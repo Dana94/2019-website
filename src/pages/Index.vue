@@ -5,9 +5,6 @@
         <div class="leading-tight">Hi, I'm Dana.</div>
         <!-- <div class="text-green-700 leading-tight">Powered by Vue.js &amp Tailwind 1.0</div> -->
       </div>
-      <div class="mt-8 sm:mt-0">
-        <g-image src="../../static/developer.svg" alt="hero" class="mx-auto sm:mx-0"/>
-      </div>
     </div>
     <!-- end hero -->
 
@@ -17,10 +14,7 @@
       >A software developer who enjoys puzzles and embracing my creative side in my work.</p>
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
-          <g-image src="../../static/mind_map.svg" alt="browser"/>
-        </div>
-        <div class="w-1/2 px-8 hidden sm:flex justify-end">
-          <g-image src="../../static/code_review.svg" alt="mobile"/>
+          <g-image src="../../static/undraw_programmer_imem.svg" alt="programmer"/>
         </div>
       </div>
     </div>
@@ -43,6 +37,9 @@
             <div
               class="text-lg text-gray-600"
             >A 3x3 grid puzzle where you have to light up all the squares to win the game.</div>
+            <div
+              class="text-lg text-gray-600"
+            >Made with VueJS.</div>
             <div class="text-lg text-gray-600">
               <a href="https://github.com/Dana94/lights-puzzle" target="_blank">Source</a>
               &nbsp;
@@ -89,7 +86,7 @@
           >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
         </div>
 
-        <div class="responsive-container">
+        <!-- <div class="responsive-container">
           <iframe
             class="responsive-iframe w-full h-full top-0 left-0 border-0"
             src="https://www.youtube.com/embed/uHo6o1TNQeE"
@@ -97,7 +94,7 @@
             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen
           ></iframe>
-        </div>
+        </div> -->
       </div>
       <!-- end get-to-know me -->
     </div>

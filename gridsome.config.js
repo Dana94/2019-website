@@ -14,8 +14,8 @@ const postcssPlugins = [
 if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
-  siteName: 'Gridsome Portfolio Starter',
-  siteDescription: 'A simple portfolio theme for Gridsome powered by Tailwind CSS v1.0',
+  siteName: 'Dana Ottaviani | Portfolio Website',
+  siteDescription: 'Dana Ottaviani\'s portfolio website.',
   siteUrl: 'https://gridsome-portfolio-starter.netlify.com',
   plugins: [
     {
@@ -42,7 +42,7 @@ module.exports = {
       options: {
         contentTypeName: 'Post',
         feedOptions: {
-          title: 'Gridsome Portfolio Starter Blog',
+          title: 'Dana Ottaviani | Portfolio Website',
           feed_url: 'https://gridsome-portfolio-starter.netlify.com/rss.xml',
           site_url: 'https://gridsome-portfolio-starter.netlify.com/'
         },

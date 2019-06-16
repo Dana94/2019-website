@@ -3,13 +3,14 @@
     <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
       <div class="text-4xl font-bold w-full text-center sm:text-left">
         <div class="leading-tight">Hi, I'm Dana.</div>
-        <div class="text-copy-leadpurple leading-tight">A software developer who enjoys puzzles and embracing my creative side in my work.</div>
+        <div
+          class="text-copy-leadpurple leading-tight"
+        >A software developer who enjoys puzzles and embracing my creative side in my work.</div>
       </div>
     </div>
     <!-- end hero -->
 
     <div class="container-inner mx-auto">
-      
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0 mx-auto">
           <g-image src="../../static/undraw_programmer_imem.svg" alt="programmer"/>
@@ -35,13 +36,19 @@
             <div
               class="text-lg text-gray-600"
             >A 3x3 grid puzzle where you have to light up all the squares to win the game.</div>
-            <div
-              class="text-lg text-gray-600"
-            >Made with VueJS.</div>
+            <div class="text-lg text-gray-600">Made with VueJS.</div>
             <div class="text-lg text-gray-600">
-              <a href="https://github.com/Dana94/lights-puzzle" target="_blank">Source</a>
+              <a
+                href="https://github.com/Dana94/lights-puzzle"
+                target="_blank"
+                class="text-copy-leadpurple"
+              >Source</a>
               &nbsp;
-              <a href="https://kind-kilby-d6c11a.netlify.com/" target="_blank">Live</a>
+              <a
+                href="https://kind-kilby-d6c11a.netlify.com/"
+                target="_blank"
+                class="text-copy-leadpurple"
+              >Live</a>
             </div>
           </li>
           <!-- <li class="checkmark mb-6">
@@ -86,7 +93,7 @@
 
        
       </div>
-    </div> -->
+    </div>-->
 
     <div class="overflow-x-hidden">
       <div class="contact-me bg-background-secondary pt-16">
@@ -101,7 +108,9 @@
 
           <p class="mb-12">
             Static sites cannot submit forms on their own. However, services like
-            <a href="https://www.netlify.com/docs/form-handling">Netlify Forms</a> or
+            <a
+              href="https://www.netlify.com/docs/form-handling"
+            >Netlify Forms</a> or
             <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.
           </p>
 
@@ -116,7 +125,7 @@
                     name="name"
                     id="name"
                     placeholder="Jon Snow"
-                    class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
+                    class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-purple-700 mb-2 p-4"
                     required
                   >
                 </div>
@@ -129,7 +138,7 @@
                     name="email"
                     id="email"
                     placeholder="email@example.com"
-                    class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-green-700 mb-2 p-4"
+                    class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-purple-700 mb-2 p-4"
                     required
                   >
                 </div>
@@ -142,7 +151,7 @@
                   id="message"
                   rows="5"
                   name="message"
-                  class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-green-700 mb-2 px-4 py-4"
+                  class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none appearance-none focus:border-purple-700 mb-2 px-4 py-4"
                   placeholder="Enter your message here."
                   required
                 ></textarea>

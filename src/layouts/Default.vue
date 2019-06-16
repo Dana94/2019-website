@@ -6,11 +6,11 @@
     <header class="border-t-14 border-purple-700">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
-          <g-link v-if="theme === 'theme-light'" to="/">
-            <g-image src="../../static/logo.svg" class="w-40" alt="logo"/>
+          <g-link v-if="theme === 'theme-light'" to="/" class="text-copy-primary hover:text-gray-600 text-3xl">
+            Dana Ottaviani
           </g-link>
-          <g-link v-else to="/">
-            <g-image src="../../static/logo_dark_mode.svg" class="w-40" alt="logo"/>
+          <g-link v-else to="/" class="text-copy-primary hover:text-gray-600 text-3xl">
+            Dana Ottaviani
           </g-link>
         </div>
         <div class="block lg:hidden">
@@ -46,15 +46,7 @@
             >Projects</a>
             <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link>
           </li>
-          <li class="mr-8 mb-6 lg:mb-0">
-            <!-- <a
-              v-if="$route.path === '/'"
-              href="/about"
-              v-scroll-to="'#about'"
-              class="text-copy-primary hover:text-gray-600"
-            >About</a> -->
-            <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
-          </li>
+
           <li class="mr-8 mb-6 lg:mb-0">
             <a
               v-if="$route.path === '/'"
@@ -63,6 +55,9 @@
               class="text-copy-primary hover:text-gray-600"
             >Contact</a>
             <g-link v-else to="/#contact" class="text-copy-primary hover:text-gray-600">Contact</g-link>
+          </li>
+          <li class="mr-8 mb-6 lg:mb-0">
+            <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
           </li>
           <li>
             <g-link to="/blog" class="text-copy-primary hover:text-gray-600">Blog</g-link>

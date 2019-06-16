@@ -1,15 +1,15 @@
 <template>
   <Layout>
     <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
-      <div class="text-4xl font-bold w-full sm:w-3/5 text-center sm:text-left">
+      <div class="text-4xl font-bold w-full text-center sm:text-left">
         <div class="leading-tight">Hi, I'm Dana.</div>
-        <div class="text-green-700 leading-tight">A software developer who enjoys puzzles and embracing my creative side in my work.</div>
+        <div class="text-copy-leadpurple leading-tight">A software developer who enjoys puzzles and embracing my creative side in my work.</div>
       </div>
     </div>
     <!-- end hero -->
 
     <div class="container-inner mx-auto">
-      <!-- <p class="text-lg sm:text-xl">A software developer who enjoys puzzles and embracing my creative side in my work.</p> -->
+      
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0">
           <g-image src="../../static/undraw_programmer_imem.svg" alt="programmer"/>

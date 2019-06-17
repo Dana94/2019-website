@@ -6,7 +6,7 @@
         <g-image
           src="../../static/me.jpg"
           alt="avatar"
-          class="w-32 h-32 rounded-full mb-8 lg:mb-0"
+          class="w-48 h-48 rounded-full mb-8 lg:mb-0"
         />
         <div>I'm Dana Ottaviani, a front-end developer...</div>
         <div>I was first intoduced to programming in my undergrad which lead me to graduating with a Computer Science degree (and Mathematics too).
@@ -27,4 +27,13 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+img {
+  float: left;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+</style>
+
 

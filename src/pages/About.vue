@@ -6,8 +6,33 @@
         <g-image
           src="../../static/me.jpg"
           alt="avatar"
-          class="w-32 h-32 rounded-full mb-8 lg:mb-0"
+          class="w-48 h-48 rounded-full mb-8 lg:mb-0"
         />
+        <div>I'm Dana Ottaviani, a front-end developer...</div>
+        <br>
+        <div>
+          I went into my undergrad as undecided. I entered college with an interest
+          in math and signed up for a B.A. in Mathematics. One of the requirements was an
+          intro to programming class. I enjoyed learning what coding actually entails.
+          It lead me to signing up for more courses (web development, Bioinformatics, Data
+          Structures, please check out the
+          <a href="https://www.linkedin.com/in/danaottaviani/">
+            full list in my
+            LinkedIn profile
+          </a> if you’re interested), which gave me the idea of applying for a
+          minor in Computer Science, but that eventually lead to a B.S. in the area since both
+          Mathematics and C.S. had some class requirement overlap.
+        </div>
+        <br>
+        <div>I enjoy working in the front-end side of web development since it’s really the first thing a user sees. But I have constant curiosity in AWS, back-end, devops, I don’t want these areas to be a black box to me. I want at least a high-level understanding of these processes to expand my technical knowledge to be a more well-rounded developer.</div>
+        <br>
+        <div>I finally decided to get around having a clean, new site to showcase what I know so far and even a <g-link to="/blog">blog</g-link> to document what I learn on my own.</div>
+        <br>
+        <div>Aside from programming, I enjoy learning about Blender and improving my drawing skills in traditional and digital formats.</div>
+        <br>
+        <div>I also (try) to keep daily streaks of such sites such as: Duolingo, khanacademy, touch typing, freecodecamp to up my skill set in other areas.</div>
+        <br>
+        <div>I have also embraced open source and constanty keep an eye out for programs and repos I can use and contribute to.</div>
       </div>
     </div>
   </Layout>
@@ -20,4 +45,13 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+img {
+  float: left;
+  margin-bottom: 1rem;
+  margin-right: 2rem;
+}
+</style>
+
 

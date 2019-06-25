@@ -14,11 +14,6 @@ I still sometimes find myself looking back at the <a href="https://vuejs.org/v2/
 
 Bear with me, these styles will be horribly boring but this is for syntax notes so hopefully you get something out of this.
 
-# Inline-styles
-
-There are a few ways to set styles.
-
-Using the `v-bind:` or `:` before the `style` attribute, you can assign values from the `data` object.
 
 This is the one the examples will be referencing.
 ```js
@@ -39,6 +34,9 @@ export default {
   }
 };
 ```
+# Style Attribute
+
+Using the `v-bind:` or `:` before the `style` attribute, you can assign values from the `data` object.
 
 This example assigns the `color` style to whatever value `headerColor`, which in this case is white.
 
@@ -68,3 +66,20 @@ Referencing the data object at the start of this post, this code is equivalent t
     Heading
   </h1>
 ```
+You can include more than one object by incasing them in square brackets.
+```html
+  <h1 :style="[headerStyles, headerHeight]">
+  Heading
+  </h1>
+```
+Want to mix both objects and regular styles together? No problem.
+
+Just make sure the inline styles are wrapped in curly braces. Then drop the part into the array.
+```html
+<h1 :style="[headerStyles, {borderRadius: borderRadius}]">
+  Heading
+</h1>
+```
+
+# Class Attribute
+

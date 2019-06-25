@@ -41,20 +41,30 @@ export default {
 ```
 
 This example assigns the `color` style to whatever value `headerColor`, which in this case is white.
+
 Since `background-color` is a hyphenated style name, it can be written 2 ways.
+
 It can be in quotations.
 ```html
-  <h1
-    :style="{color: headerColor, 'background-color': 'black'}"
-  >
-    :style="{color: headerColor, 'background-color': 'black'}"
+  <h1 :style="{color: headerColor, 'background-color': 'black'}">
+    Heading
   </h1>
 ```
 Or written in camelcase with no quotations.
 ```html
-<!-- set with data variables as value, camelCase hyphens -->
-    <h1
-      :style="{color: headerColor, backgroundColor: 'black'}"
-    >:style="{color: headerColor, backgroundColor: 'black'}"</h1>
-
+  <h1 :style="{color: headerColor, backgroundColor: 'black'}">
+    Heading
+  </h1>
+```
+You can also set styles with objects.
+```html
+  <h1 :style="headerStyles">
+    Heading
+  </h1>
+```
+Referencing the data object at the start of this post, this code is equivalent to writing the styles like this:
+```html
+  <h1 style="color: white; background-color: black">
+    Heading
+  </h1>
 ```

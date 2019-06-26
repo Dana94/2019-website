@@ -128,6 +128,10 @@ It's possible to assign the class through a data value.
 ```html
   <h1 :class="bgColor">Heading</h1>
 ```
+is equivalent to
+```html
+  <h1 class="purple">Heading</h1>
+```
 If there is more than one, the classes need to be listed in an array.
 
 Like for styles, you can combine too.
@@ -135,13 +139,11 @@ Like for styles, you can combine too.
   <h1 :class="[bgColor, {pink: attachColor}]">Heading</h1>
 ```
 
-Last method for adding classes is through computed properties. The property returns an object of the classes as keys and their values being tuthy or falsey.
+Last method for adding classes is through computed properties. The property returns an object of the classes as keys and their values being truthy or falsey.
 ```html
   <h1 :class="headerClasses">Heading</h1>
 ```
-same as
+is equivalent to
 ```html
   <h1 :class="{pink: false, purple: true}">Heading</h1>
 ```
-
-

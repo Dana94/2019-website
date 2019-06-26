@@ -134,7 +134,7 @@ is equivalent to
 ```
 If there is more than one, the classes need to be listed in an array.
 
-Like for styles, you can combine too.
+Like for styles, you can combine class objects and properties.
 ```html
   <h1 :class="[bgColor, {pink: attachColor}]">Heading</h1>
 ```
@@ -147,3 +147,5 @@ is equivalent to
 ```html
   <h1 :class="{pink: false, purple: true}">Heading</h1>
 ```
+
+As you can see, there are many ways to implement styles and classes to your elements in VueJS. These methods can help your app change appropriately depending on user input, placement, or just about anything!

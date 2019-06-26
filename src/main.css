@@ -69,7 +69,7 @@ a {
 
 
 a:hover {
-  @apply text-green-800;
+  @apply text-purple-800;
 }
 
 /* nav .active {

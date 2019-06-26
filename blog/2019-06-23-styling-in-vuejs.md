@@ -147,3 +147,5 @@ is equivalent to
 ```html
   <h1 :class="{pink: false, purple: true}">Heading</h1>
 ```
+
+As you can see, there are many ways to implement styles and classes to your elements in VueJS. 

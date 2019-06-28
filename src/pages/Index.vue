@@ -5,7 +5,7 @@
         <div class="leading-tight">Hi, I'm Dana.</div>
         <div
           class="text-copy-leadpurple leading-tight"
-        >A software developer who enjoys puzzles and embracing my creative side in my work.</div>
+        >A software developer who enjoys puzzles and embracing the creative side in my work.</div>
       </div>
     </div>
     <!-- end hero -->

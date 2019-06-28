@@ -10,8 +10,7 @@
         />
         <div>
           I'm Dana Ottaviani, a front-end developer. I'm currently on the look out for the next great company to work at so send an
-          <a href="mailto:dana.ottaviani@gmail.com">email</a> or
-          <g-link to="/#contact">message</g-link>if you're interested.
+          <a href="mailto:dana.ottaviani@gmail.com">email</a> or <g-link to="/#contact">message</g-link> if you're interested.
         </div>
         <br>
         <div>
@@ -34,12 +33,15 @@
         <br>
         <div>
           I finally decided to get around having a clean, new site to showcase what I know so far and even a
-          <g-link to="/blog">blog</g-link>to document what I learn on my own.
+          <g-link to="/blog">blog</g-link> to document what I learn on my own.
         </div>
         <br>
         <div>Aside from programming, I enjoy learning about Blender and improving my drawing skills.</div>
         <br>
         <div>I have also embraced open source and constanty keep an eye out for programs and repos I can use and contribute to.</div>
+      </div>
+      <div>
+        programs using...
       </div>
     </div>
   </Layout>

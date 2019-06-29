@@ -74,7 +74,7 @@
         <div class="mb-8 lg:mb-0">
           <div>Copyright 2019. All rights reserved.</div>
           <div>
-            <a href="rss.xml" class="text-white hover:text-gray-400 font-normal">RSS Feed</a>
+            <a href="https://github.com/Dana94/website" target="_blank" class="hover:text-purple-300">View Source</a>
           </div>
         </div>
         <ul class="flex items-center">

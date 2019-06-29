@@ -85,15 +85,6 @@
               <use xlink:href="#dots-triangle"></use>
             </svg>
           </div>
-
-          <!-- <p class="mb-12">
-            Static sites cannot submit forms on their own. However, services like
-            <a
-              href="https://www.netlify.com/docs/form-handling"
-            >Netlify Forms</a> or
-            <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.
-          </p> -->
-
           <div class="text-lg sm:text-lg mb-16">
             <form class="mb-12" name="contact" method="POST" action="https://formspree.io/dana.ottaviani@gmail.com">
               <div class="flex flex-wrap mb-6 -mx-4">

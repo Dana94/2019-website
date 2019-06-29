@@ -79,6 +79,11 @@
         </div>
         <ul class="flex items-center">
           <li class="mr-8">
+            <a href="" class="text-white hover:text-gray-400">
+              <font-awesome :icon="['fas', 'file']" class="fa-2x"/>
+            </a>
+          </li>
+          <li class="mr-8">
             <a href="mailto:dana.ottaviani@gmail.com" class="text-white hover:text-gray-400">
               <font-awesome :icon="['fas', 'envelope']" class="fa-2x"/>
             </a>

@@ -71,50 +71,10 @@
               >Live</a>
             </div>
           </li>
-          <!-- <li class="checkmark mb-6">
-            <div>Project Two</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>
-          <li class="checkmark mb-6">
-            <div>Project Three</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>
-          <li class="checkmark mb-6">
-            <div>Project Four</div>
-            <div class="text-lg text-gray-600">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui ab nam animi iure nemo exercitationem a, eius non culpa itaque!</div>
-          </li>-->
         </ul>
       </div>
       <!-- end projects -->
     </div>
-
-    <!-- <div class="overflow-x-hidden border-gray-200 border-b">
-      <div class="get-to-know-me container-inner mx-auto text-xl pb-16 relative">
-        <h2 class="font-bold mb-6" id="about">Get to know me:</h2>
-
-        <div class="absolute left-0" style="top: 50px; transform: translateX(-100%)">
-          <svg width="170px" height="170px">
-            <use xlink:href="#dots-triangle"></use>
-          </svg>
-        </div>
-
-        <div class="flex flex-col sm:flex-row justify-between items-center mb-16">
-          <div>
-            <g-image
-              src="../../static/avatar.jpg"
-              alt="avatar"
-              class="w-32 h-32 rounded-full mb-8 lg:mb-0"
-            />
-          </div>
-          <div
-            class="flex-1 text-lg sm:text-xl ml-6"
-          >Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum quae architecto minus molestias iusto ducimus fuga quo quia libero dignissimos, fugiat modi assumenda debitis laboriosam.</div>
-        </div>
-
-       
-      </div>
-    </div>-->
-
     <div class="overflow-x-hidden">
       <div class="contact-me bg-background-secondary pt-16">
         <div class="container-inner mx-auto text-xl pb-4 relative">
@@ -126,16 +86,16 @@
             </svg>
           </div>
 
-          <p class="mb-12">
+          <!-- <p class="mb-12">
             Static sites cannot submit forms on their own. However, services like
             <a
               href="https://www.netlify.com/docs/form-handling"
             >Netlify Forms</a> or
             <a href="https://formspree.io">FormSpree</a> can help you do this without a backend.
-          </p>
+          </p> -->
 
           <div class="text-lg sm:text-lg mb-16">
-            <form action="#" class="mb-12">
+            <form class="mb-12" name="contact" method="POST" action="https://formspree.io/dana.ottaviani@gmail.com">
               <div class="flex flex-wrap mb-6 -mx-4">
                 <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                   <label class="block mb-2 text-copy-primary" for="name">Name</label>
@@ -144,7 +104,7 @@
                     type="text"
                     name="name"
                     id="name"
-                    placeholder="Jon Snow"
+                    placeholder="Dana Scully"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-purple-700 mb-2 p-4"
                     required
                   >
@@ -189,25 +149,6 @@
         </div>
       </div>
       <!-- end contact-me -->
-    </div>
-
-    <!-- <div class="newsletter bg-background-tertiary">
-      <div class="container-inner mx-auto py-16 pb-8 text-center textl-xl">
-        <h2 class="text-2xl font-bold mb-8">Join my Newsletter</h2>
-
-        <div class="w-4/5 mx-auto mb-8">
-          <p class="mb-8 text-lg sm:text-xl">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis, voluptatum. Quam, deleniti nulla.</p>
-
-          <form action="#">
-            <div class="flex flex-col sm:flex-row">
-              <input type="email" name="email" placeholder="Your email address" class="flex-1 bg-background-form rounded sm:rounded-r-none px-4 py-4 leading-normal border border-border-color-primary sm:border-r-0 shadow outline-none focus:border-green-700 z-10" required>
-              <button data-element="submit" class="flex-2 w-40 uppercase bg-green-700 text-white rounded sm:rounded-l-none text-lg py-3 px-8 tracking-wide shadow focus:outline-none hover:bg-green-800 focus:bg-green-800 z-10 w-full sm:w-auto mt-4 sm:mt-0">
-                <span>Subscribe</span>
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>-->
     </div>
   </Layout>
 </template>

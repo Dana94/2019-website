@@ -41,7 +41,13 @@
         <div>I have also embraced open source and constanty keep an eye out for programs and repos I can use and contribute to.</div>
       </div>
       <div>
-        programs using...
+        <h2>Currently Using:</h2>
+        <ul>
+          <li>Editor: <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a></li>
+          <li>Operating System: Windows 10</li>
+          <li>Static Site Generator: <a href="https://gridsome.org/" target="_blank">Gridsome</a></li>
+          <li>Hosting: <a href="https://www.netlify.com/" target="_blank">Netlify</a></li>
+        </ul>
       </div>
     </div>
   </Layout>

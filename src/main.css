@@ -72,11 +72,6 @@ a:hover {
   @apply text-purple-800;
 }
 
-/* nav .active {
-  font-weight: bold;
-  @apply border-black border-b;
-} */
-
 .container-inner {
   padding-left: 1rem;
   padding-right: 1rem;

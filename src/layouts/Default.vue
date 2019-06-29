@@ -73,6 +73,9 @@
       <div class="container mx-auto flex flex-col lg:flex-row items-center justify-between py-8">
         <div class="mb-8 lg:mb-0">
           <div>Copyright 2019. All rights reserved.</div>
+          <div>
+            <a href="https://github.com/Dana94/website" target="_blank" class="hover:text-purple-300">View Source</a>
+          </div>
         </div>
         <ul class="flex items-center">
           <li class="mr-8">

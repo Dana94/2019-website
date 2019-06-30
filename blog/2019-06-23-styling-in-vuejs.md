@@ -13,7 +13,7 @@ I still sometimes find myself looking back at the <a href="https://vuejs.org/v2/
 Bear with me, these styles will be horribly boring but this is for syntax notes so hopefully you get something out of this.
 
 
-This is the one the examples will be referencing.
+This is the data the examples will be referencing.
 ```js
 export default {
   name: "app",

@@ -15,8 +15,8 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Dana Ottaviani | Portfolio Website',
-  siteDescription: 'Dana Ottaviani\'s portfolio website.',
-  siteUrl: 'https://gridsome-portfolio-starter.netlify.com',
+  siteDescription: '',
+  siteUrl: 'https://danaottaviani.com',
   plugins: [
     {
       use: '@gridsome/source-filesystem',

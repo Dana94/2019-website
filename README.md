@@ -1,6 +1,7 @@
 # Gridsome Portfolio Starter
 
 Personal site using Gridsome.
+Using this [template](https://github.com/drehimself/gridsome-portfolio-starter).
 
 ## Installation
 
@@ -12,3 +13,4 @@ Personal site using Gridsome.
 ## Notes
 
  - Illustrations from [unDraw](https://undraw.co)
+ - Favicon created by me using [Inkscape](https://inkscape.org/)

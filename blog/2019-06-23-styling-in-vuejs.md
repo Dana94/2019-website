@@ -73,7 +73,7 @@ Since `background-color` is a hyphenated style name, it can be written 2 ways.
 
 It can be written with the hyphen in quotations.
 
-Notice that the list of styles are contained in curly braces.
+(Notice that the list of styles are contained in curly braces.)
 ```html
   <h1 :style="{color: headerColor, 'background-color': 'black'}">Heading</h1>
 ```
@@ -116,7 +116,7 @@ The statement needs to be in curly braces.
     <li v-for="i in 5" :key="i.id" :class="{active: i % 2 == 0}">{{i}}</li>
   </ul>
 ```
-In case you don't know the `%` symbol, it's called the "remainder" or "modulo" operator. It's checking if `i` divides by 2 evenly (or equals to 0), which will recognize `i` as even or not.
+> In case you don't know the `%` symbol, it's called the "remainder" or "modulo" operator. It's checking if `i` divides by 2 evenly (or equals to 0), which will recognize `i` as even or odd.
 
 Of course you can use data to assign a boolean for the class.
 ```html
@@ -128,7 +128,7 @@ It's possible to assign the class through a data value.
 ```html
   <h1 :class="bgColor">Heading</h1>
 ```
-is equivalent to
+is equivalent to:
 ```html
   <h1 class="purple">Heading</h1>
 ```
@@ -143,7 +143,7 @@ Last method for adding classes is through computed properties. The property retu
 ```html
   <h1 :class="headerClasses">Heading</h1>
 ```
-is equivalent to
+is equivalent to:
 ```html
   <h1 :class="{pink: false, purple: true}">Heading</h1>
 ```

@@ -1,7 +1,10 @@
-# Gridsome Portfolio Starter
+# Personal Website
 
-Personal site using Gridsome.
-Using this [template](https://github.com/drehimself/gridsome-portfolio-starter).
+A personal website and blog.
+
+## Built With
+
+ - [Gridsome](https://gridsome.org/)
 
 ## Installation
 
@@ -14,3 +17,6 @@ Using this [template](https://github.com/drehimself/gridsome-portfolio-starter).
 
  - Illustrations from [unDraw](https://undraw.co)
  - Favicon created by me using [Inkscape](https://inkscape.org/)
+
+## Acknowledgments
+- A big thank you to [Andre Madarang](https://github.com/drehimself) for his awesome [template](https://github.com/drehimself/gridsome-portfolio-starter). :+1:

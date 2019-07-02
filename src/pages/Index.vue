@@ -71,6 +71,26 @@
               >Live</a>
             </div>
           </li>
+           <li class="checkmark mb-6">
+            <div>TARDIS</div>
+            <div
+              class="text-lg text-gray-600"
+            >The TARDIS made with CSS. I also used transitions to replicate the fade in/out effects.</div>
+            <div class="text-lg text-gray-600">Made with VueJS.</div>
+            <div class="text-lg text-gray-600">
+              <a
+                href="https://github.com/Dana94/TARDIS"
+                target="_blank"
+                class="text-copy-leadpurple"
+              >Source</a>
+              &nbsp;
+              <a
+                href="https://distracted-jang-cfb752.netlify.com/"
+                target="_blank"
+                class="text-copy-leadpurple"
+              >Live</a>
+            </div>
+          </li>
         </ul>
       </div>
       <!-- end projects -->

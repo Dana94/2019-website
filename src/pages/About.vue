@@ -5,7 +5,7 @@
       <div>
         <g-image
           src="../../static/me.jpg"
-          alt="avatar"
+          alt="Picture of me."
           class="w-48 h-48 rounded-full mb-8 lg:mb-0"
         />
         <div>

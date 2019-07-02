@@ -26,6 +26,9 @@
         class="absolute top-0 right-0 text-2xl mr-3 cursor-pointer text-gray-600 hover:text-gray-800"
         style="top:2px;"
         @click="reset"
+        tabindex="0"
+        @keyup.enter="reset"
+        @keyup.space.prevent="reset"
       >
         &times;
       </div>

@@ -16,6 +16,7 @@
         <div class="block lg:hidden">
           <button
             @click="toggle"
+            role="button"
             class="flex items-center px-3 py-2 border rounded border-gray-500 hover:text-gray-600 hover:border-gray-600"
           >
             <svg
@@ -42,9 +43,11 @@
               v-if="$route.path === '/'"
               href="/#projects"
               v-scroll-to="'#projects'"
+              @keyup.enter="sendTo"
               class="text-copy-primary hover:text-gray-600"
             >Projects</a>
-            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600">Projects</g-link>
+            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600" @keyup.enter="sendTo"
+            >Projects</g-link>
           </li>
 
           <li class="mr-8 mb-6 lg:mb-0">
@@ -136,6 +139,8 @@ query {
 import SearchInput from "../components/SearchInput";
 import ThemeSwitcher from "../components/ThemeSwitcher";
 
+import {scroller} from 'vue-scrollto/src/scrollTo'
+
 export default {
   components: {
     SearchInput,
@@ -151,11 +156,16 @@ export default {
     };
   },
   methods: {
-    toggle() {
+  toggle() {
       this.isOpen = !this.isOpen;
     },
     updateTheme(theme) {
       this.theme = theme;
+    },
+    sendTo() {
+      const firstScrollTo = scroller()
+      console.log('here ', firstScrollTo)
+      firstScrollTo('#projects')
     }
   }
 };

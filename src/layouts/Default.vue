@@ -8,7 +8,6 @@
         <div>
           <g-link v-if="theme === 'theme-light'" to="/" class="text-copy-primary hover:text-gray-600 text-3xl"
           @keydown.enter="sendTo('')"
-  
           >
             Dana Ottaviani
           </g-link>

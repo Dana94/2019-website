@@ -13,7 +13,7 @@
     <div class="container-inner mx-auto">
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0 mx-auto">
-          <g-image src="../../static/undraw_programmer_imem.svg" alt="a programmer"/>
+          <g-image src="../../static/undraw_programmer_imem.svg" alt="A programmer."/>
         </div>
       </div>
     </div>

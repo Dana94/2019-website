@@ -6,10 +6,15 @@
     <header class="border-t-14 border-purple-700">
       <nav class="container mx-auto flex flex-wrap justify-between items-center py-8">
         <div>
-          <g-link v-if="theme === 'theme-light'" to="/" class="text-copy-primary hover:text-gray-600 text-3xl">
+          <g-link v-if="theme === 'theme-light'" to="/" class="text-copy-primary hover:text-gray-600 text-3xl"
+          @keydown.enter="sendTo('')"
+  
+          >
             Dana Ottaviani
           </g-link>
-          <g-link v-else to="/" class="text-copy-primary hover:text-gray-600 text-3xl">
+          <g-link v-else to="/" class="text-copy-primary hover:text-gray-600 text-3xl"
+           @keydown.enter="sendTo('')"
+          >
             Dana Ottaviani
           </g-link>
         </div>
@@ -43,10 +48,10 @@
               v-if="$route.path === '/'"
               href="/#projects"
               v-scroll-to="'#projects'"
-              @keyup.enter="sendTo"
-              class="text-copy-primary hover:text-gray-600"
+              @keydown.enter="sendTo('#projects')"
+              class="text-copy-primary hover:text-gray-600 projects-link"
             >Projects</a>
-            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600" @keyup.enter="sendTo"
+            <g-link v-else to="/#projects" class="text-copy-primary hover:text-gray-600 projects-link" @keydown.enter="sendTo('#projects')"
             >Projects</g-link>
           </li>
 
@@ -55,9 +60,11 @@
               v-if="$route.path === '/'"
               href="/#contact"
               v-scroll-to="'#contact'"
+              @keydown.enter="sendTo('#contact')"
               class="text-copy-primary hover:text-gray-600"
             >Contact</a>
-            <g-link v-else to="/#contact" class="text-copy-primary hover:text-gray-600">Contact</g-link>
+            <g-link v-else to="/#contact" class="text-copy-primary hover:text-gray-600" @keydown.enter="sendTo('#contact')"
+            >Contact</g-link>
           </li>
           <li class="mr-8 mb-6 lg:mb-0">
             <g-link to="/about" class="text-copy-primary hover:text-gray-600">About</g-link>
@@ -138,8 +145,7 @@ query {
 <script>
 import SearchInput from "../components/SearchInput";
 import ThemeSwitcher from "../components/ThemeSwitcher";
-
-import {scroller} from 'vue-scrollto/src/scrollTo'
+import { constants } from 'crypto';
 
 export default {
   components: {
@@ -162,10 +168,9 @@ export default {
     updateTheme(theme) {
       this.theme = theme;
     },
-    sendTo() {
-      const firstScrollTo = scroller()
-      console.log('here ', firstScrollTo)
-      firstScrollTo('#projects')
+    // for keyboard accessibility
+    sendTo(path) {
+     window.location = path;
     }
   }
 };

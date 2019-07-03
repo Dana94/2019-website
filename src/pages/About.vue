@@ -2,7 +2,7 @@
   <Layout>
     <div class="container-inner mx-auto py-16">
       <h2 class="text-4xl font-bold mb-16">About Me</h2>
-      <div>
+      <div class="main-content">
         <g-image
           src="../../static/me.jpg"
           alt="Picture of me."
@@ -40,6 +40,27 @@
         <div>Aside from programming, I enjoy learning about Blender and improving my drawing skills.</div>
         <br />
         <div>I have also embraced open source and constanty keep an eye out for programs and repos I can use and contribute to.</div>
+      </div>
+      <div>
+        <a href="https://docs.google.com/document/d/1Oo7dxyvFD4rnVWkhZn1wP6BzO_lNRR_iGHxegOg6Dfw/edit?usp=sharing" target="_blank">Resume</a>
+      </div>
+       <div>
+        <h3 class="text-2xl">Social:</h3>
+        <hr />
+        <ul>
+          <li>
+            <a href="mailto:dana.ottaviani@gmail.com" target="_blank">Email</a>
+          </li>
+          <li>
+            <a href="https://github.com/Dana94"
+              target="_blank">GitHub</a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/danaottaviani/"
+              target="_blank">LinkedIn</a>
+          </li>
+
+        </ul>
       </div>
       <div>
         <h3 class="text-2xl">Currently Using:</h3>
@@ -100,6 +121,10 @@ img {
     margin-bottom: 1rem;
     margin-right: 2rem;
   }
+}
+
+.main-content {
+  margin-bottom: 3rem;
 }
 </style>
 

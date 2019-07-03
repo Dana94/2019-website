@@ -86,7 +86,7 @@
             <a href="https://github.com/Dana94/website" target="_blank" class="hover:text-purple-300">View Source</a>
           </div>
         </div>
-        <ul class="flex items-center">
+        <!-- <ul class="flex items-center">
           <li class="mr-8">
             <a href="https://docs.google.com/document/d/1Oo7dxyvFD4rnVWkhZn1wP6BzO_lNRR_iGHxegOg6Dfw/edit?usp=sharing" target="_blank" class="text-white hover:text-gray-400">
               <font-awesome :icon="['fas', 'file']" class="fa-2x"/>
@@ -116,7 +116,7 @@
               <font-awesome :icon="['fab', 'linkedin']" class="fa-2x"/>
             </a>
           </li>
-        </ul>
+        </ul> -->
       </div>
     </footer>
 

@@ -94,7 +94,7 @@
           </li>
           <li class="mr-8">
             <a href="mailto:dana.ottaviani@gmail.com" class="text-white hover:text-gray-400">
-              <font-awesome :icon="['fas', 'envelope']" class="fa-2x"/>
+              <font-awesome :icon="['fas', 'envelope']" class="fa-2x"></font-awesome>
             </a>
           </li>
 
@@ -104,7 +104,7 @@
               target="_blank"
               class="text-white hover:text-gray-400"
             >
-              <font-awesome :icon="['fab', 'github']" class="fa-2x"/>
+              <font-awesome :icon="['fab', 'github']" class="fa-2x"></font-awesome>
             </a>
           </li>
           <li class="mr-8">
@@ -113,7 +113,7 @@
               target="_blank"
               class="text-white hover:text-gray-400"
             >
-              <font-awesome :icon="['fab', 'linkedin']" class="fa-2x"/>
+              <font-awesome :icon="['fab', 'linkedin']" class="fa-2x"></font-awesome>
             </a>
           </li>
         </ul>

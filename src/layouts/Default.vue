@@ -83,11 +83,11 @@
         <div class="mb-8 lg:mb-0">
           <div>Copyright 2019. All rights reserved.</div>
           <div>
-            <a href="https://github.com/Dana94/website" target="_blank" class="hover:text-purple-300">View Source</a>
-          </div>
-          <div>
             Footer icons by
             <a href="https://icons8.com/" target="_blank" class="hover:text-purple-300">icons8</a>.
+          </div>
+          <div>
+            <a href="https://github.com/Dana94/website" target="_blank" class="hover:text-purple-300">View Source</a>
           </div>
         </div>
         <ul class="flex items-center">

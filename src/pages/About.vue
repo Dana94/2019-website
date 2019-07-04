@@ -18,7 +18,7 @@
           I went into my undergrad as undecided. I entered college with an interest
           in math and signed up for a B.A. in Mathematics. One of the requirements was an
           intro to programming class. I enjoyed learning what coding actually entails.
-          It lead me to signing up for more courses (web development, Bioinformatics, Data
+          It led me to signing up for more courses (web development, Bioinformatics, Data
           Structures, please check out the
           <a
             href="https://www.linkedin.com/in/danaottaviani/"
@@ -26,7 +26,7 @@
             full list in my
             LinkedIn profile
           </a> if you’re interested), which gave me the idea of applying for a
-          minor in Computer Science, but that eventually lead to a B.S. in the area since both
+          minor in Computer Science, but that eventually led to a B.S. in the area since both
           Mathematics and C.S. had some class requirement overlap.
         </div>
         <br />

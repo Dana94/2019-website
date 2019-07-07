@@ -1,8 +1,7 @@
 ---
 title: How I Got Into Open Source
-path: open-source
+path: how-i-got-into-open-source
 date: 2019-07-07
-summary: 
 tags: ['coding']
 ---
 
@@ -34,4 +33,4 @@ There is a lot of resources online to help someone get into open source, here ar
 * [GitHub's list of projects with a great repuation for new contributers.](https://github.com/showcases/great-for-new-contributors)
 * [Open Source Friday](https://opensourcefriday.com/)
 
-Being a part of the open source community isn’t something you need to spend a lot of time on. It can take days, even weeks, to figure out just where one function is being done in the code, let alone how the whole thing ticks. Be patient with the code, and with yourself, you will get it. :)
+Being a part of the open source community isn’t something you need to spend a lot of time on. It can take days, even weeks, to figure out just where one function is being used in the code, let alone how the whole thing ticks. Be patient with the code, and with yourself, you will get it. :)

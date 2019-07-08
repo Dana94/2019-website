@@ -3,5 +3,9 @@
     "title": "Styling In VueJS",
     "path": "/styling-in-vuejs",
     "summary": "There are various ways to attach styles on elements in VueJS. Here, I'm going to explain the methods for binding to the `class` and `style` attributes."
+  },
+  {
+    "title": "How I Got Into Open Source",
+    "path": "/how-i-got-into-open-source"
   }
 ]

@@ -1,5 +1,5 @@
 ---
-title: Why You Should Draw Your Ideas
+title: Why I Draw My Ideas
 path: why-you-should-draw-your-ideas
 date: 2019-07-17
 summary: I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do.
@@ -43,5 +43,7 @@ _Cute critter eating a cookie sketch_
 ![Cute critter eating a cookie svg](./images/2019-07-17/svg-finish.jpg)
 _Cute critter eating a cookie svg_
 
-I understand that looking for design inspiriation on [Dribble](https://dribbble.com/) or wherever you find ideas is great to find references but... 
+I understand that looking for design inspiriation on [Dribble](https://dribbble.com/) or wherever you find ideas is great to find references but unless you have something written down, all your incredible ideas are just floating around in your head with everything else you have to do.
+
+Creating a website layout from scratch can be pretty overwelming, take some of the pressure off by writing down your ideas whenever lightning strikes. Your future self will thank you.
 

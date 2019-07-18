@@ -1,6 +1,6 @@
 ---
 title: Why I Draw My Ideas
-path: why-you-should-draw-your-ideas
+path: why-i-draw-my-ideas
 date: 2019-07-17
 summary: I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do.
 tags: ['coding','art','blender']
@@ -8,7 +8,7 @@ tags: ['coding','art','blender']
 
 I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do.
 
-Before I continue, I just need to point out to whoever is reading this thinking: 
+Before I continue, I just need to point out to whomever is reading this thinking: 
 
 _I can't draw! My stuff will look horrible!_ 
 
@@ -25,7 +25,7 @@ _Doctor Who's TARDIS_
 
 The live project can be seen [here](https://distracted-jang-cfb752.netlify.com/).
 
-Another project currently in progress (as of writing this) is using a 3D model I made in Blender for a "shift" affect when the user scrolls down the page. I love the effect of the models in [Season 2 of Command Line Heroes](https://www.redhat.com/en/command-line-heroes/season-2) (great podcast by the way!). As you scoll down the page, the pieces of the model shift apart. My Blender skills aren't where I want them to be yet, but that didn't stop me from applying what I know so far.
+Another project that is currently in progress (as of writing this) is using a 3D model I made in Blender for a "shift" effect when the user scrolls down the page. I love the result of the models in [Season 2 of Command Line Heroes](https://www.redhat.com/en/command-line-heroes/season-2) (great podcast by the way!). As you scroll down the page, the pieces of the model shift apart.
 
 ![3D stair model sketch](./images/2019-07-17/stairs-sketch.jpg)
 _3D stair model sketch_
@@ -43,7 +43,7 @@ _Cute critter eating a cookie sketch_
 ![Cute critter eating a cookie svg](./images/2019-07-17/svg-finish.jpg)
 _Cute critter eating a cookie svg_
 
-I understand that looking for design inspiriation on [Dribble](https://dribbble.com/) or wherever you find ideas is great to find references but unless you have something written down, all your incredible ideas are just floating around in your head with everything else you have to do.
+There are many developers (including me) who use design sites like [Dribble](https://dribbble.com/) for inspiration. Unless you have your thoughts written down, all of your ideas are just floating around in your head with everything else you have to do. It's most likely you'll forget them over time.
 
-Creating a website layout from scratch can be pretty overwelming, take some of the pressure off by writing down your ideas whenever lightning strikes. Your future self will thank you.
+Creating a website layout from scratch can be pretty overwelming, take some of the pressure off by sketching your ideas whenever lightning strikes. Your future self will thank you.
 

@@ -45,7 +45,7 @@ _Cute critter eating a cookie sketch_
 ![Cute critter eating a cookie svg](./images/2019-07-17/svg-finish.jpg)
 _Cute critter eating a cookie svg_
 
-There are many developers (including me) who use design sites like [Dribble](https://dribbble.com/) for inspiration. Unless you have your thoughts written down, all of your ideas are just floating around in your head with everything else you have to do. It's most likely you'll forget them over time.
+There are many developers (including me) who use design sites like [Dribbble](https://dribbble.com/) for inspiration. Unless you have your thoughts written down, all of your ideas are just floating around in your head with everything else you have to do. It's most likely you'll forget them over time.
 
 Creating a website layout from scratch can be pretty overwelming, take some of the pressure off by sketching your ideas whenever lightning strikes. Your future self will thank you.
 

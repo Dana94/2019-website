@@ -1,7 +1,7 @@
 ---
 title: Why I Draw My Ideas
 path: why-i-draw-my-ideas
-date: 2019-07-17
+date: 2019-07-19
 summary: I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do.
 tags: ['coding','art','blender']
 ---

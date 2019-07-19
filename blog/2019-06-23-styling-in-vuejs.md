@@ -149,3 +149,5 @@ is equivalent to:
 ```
 
 As you can see, there are many ways to implement styles and classes to your elements in VueJS. These methods can help your app change appropriately depending on user input, placement, or just about anything!
+
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-06-23-styling-in-vuejs.md)

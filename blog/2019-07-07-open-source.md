@@ -34,3 +34,5 @@ There are a lot of resources online to help someone get into open source, here a
 * [Open Source Friday](https://opensourcefriday.com/)
 
 Being a part of the open source community isn’t something you need to spend a lot of time on. It can take days, even weeks, to figure out just where one function is being used in the code, let alone how the whole thing works. Be patient with the code, and with yourself, you will get it. :)
+
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-07-07-open-source.md)

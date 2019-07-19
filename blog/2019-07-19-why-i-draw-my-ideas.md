@@ -49,3 +49,4 @@ There are many developers (including me) who use design sites like [Dribble](htt
 
 Creating a website layout from scratch can be pretty overwelming, take some of the pressure off by sketching your ideas whenever lightning strikes. Your future self will thank you.
 
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-07-19-why-i-draw-my-ideas.md)

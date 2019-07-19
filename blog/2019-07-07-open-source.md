@@ -19,7 +19,7 @@ My first experience in open source was doing [Hacktoberfest in 2018](https://hac
 
 Hacktoberfest encourages developers (aimed for newbies) to make at least 5 PRs in October. You sign up using your GitHub profile and it tracks PRs you open. I was able to get an awesome t-shirt and stickers from the event.
 
-![Hacktober 2018 t-shirt](./images/hacktober-2018.jpg)
+![Hacktober 2018 t-shirt](./images/2019-07-07/hacktober-2018.jpg)
 _Hacktober swag_
 
 

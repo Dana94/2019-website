@@ -127,4 +127,4 @@ I am so glad to have witnessed these speakers and be present at Codeland. I’ve
 
 If you're interested in attending Codeland, you can stay up to date with their [newsletter](https://codelandconf.com/).
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-07-27-my-first-codeland-experience.md)

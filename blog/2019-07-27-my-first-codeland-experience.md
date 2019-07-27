@@ -6,7 +6,9 @@ summary: A summary of the talks I saw at Codeland 2019.
 tags: ['coding']
 ---
 
-A summary of the talks I saw at Codeland 2019.
+I recently attended Codeland in NYC. I was super pumped to meet with new developers at an event that is known to have such a welcoming and enthusiastic community.
+
+I only signed up for the talks so that is what this article will be about.
 
 ---
 
@@ -21,8 +23,9 @@ _Entrance to Skirball Center for the Performing Arts_
 
 _Kaya Thomas, @kthomas901_
 
-The first talk was by Kaya Thomas, an iOS engineer, who presented her mobile app called "We Read Too". The app is an extensive list of books featuring authors and main characters of color. Kaya’s project is so inspiring to me because, like how many ideas start, she realized something was wrong with how many popular/best seller YA books were notoriously consisted of white characters. Seeing a lack in more diverse representation being recognized, Kaya concocted a list of books that would encourage others to read stories that had characters that they could more relate to in terms of racial diversity. This list grew as she introduced the app to friends and family, recommendations can be offered to anyone through the app itself.
-Something I took away from this lecture is that even if something isn’t perfect, ship it. There will always be time to fix or enhance the app once it’s out for the public to view/test.
+The first talk was by Kaya Thomas, an iOS engineer, who presented her mobile app called "We Read Too". The app is an extensive list of books featuring authors and main characters of color. Kaya’s project is so inspiring to me because, like how many ideas start, she realized something was wrong with how many popular/best seller YA books are mostly consisted of white characters as the protagonist. Seeing a lack in more diverse representation being recognized, Kaya concocted a list of books that would encourage others to read stories that had characters that they could more relate to in terms of racial diversity. This list grew as she introduced the app to friends and family, recommendations can be offered to anyone through the app itself.
+
+Something I took away from this lecture is that even if something isn’t perfect, ship it. There will always be time to fix or enhance the app once it’s out for the public to view and test.
 
 If you’re interested in Kaya’s app, you can check it out [here](https://wereadtoo.launchaco.com/).
 
@@ -30,14 +33,16 @@ If you’re interested in Kaya’s app, you can check it out [here](https://were
 
 ## How to Fail Without Being a Loser
 
-_Katrina Owens, @kytrinyx_
+_Katrina Owen, @kytrinyx_
 
-Even before Katrina came on stage, I knew I was going like this talk just by reading the title. Honestly, I think anyone in tech needs to hear what she has to say. Katrina delved into the stages of going through a project and the many situations where you can eventually come up short as you persist. There were 3 parts where failure could happen:
+Even before Katrina came on stage, I knew I was going like this talk just from the title alone. Honestly, I think anyone in tech needs to hear what she has to say. Katrina delved into the stages of going through a project and the many situations where you can eventually come up short as you persist. 
+
+There were 3 parts where failure could happen:
 - the beginning of when you have an idea but you never even start acting on it
 - the middle when you have consistency in your work, but the drive eventually peters out
 - the end where you don’t stop (yes, this could be a bad thing)
 
-She included various stories from when she worked on her project [Exercism.io](https://exercism.io/). I also appreciated her busting some famous “Instagramish” quotes that you hear about success like “you should never quit” because it gives such a societal pressure to “keep at it” even if you aren’t happy in what you’re doing. If something is bad or even dangerous, you should quit, enough said.
+She included various stories from when she worked on her project [Exercism.io](https://exercism.io/). I also appreciated her busting some famous “Instagramish” quotes that you hear about success like “you should never quit” because it gives such a societal pressure to “keep at it” even if you aren’t happy in what you’re doing. If something is bad or even dangerous you should quit, enough said.
 
 ---
 
@@ -55,7 +60,7 @@ She even ran the program for us on her own face and showed us a condensed list o
 
 _BJ Burns, @bowtiebeej_
 
-This talk wasn’t as much about technology as it was about BJ’s experience with depression and his journey. I was very relieved to have such a deep and emotional topic like depression at a technical conference because when we think of developers, we think of what they know, what they can produce, what they can create for others, but not always considering them for their emotions (at least not in some job interviews). His talk was very motivating for anyone that has ever been in a dark place in their coding journey.
+This talk wasn’t as much about technology as it was about BJ’s experience with depression and his journey. I was very relieved to have such a deep and emotional topic like depression at a technical conference. When we think of developers, we think of what they know, what they can produce, what they can create for others, but not always considering them for their emotions (at least not in some job interviews). His talk was very motivating for anyone that has ever been in a dark place in their coding journey.
 
 I for one, have had moments of doubt when I compare myself to others (by the way, don’t ever do this). I find reading articles about other developers of all levels posting their experiences with burnout or imposter syndrome makes me feel that I am not alone.
 
@@ -106,7 +111,7 @@ It’s really quite fascinating how coding can be a part in creating art. I plan
 
 [Kristen's case study.](http://www.kristenwebster.net/projects/algorithmic-art-case-study.html)
 
-[Here are some of the art she created with her program.](http://www.kristenwebster.net/projects/algorithmic-art-gallery.html)
+[Here is some of the art she created with her program.](http://www.kristenwebster.net/projects/algorithmic-art-gallery.html)
 
 ---
 

@@ -83,7 +83,7 @@
         <div class="mb-8 lg:mb-0">
           <div>Copyright 2019. All rights reserved.</div>
           <div>
-            Footer icons by
+            Footer icons (first 4) by
             <a href="https://icons8.com/" target="_blank" class="hover:text-purple-300">icons8</a>.
           </div>
           <div>

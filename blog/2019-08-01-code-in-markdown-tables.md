@@ -10,6 +10,10 @@ tags: ['coding', 'markdown']
 
 I came across a issue with a line of code not formatted properly in a README.md today and wanted to make a note in case someone else had the same problem to Google.
 
+# Grid table
+
+## Basic example
+
 +-------+----------+------+
 | Table Headings   | Here |
 +-------+----------+------+

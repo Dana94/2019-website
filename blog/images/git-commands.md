@@ -8,7 +8,7 @@ tags: ['coding','git']
 ## Table of Contents
 
 
-## Prerequisute
+## Prerequisite
 
 Install Git from this [page](https://git-scm.com/downloads).
 
@@ -42,9 +42,9 @@ Download repo from GitHub onto your computer. The project will already be a Git 
 
 Make sure HTTPS is selected, and click the copy to clipboard button.
 
-> Add image here
+![Where to find HTTPS in GitHub](./git/git-init.png)
 
-Add the url after “git clone”
+Add the url after `git clone`.
 
 ```shell
 ~/
@@ -217,9 +217,9 @@ Pushes your local branch to the location specified. I only find myself using thi
 $ git push origin new-feature
 ```
 
-Now the branch “new-feature” is available in GitHub.
+Now the branch `new-feature` is available in GitHub.
 
-> image
+![The new branch seen in GitHub](./git/git-branch.png)
 
 `--force`
 

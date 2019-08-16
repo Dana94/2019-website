@@ -21,7 +21,7 @@ There are 2 ways I go about this:
 
 For a project you only have locally on your computer and not in GitHub.
 
-Initialize the project as a Git repository (repo). The command will automatically create the Master branch.
+Initialize the project as a Git repository (repo). The command will automatically create the `master` branch.
 
 ```shell
 ~/
@@ -34,11 +34,11 @@ $ cd sample-repo/
 $ git init
 ```
 
-Or pull down a new repo form GitHub.
+Or pull down a new repo from GitHub.
 
 `Git clone <url>`
 
-Download repo from GitHub onto your computer. The project will already be a Git repository.
+Download a repo from GitHub onto your computer. The project will already be a Git repository.
 
 Make sure HTTPS is selected, and click the copy to clipboard button.
 
@@ -53,7 +53,7 @@ $ git clone https://github.com/Dana94/git-example.git
 
 ## Creating branches
 
-It’s important to not work in your base branch (normally called “master”). Make sure to be constantly working in separate branches for different features.
+It’s important to not work in your base branch (usually this is `master`). Make sure to be constantly working in separate branches for different features.
 
 `Git checkout <branch-name>`
 
@@ -115,7 +115,7 @@ I commonly use this flag which stages all file changes.
 
 `.`
 
-Stages all new files and modifications without deletions (thanks to this post for clarifying that).
+Stages all new files and modifications without deletions ([thanks to this post for clarifying that](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add?rq=1)).
 
 ```shell
 ~/git-example (new-feature)
@@ -136,7 +136,7 @@ Commit your changes. Can only be done once you’ve staged any file(s).
 
 ```-m```
 
-I never use this command without this flag, add a short description to describe the changes you've made.
+I never use this command without this flag. Add a short description to describe the changes you've made.
 
 ```shell
 ~/git-example (new-feature)
@@ -148,19 +148,19 @@ $ git commit -m "add new file"
 
 `git log`
 
-List recent commit messages.
+List most recent commit messages.
 
 ```shell
 ~/git-example (new-feature)
 $ git log
 commit bbf2f75624e2b29f8a8e11186f4ad5833f7776ee
-Author: Dana Ottaviani <dana.ottaviani@gmail.com>
+Author: Dana Ottaviani
 Date:   Wed Aug 14 09:41:57 2019 -0400
 
     add new file
 
 commit a005981daa9cd2a1645f8a78fd0fcc12c6e461c5
-Author: Dana Ottaviani <dana.ottaviani@gmail.com>
+Author: Dana Ottaviani
 Date:   Wed Aug 14 08:51:52 2019 -0400
 
     Create README.md
@@ -168,7 +168,7 @@ Date:   Wed Aug 14 08:51:52 2019 -0400
 
 ## Set Up Remote Tracking
 
-Remote tracking can be used for connecting your repo to the remote one in GitHub, or for updating a forked repo (copied a user’s repo).
+Remote tracking can be used for connecting your repo to the remote one in GitHub, or for updating a forked repo (copy another user’s repo).
 
 `git remote`
 
@@ -186,7 +186,7 @@ Shows the urls associated with each repos that you are tracking. Some common one
 
 `origin` – your repo connected to GitHub.
 
-`upstream` – if your repo if forked, this label will coincide to the original repo. Useful for making sure your forked copy stays updated with the original.
+`upstream` – if your repo is forked, this label will coincide to the original repo. Useful for making sure your forked copy stays updated with the original.
 
 ```shell
 ~/git-example (master)
@@ -197,7 +197,7 @@ origin  https://github.com/Dana94/git-example.git (push)
 
 `git remote add <tracking-name> <url>`
 
-Adding a new repo to track. The example shows how to set up `origin` as the local project’s repo in GitHub. The url is the same used for cloning the project.
+Add a new repo to track. The example shows how to set up `origin` as the local project’s repo in GitHub. The url is the same used for cloning the project.
 
 ```shell
 ~/git-example (master)
@@ -210,7 +210,7 @@ $ git remote add origin https://github.com/Dana94/git-example.git
 
 `git push <tracking-name> <branch-name>`
 
-Pushes your local branch to the location specified. I only find myself using this to push to the repo tracked in GitHub (remote).
+Pushes your local branch to the location specified.
 
 ```shell
 ~/git-example (new-feature)
@@ -254,7 +254,7 @@ nothing to commit, working directory clean
 
 `git pull <tracking-name>`
 
-Downloads the files from the specified repo and merges them with your local branch.
+Downloads the files from the specified repo _and_ merges them into your local branch.
 
 ```shell
 ~/git-example (master)
@@ -265,8 +265,7 @@ Fast-forward
  1 file changed, 1 insertion(+)
  create mode 100644 app.js
  ```
-
+ 
 Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I hoped this helps a beginner in the start of using Git. If there is more clarification needed, open an issue and I’d be happy to remedy this. 
 
-
-> Edit post link
+[Found a typo or problem? Edit this page.]()

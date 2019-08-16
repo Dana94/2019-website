@@ -206,7 +206,7 @@ $ git remote add origin https://github.com/Dana94/git-example.git
 
 ## Updating Repo
 
-> description
+As you work on your projects, you need to make sure it's constantly backed up in GitHub. Make sure to merge often into your base branch (`master`) when it's safe to. 
 
 `git push <tracking-name> <branch-name>`
 
@@ -265,7 +265,7 @@ Fast-forward
  1 file changed, 1 insertion(+)
  create mode 100644 app.js
  ```
- 
+
 Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I hoped this helps a beginner in the start of using Git. If there is more clarification needed, open an issue and I’d be happy to remedy this. 
 
 [Found a typo or problem? Edit this page.]()

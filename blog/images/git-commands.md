@@ -5,8 +5,12 @@ date: 2019-08-16
 tags: ['coding','git']
 ---
 
-## Table of Contents
+I started using Git about 3 years ago. While I don’t always remember all the commands on the top of my head, I thought to create a list to keep track of the ones I currently use with a small blurb of what each one does.
 
+Some of the commands have multiple flag options to use, if I don’t mention them here, it’s because I don’t use it myself.
+
+
+## Table of Contents
 
 ## Prerequisite
 
@@ -17,7 +21,7 @@ There are 2 ways I go about this:
 
 ## Initialize
 
-`Git init`
+`git init`
 
 For a project you only have locally on your computer and not in GitHub.
 
@@ -36,7 +40,7 @@ $ git init
 
 Or pull down a new repo from GitHub.
 
-`Git clone <url>`
+`git clone <url>`
 
 Download a repo from GitHub onto your computer. The project will already be a Git repository.
 
@@ -55,13 +59,13 @@ $ git clone https://github.com/Dana94/git-example.git
 
 It’s important to not work in your base branch (usually this is `master`). Make sure to be constantly working in separate branches for different features.
 
-`Git checkout <branch-name>`
+`git checkout <branch-name>`
 
 Changes the branch you are currently working in to the one you specify. This will only work if the branch you want to change to already exists.
 
 To create a new branch and check it out:
 
-`Git checkout –b <new-branch-name>`
+`git checkout –b <new-branch-name>`
 
 ```shell
 ~/git-example (master)
@@ -73,7 +77,7 @@ $ git checkout master
 Switched to branch 'master'
 ```
 
-`Git branch`
+`git branch`
 
 Displays a list of the branches in your repo. The branch with an asterisk next to it is the one you are currently working in.
 
@@ -109,13 +113,11 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Stage edited files.
 
-`-A`
+### Flag Options
 
-I commonly use this flag which stages all file changes.
+- `-A`I commonly use this flag which stages all file changes.
 
-`.`
-
-Stages all new files and modifications without deletions ([thanks to this post for clarifying that](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add?rq=1)).
+- `.` Stages all new files and modifications without deletions ([thanks to this post for clarifying that](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add?rq=1)).
 
 ```shell
 ~/git-example (new-feature)
@@ -130,13 +132,13 @@ Changes to be committed:
         new file:   sample.txt
 ```
 
-```git commit```
+`git commit`
 
 Commit your changes. Can only be done once you’ve staged any file(s).
 
-```-m```
+### Flag Options
 
-I never use this command without this flag. Add a short description to describe the changes you've made.
+- `-m` Add a short description to describe the changes you've made.
 
 ```shell
 ~/git-example (new-feature)
@@ -148,7 +150,7 @@ $ git commit -m "add new file"
 
 `git log`
 
-List most recent commit messages.
+List the most recent commit messages.
 
 ```shell
 ~/git-example (new-feature)
@@ -180,9 +182,9 @@ $ git remote
 origin
 ```
 
-`-v`
+### Flag Options
 
-Shows the urls associated with each repos that you are tracking. Some common ones you’ll see are:
+- `-v` Shows the url associated with each repo that you are tracking. Some common ones you’ll see are `origin` and `upstream`.
 
 `origin` – your repo connected to GitHub.
 
@@ -221,10 +223,9 @@ Now the branch `new-feature` is available in GitHub.
 
 ![The new branch seen in GitHub](./git/git-branch.png)
 
-`--force`
+### Flag Options
 
-Overwrites any history currently on the branch in origin with the history of the branch you have locally.
-
+- `--force` Overwrites any history currently on the branch in origin with the history of the branch you have locally.
 This flag would be useful when you have forked a repo from an organization whose branch is more commits ahead than yours and you need to fix that.
 
 `git fetch <tracking-name>`
@@ -266,6 +267,6 @@ Fast-forward
  create mode 100644 app.js
  ```
 
-Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I hoped this helps a beginner in the start of using Git. If there is more clarification needed, open an issue and I’d be happy to remedy this. 
+Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I hoped this helps a beginner in the start of using Git. 
 
 [Found a typo or problem? Edit this page.]()

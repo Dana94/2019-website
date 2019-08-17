@@ -263,4 +263,4 @@ Fast-forward
 
 Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I found these to be the most commonly used commands in both my personal work and when working with colleagues.
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-08-17-git-commands-i-currently-use.md)

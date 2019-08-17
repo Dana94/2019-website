@@ -113,9 +113,7 @@ nothing added to commit but untracked files present (use "git add" to track)
 
 Stage edited files.
 
-### Flag Options
-
-- `-A`I commonly use this flag which stages all file changes.
+- `-A` I commonly use this flag which stages all file changes.
 
 - `.` Stages all new files and modifications without deletions ([thanks to this post for clarifying that](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add?rq=1)).
 
@@ -135,8 +133,6 @@ Changes to be committed:
 `git commit`
 
 Commit your changes. Can only be done once you’ve staged any file(s).
-
-### Flag Options
 
 - `-m` Add a short description to describe the changes you've made.
 
@@ -182,8 +178,6 @@ $ git remote
 origin
 ```
 
-### Flag Options
-
 - `-v` Shows the url associated with each repo that you are tracking. Some common ones you’ll see are `origin` and `upstream`.
 
 `origin` – your repo connected to GitHub.
@@ -222,8 +216,6 @@ $ git push origin new-feature
 Now the branch `new-feature` is available in GitHub.
 
 ![The new branch seen in GitHub](./git/git-branch.png)
-
-### Flag Options
 
 - `--force` Overwrites any history currently on the branch in origin with the history of the branch you have locally.
 This flag would be useful when you have forked a repo from an organization whose branch is more commits ahead than yours and you need to fix that.

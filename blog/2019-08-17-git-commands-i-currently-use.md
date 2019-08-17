@@ -1,7 +1,8 @@
 ---
 title: Git Commands I Currently Use
 path: git-commands-i-currently-use
-date: 2019-08-16
+date: 2019-08-17
+summary: I started using Git about 3 years ago. While I don’t always remember all the commands on the top of my head, I thought to create a list to keep track of the ones I currently use with a small blurb of what each one does.
 tags: ['coding','git']
 ---
 
@@ -16,7 +17,8 @@ Some of the commands have multiple flag options to use, if I don’t mention the
 
 Install Git from this [page](https://git-scm.com/downloads).
 
-You cannot immediately use Git in a project until the project is initialized for it.
+You cannot immediately use Git until the project is initialized for it.
+
 There are 2 ways I go about this:
 
 ## Initialize
@@ -46,7 +48,7 @@ Download a repo from GitHub onto your computer. The project will already be a Gi
 
 Make sure HTTPS is selected, and click the copy to clipboard button.
 
-![Where to find HTTPS in GitHub](./git/git-init.png)
+![Where to find HTTPS in GitHub](./images/2019-08-17/git-init.png)
 
 Add the url after `git clone`.
 
@@ -55,13 +57,13 @@ Add the url after `git clone`.
 $ git clone https://github.com/Dana94/git-example.git
 ```
 
-## Creating branches
+## Creating Branches
 
 It’s important to not work in your base branch (usually this is `master`). Make sure to be constantly working in separate branches for different features.
 
 `git checkout <branch-name>`
 
-Changes the branch you are currently working in to the one you specify. This will only work if the branch you want to change to already exists.
+Changes the branch you are currently working in to the one you specify. This will only work if the branch you want to switch to already exists.
 
 To create a new branch and check it out:
 
@@ -79,7 +81,7 @@ Switched to branch 'master'
 
 `git branch`
 
-Displays a list of the branches in your repo. The branch with an asterisk next to it is the one you are currently working in.
+Displays a list of the branches in your repo. The branch with an asterisk is the one you are currently working in.
 
 ```shell
 ~/git-example (master)
@@ -166,7 +168,7 @@ Date:   Wed Aug 14 08:51:52 2019 -0400
 
 ## Set Up Remote Tracking
 
-Remote tracking can be used for connecting your repo to the remote one in GitHub, or for updating a forked repo (copy another user’s repo).
+Remote tracking can be used for connecting your repo to the remote one in GitHub, or for updating a forked repo (copy of another user’s repo).
 
 `git remote`
 
@@ -180,9 +182,9 @@ origin
 
 - `-v` Shows the url associated with each repo that you are tracking. Some common ones you’ll see are `origin` and `upstream`.
 
-`origin` – your repo connected to GitHub.
+`origin` – Your repo connected to GitHub.
 
-`upstream` – if your repo is forked, this label will coincide to the original repo. Useful for making sure your forked copy stays updated with the original.
+`upstream` – If your repo is forked, this label will coincide to the original repo. This is useful for making sure your forked copy stays updated with the original.
 
 ```shell
 ~/git-example (master)
@@ -215,10 +217,10 @@ $ git push origin new-feature
 
 Now the branch `new-feature` is available in GitHub.
 
-![The new branch seen in GitHub](./git/git-branch.png)
+![The new branch seen in GitHub](./images/2019-08-17/git-branch.png)
 
 - `--force` Overwrites any history currently on the branch in origin with the history of the branch you have locally.
-This flag would be useful when you have forked a repo from an organization whose branch is more commits ahead than yours and you need to fix that.
+This flag would be useful when you have forked a repo from an organization whose branch is more commits ahead than yours and you need to update your copy.
 
 `git fetch <tracking-name>`
 
@@ -259,6 +261,6 @@ Fast-forward
  create mode 100644 app.js
  ```
 
-Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I hoped this helps a beginner in the start of using Git. 
+Aside from using the command line, I do use a Git client called [GitKraken](https://www.gitkraken.com/git-client) for its visual representation of my ongoing work. I still have a lot of Git knowledge to retain, but I found these to be the most commonly used commands in both my personal work and when working with colleagues.
 
 [Found a typo or problem? Edit this page.]()

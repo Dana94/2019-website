@@ -1,12 +1,12 @@
 ---
 title: Coders by Clive Thompson – Review – Part 1
 path: coders-review-part-1
-date: 2019-08-28
+date: 2019-09-05
 summary: I encourage every programmer to read Coders by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
 tags: ['coding']
 ---
 
-I encourage every programmer to read Coders by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
+I encourage every programmer to read ***_Coders_*** by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
 
 I had to split this review into 2 parts because there is a lot I wanted to emphasize.
 
@@ -18,11 +18,11 @@ I have many thoughts about the sought-after programmer that fits the title of a 
 
 I learned of the term “10X” coder for the first time when reading this book. Coincidentally, it was the around the same time this [Twitter post came out](https://twitter.com/skirani/status/1149302834619248640) where someone encouraged startups to hire as many “10X” coders as they can. The post suggested ways to point out these needed developers by identifying those who “hate meetings”, are “poor mentors” and other traits that may be seen as negative to a company’s culture.
 
-This post makes my skin crawl. I completely disagree with this person’s opinion. This is a bias view on the fact that start-ups must hire such lone wolf coders to make their company a success. Of course, their success is measured by how much software the “10X” will produce for them, but based on how much difficulty they may be with other employees or perhaps their egotistical methods may do more harm than good? Why would you want someone to work for you that doesn’t like working with others?
+I completely disagree with this person’s opinion. This is a bias view on the fact that start-ups must hire such lone wolf coders to make their company a success. Of course, their success is measured by how much software the “10X” will produce for them. But perhaps their methods may do more harm than good? Why would you want someone to work for you that doesn’t like working with others?
 
-The belief of companies needing to hire only those considered “10X programmers” leaves a lot to be said about the company itself. A company’s main goal is to see themselves thrive, to continue to exist with their idea that somehow outlives those other rivals by only hiring the best of the best in technology that know their craft. Of course, focusing primarily on what the developers can do leaves out the question if they are a good fit to working with others as well. It’s the developers I’ve known that aren’t considered “10X” that witness the flaws of these so called “shining devs”. Condescending and god-like arrogance makes them inadequate to work with others. “Brilliant jerks” are just as likely, if not more, to leave technical debt in their wake with the workload they do. 
+The belief of companies needing to hire only those considered “10X programmers” leaves a lot to be said about the company itself. A company’s main goal is to see themselves thrive, to continue to exist with their idea that somehow outlives those other rivals by only hiring the best of the best in technology that know their craft. Of course, focusing primarily on what the developers can do leaves out the question if they are a good fit to working with others as well. It’s the developers I’ve known that aren’t considered “10X” that witness the flaws of these so called “shining devs”. Condescending and god-like arrogance makes them incapable to work with others. “Brilliant jerks” are just as likely, if not more, to leave technical debt in their wake with the workload they do. 
 
-It’s a typical scenario to accept a “young, white dude” to express such ridiculous behavior in an office setting. A woman wouldn’t get away with that type of behavior, considering we would be considered hard to work with just for debating with self-entitled developers. (I want to make clear that I don’t think all programmers that do display a high knowledge of their craft are arrogant, but it concerns me that even if they are, employers won’t always consider that’s a problem.)
+It’s a typical scenario to accept a “young, white dude” to express such ridiculous attitude in an office setting. A woman wouldn’t get away with that type of behavior, considering we would be considered hard to work with just for debating with self-entitled developers. (I want to make clear that I don’t think all programmers that do display a high knowledge of their craft are arrogant, but it concerns me that even if they are, employers won’t always consider that a problem.)
 
 ## 'GitHub is your résumé' (pg. 170)
 
@@ -42,13 +42,13 @@ When one of Google’s developers gave him an algorithm question, he replied:
 
 > _“’I clearly have no idea,...I don’t know what you’re talking about. I’ve never taken a programming course!’” (pg. 183)_
 
-Crowley’s honesty to the Google interviewer’s shows that you don’t need to know every algorithm or have the aptitude to solve engineering puzzles to be able to make a head-turning program. There is always going to be someone better than you, you need to accept that and enjoy just building something.
+Crowley’s honesty to the Google interviewer’s shows that you don’t need to know every algorithm or have the penchant to solve engineering puzzles to be able to make a head-turning program. There is always going to be someone better than you, you need to accept that and enjoy just building something.
 
 ## The first programmers were women
 
-When coding jobs started out in the 50‘s and 60’s, men did not have the advantage of experience over women in this career since it was such a new field. The only testing done for potential programmers was an aptitude test which women regularly passed. They were payed to learn programming from the company that hired them. This was a big deal considering other highly paid career fields such as law or engineering hardly accepted women.
+When coding jobs started out in the 50‘s and 60’s, men did not have the advantage of experience over women in this career since it was such a new field. The only testing done for potential programmers was an aptitude test which women regularly passed. They were paid to learn programming from the company that hired them. This was a big deal considering other highly paid career fields such as law or engineering hardly accepted women.
 
-Things unfortunately began to change when companies were realizing how much they needed to emphasize the importance of coders in their business. Putting such a strong emphasis on programming was leading to deciding who should be hired for such a task.
+Things unfortunately began to change when companies were realizing how much they needed to emphasize the importance of coders in their business. Putting such a strong emphasis on programming led to deciding who should be hired for such a task.
 
 Some companies required a degree to be even considered a programmer in their company. Women were, needless to say, lacking in the higher education department and their roles were beginning to be replaced by those with the specific requirements, men.
 
@@ -62,9 +62,9 @@ While studying CS in college, I felt consciously aware that I was one of the few
 
 ## Dark side of machine learning
 
-Incorporating real-world data for machine learning comes with cons of its own. Robyn Speer, the cofounder and chief science officer of Luminoso, analyzed online restaurant reviews using an algorithm applied with “word embeddings” to associate certain words with others. Like a country would be associated with the words of its cities. She noticed that when using her algorithm, Mexican restaurants were receiving a lower rank. Turns out, they were given negative connotation because the word Mexican was considered a negative word from information on the internet. This was also happening for pronouns. He was connected to programmer or boss and she with librarian and receptionist. If our real-world information is so ingrained with hate and prejudice, why use this data? Wouldn’t it make sense to manually program the machine to consider that it makes no difference if a person is a he, she, they, etc. they should all have the same association with being a chef, secretary, programmer, lawyer, etc? Yes, it would not reflect the same opinions from the “real” data, but at least the machine wouldn’t be having this prejudice opinion when using the data to automate in practice in the real world.
+Incorporating real-world data for machine learning comes with cons of its own. Robyn Speer, the cofounder and chief science officer of Luminoso, analyzed online restaurant reviews using an algorithm applied with “word embeddings” to associate certain words with others. Like a country would be associated with the words of its cities. She noticed that when using her algorithm, Mexican restaurants were receiving a lower rank. Turns out, they were given negative connotation because the word Mexican was considered a negative word from information on the internet. This was also happening for pronouns. "He" was connected to programmer or boss and "she" with librarian and receptionist. If our real-world information is so ingrained with hate and prejudice, why use this data? Wouldn’t it make sense to manually program the machine to consider that it makes no difference if a person is a he, she, they, so they could all have the same association with being a chef, secretary, programmer, lawyer, etc? Yes, it would not reflect the same opinions from the “real” data, but at least the machine wouldn’t be having this prejudice opinion when using the data to automate in practice in the real world.
 
-COMPAS is an example of when relying on machine learning can make things go from bad to worse. The firm Northpointe created a system to aid overloaded judges to determine if a defendant will reoffend in the future. The system labeled black defendants more likely to reoffend than those who were white, not considering the person has made changes in their life to clean up their act based on preexisting data. This is why those creating the software need to not only care about speed, efficiency, clean code, but also who and what the software is affecting. Engineers need to have empathy, awareness, and the knowledge to realize that their creation might be doing more harm than good when it’s used.
+COMPAS is an example of when relying on machine learning can make things go from bad to worse. The firm Northpointe created a system to aid overloaded judges to determine if a defendant will reoffend in the future. The system labeled black defendants more likely to reoffend than those who were white, not considering the person has made changes in their life to clean up their act based on preexisting data. This is why those creating the software need to not only care about speed, efficiency, clean code, but also _who_ and _what_ the software is affecting. Engineers need to have empathy, awareness, and the knowledge to realize that their creation might be doing more harm than good when it’s used.
 
 ## “When are the machines going to rise up and kill us?” (pg. 298)
 

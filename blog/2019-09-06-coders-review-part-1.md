@@ -72,4 +72,4 @@ Nick Bostrom, who is a philosopher leading the Future of Humanity Institute at t
 
 > _“’Before the prospect of an intelligence explosion, we humans are like small children playing with a bomb,’ Bostrom writes. ‘We have little idea when the detonation will occur, though if we hold the device to our ear we can hear a faint ticking sound.’” (pg. 300)_
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-09-06-coders-review-part-1.md)

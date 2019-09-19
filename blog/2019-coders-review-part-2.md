@@ -1,7 +1,7 @@
 ---
 title: Coders by Clive Thompson – Review – Part 2
 path: coders-review-part-2
-date: 2019
+date: 2019-09-19
 tags: ['coding']
 ---
 
@@ -9,66 +9,65 @@ I encourage every programmer to read ***_Coders_*** by Clive Thompson. This book
 
 I had to split this review into 2 parts because there is a lot I wanted to emphasize.
 
-## 10X programmers
+## Uncontrolled Social Problems Online
 
-> _"This belief in the unicorn programmer isn’t just a piece of pop culture. Indeed, in the real world of software, it’s so well known that the concept has a name: the “10X” coder. As the moniker suggests, it describes a programmer who is provably better, multiple times so, than the average code monkey." (pg. 150-151)_
+I was glad to find a chapter that included the relentless harassment users can face when being involved on the web.
 
-I have many thoughts about the sought-after programmer that fits the title of a “unicorn”. For one, I don’t believe it’s fair to demote everyone to the term “code monkey” if you don’t fit this criteria. It’s an insult to all the different knowledge coders have gained through their experiences on their own journey. 
+While some activist groups like #metoo and #blacklivesmatter were trying to make the public aware of existing issues in our society, there were some communities that were trying to use the platform to spread hatred and threaten violence. A well-known campaign was Gamergate which groups mostly comprised of men harassed women who criticized the sexism in games and worked in the game industry themselves.
 
-I learned of the term “10X” coder for the first time when reading this book. Coincidentally, it was the around the same time this [Twitter post came out](https://twitter.com/skirani/status/1149302834619248640) where someone encouraged startups to hire as many “10X” coders as they can. The post suggested ways to point out these needed developers by identifying those who “hate meetings”, are “poor mentors” and other traits that may be seen as negative to a company’s culture.
+Later on, Twitter regretted not taking action sooner when these hate groups were first emerging.
 
-I completely disagree with this person’s opinion. This is a bias view on the fact that start-ups must hire such lone wolf coders to make their company a success. Of course, their success is measured by how much software the “10X” will produce for them. But perhaps their methods may do more harm than good? Why would you want someone to work for you that doesn’t like working with others?
+> _"The young guys of Twitter had little intuition about the scope of the problem, which made it hard, when Gamergate was ongoing, to even realize how bad it had become." (pg. 327)_
 
-The belief of companies needing to hire only those considered “10X programmers” leaves a lot to be said about the company itself. A company’s main goal is to see themselves thrive, to continue to exist with their idea that somehow outlives those other rivals by only hiring the best of the best in technology that know their craft. Of course, focusing primarily on what the developers can do leaves out the question if they are a good fit to working with others as well. It’s the developers I’ve known that aren’t considered “10X” that witness the flaws of these so called “shining devs”. Condescending and god-like arrogance makes them incapable to work with others. “Brilliant jerks” are just as likely, if not more, to leave technical debt in their wake with the workload they do. 
+I wonder if more women were engineers at Twitter at the time, would there have been more of a system in place to expect the possibility of attacks online and to deflect its impact.
 
-It’s a typical scenario to accept a “young, white dude” to express such ridiculous attitude in an office setting. A woman wouldn’t get away with that type of behavior, considering we would be considered hard to work with just for debating with self-entitled developers. (I want to make clear that I don’t think all programmers that do display a high knowledge of their craft are arrogant, but it concerns me that even if they are, employers won’t always consider that a problem.)
+I wanted to point out that someone did go out of his way to try to address the issue. Jacob Hoffman-Andrews, who previously worked as an engineer at Twitter, created Block Together. Realizing that users being attacked online were targeted by the same hate-groups, he created an app where lists of blocked accounts can be shared between those who subscribe to a user’s list. This saved time for someone to manually block the hundreds of accounts that targeted others receiving the same attacks. 
 
-## 'GitHub is your résumé' (pg. 170)
+I appreciate that Hoffman-Andrews sought out a way to alleviate this problem even after he already left Twitter after witnessing the uncontrollable “dogpiling” on the site. If Twitter had gotten control of the situation sooner, maybe things would not have gotten as bad as they did.
 
-> _“Even the world of open source becomes rather less of a mediocracy the closer one looks. After all, it’s predicted on a coder having tons of free time to crank away on volunteer labor. This works remarkably well for full time-rich young people but less so for anyone with lots of coding talent but more real-world responsibilities.” (pg. 170)_
+Aside from harassment, we can all agree that there are some extremely inappropriate (if not illegal) content on the internet. Online moderators is definitely a thankless job. They spend their hours purposely searching for obscene, horrific, or damaging material online just to report or remove it. Unfortunately, this is a job that we don’t expect to be able to use AI for because the data teaching machines is problematic in itself. What if the messages were filtered before posting them? Cursing would be obvious, but what about common statements initiating threats to others? It’s easier to lock the gate than to wrangle the horses once they’ve left the stable.
 
-I don’t believe it’s fair to think that a coder should have a full GitHub profile to show-off to potential employers. Many of the people I follow on GitHub are working full-time so it doesn’t surprise me to see their contributions more stagnant, especially during the work week.
+## Standing Against Your Company’s Decisions
 
-In my last job, I felt burnt out often from staring at a screen for about 8 hours a day, and then be expected to carry myself to my desk at home to type out more code to prove I was still a programmer in my off time.
+When Google employees found out their company was involved in building technology for the military drones for image recognition, there was strong pushback.
 
-## You don’t need to know everything
+> _“’We believe that Google should not be in the business of war,’” (pg. 339)_
 
-Dennis Crowley created an app called Dodgeball to connect groups of friends together (inspired by the Marauder’s Map from Harry Potter). When it caught the interest of Google, his code was reviewed by many engineers. They were less than impressed with what they were seeing under the hood.
+This eventually led some developers to leave the company to go work somewhere that followed their moral code.
 
-After questioning Crowley about his app, it was made clear that he didn’t have the knowledge that they have, and that was okay. Because it’s not all aptitude that makes a great app, it was Crowley’s idea that made it a possibility and it wasn’t something any Google developer could surpass him with.
+This reminds me of Microsoft and Amazon’s involvement in contributing to ICE. I’m glad to hear that those creating the software have a voice to say no to contribute to technology that would be involved in the military.
 
-When one of Google’s developers gave him an algorithm question, he replied:
+As long as software developers are in high demand, you should be picking up more than what’s on a job board online. Care about what the company does! Your work goes towards making them successful, not everyone has this luxury.
 
-> _“’I clearly have no idea,...I don’t know what you’re talking about. I’ve never taken a programming course!’” (pg. 183)_
+## Coding can be considered a Blue-Collar Job
 
-Crowley’s honesty to the Google interviewer’s shows that you don’t need to know every algorithm or have the penchant to solve engineering puzzles to be able to make a head-turning program. There is always going to be someone better than you, you need to accept that and enjoy just building something.
+There is a chapter that describes the notion of coding becoming a blue-color job for its common use in almost every company. 
 
-## The first programmers were women
+When Rusty Justice (who worked in the mining industry) decided to teach coal miners to code, he was treated with skepticism. Despite that, he took miners into an intensive program to teach them the basics of coding in order to make them technology able to find more substantial careers. 
 
-When coding jobs started out in the 50‘s and 60’s, men did not have the advantage of experience over women in this career since it was such a new field. The only testing done for potential programmers was an aptitude test which women regularly passed. They were paid to learn programming from the company that hired them. This was a big deal considering other highly paid career fields such as law or engineering hardly accepted women.
+I found this story inspiring not only because of the miners learning new skills, but for battling stereotypes imposed on them from others. This can relate to being bias towards older programmers that aren’t fresh out of college and wish to change careers into a more technical role. 
 
-Things unfortunately began to change when companies were realizing how much they needed to emphasize the importance of coders in their business. Putting such a strong emphasis on programming led to deciding who should be hired for such a task.
+## Another Way to Hire
 
-Some companies required a degree to be even considered a programmer in their company. Women were, needless to say, lacking in the higher education department and their roles were beginning to be replaced by those with the specific requirements, men.
+While companies were finding developers using resumes and interviews, a Baltimore software firm called Catalyte decided to take a different approach to the hiring process. They administered an aptitude test in locations that didn’t normally have a high offer of coders to come apply to them. Those who scored well were given proper training and a guaranteed job.
 
-> _“’As it became a profession…it became an avenue that woman were pretty much shut out if-in general.’” (pg. 195)_
+I found the aptitude test in Baltimore relates to how things were done in the ‘50s and 60’s. When the hiring process was like this, more women were hired compared to men for programming jobs.
 
-> _“As sociologists have long noted, when a field suddenly becomes increasingly well paid and prominent, men who previously spurned it rush in: We’ll take this over now, ladies, thank you very much.” (pg. 195)_
+The firm’s test results resulted in a diverse group of people from different racial and working class backgrounds. This enabled the company to find more people who had experience and a different perspective.
 
-To relate to the correlation of women in higher education: Since 1984, women have never peaked any higher in pursuing bachelors in Computer Science. A factor in this resulted from when they were first introduced to the concept of programming at a young age. Parents tend to expect their son(s) to receive a computer to hack away on, while the daughter(s) were not given such exposure. Another was the culture the women experienced while studying the field. 
+## Not All Coding Jobs Are Considered Equal
 
-While studying CS in college, I felt consciously aware that I was one of the few people (and usually the only women coincidentally) who wasn’t programming since I was 10. I certainly was nervous to ask about basic programming in class with some men snickering in the back of the classroom. It was not uncommon for them to not even engage in what the professor was saying, claiming they knew the topic already. 
+It seems as coding has become more diverse in fields, so has the salary range expectations for a role. The book mentions the perspective of some developers who consider “front-end” jobs (using HTML, CSS which is what’s encouraged to learn for any newbie coder) not real coding because it’s not complex enough. I’d like to see those who say this try to get a site to look appealing and functional on Internet Explorer.
 
-## Dark side of machine learning
+I wonder what determines the significant salary difference between front-end and back-end jobs. Could it be because women are more likely to work in front-end roles?
 
-Incorporating real-world data for machine learning comes with cons of its own. Robyn Speer, the cofounder and chief science officer of Luminoso, analyzed online restaurant reviews using an algorithm applied with “word embeddings” to associate certain words with others. Like a country would be associated with the words of its cities. She noticed that when using her algorithm, Mexican restaurants were receiving a lower rank. Turns out, they were given negative connotation because the word Mexican was considered a negative word from information on the internet. This was also happening for pronouns. "He" was connected to programmer or boss and "she" with librarian and receptionist. If our real-world information is so ingrained with hate and prejudice, why use this data? Wouldn’t it make sense to manually program the machine to consider that it makes no difference if a person is a he, she, they, so they could all have the same association with being a chef, secretary, programmer, lawyer, etc? Yes, it would not reflect the same opinions from the “real” data, but at least the machine wouldn’t be having this prejudice opinion when using the data to automate in practice in the real world.
+There are even some senior programmers that are not happy with how organizations are attempting to make the transition into learning coding easier for those with no technical experience.
 
-COMPAS is an example of when relying on machine learning can make things go from bad to worse. The firm Northpointe created a system to aid overloaded judges to determine if a defendant will reoffend in the future. The system labeled black defendants more likely to reoffend than those who were white, not considering the person has made changes in their life to clean up their act based on preexisting data. This is why those creating the software need to not only care about speed, efficiency, clean code, but also _who_ and _what_ the software is affecting. Engineers need to have empathy, awareness, and the knowledge to realize that their creation might be doing more harm than good when it’s used.
+One computer scientist, Edsger W. Dijkstra, expresses his scorn for higher-level languages that were easier to understand because of their English-like appearance:
 
-## “When are the machines going to rise up and kill us?” (pg. 298)
+> _“But Dijkstra’s disdain was also pure snobbishness, a sense that you shouldn’t even try to make coding easier for the beginner. For him, a central glory of coding seemed to lie precisely in its difficulty, that it chased people away, leaving only the monk-like devotees behind, to ponder their ASCII printouts in blissful silence.” (pg. 368)_
 
-Nick Bostrom, who is a philosopher leading the Future of Humanity Institute at the University of Oxford, is one of the many who believes as technology evolves, it will inherently be the bane of our existence. He is constantly trying to figure out what will kill off humanity first. He believes that it’s AI that will eventually be our doom. 
+I don’t understand the opinion of those who don’t want to make coding easier for beginners to learn. At one end of the spectrum, there are all these “programming 101” sites that keep it fun and simple for a newbie while encouraging the learner to challenge themselves to progress. The other end looks down on these implications and insists that coding should only be done by those who get it.
 
-> _“’Before the prospect of an intelligence explosion, we humans are like small children playing with a bomb,’ Bostrom writes. ‘We have little idea when the detonation will occur, though if we hold the device to our ear we can hear a faint ticking sound.’” (pg. 300)_
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-09-06-coders-review-part-1.md)
+[Found a typo or problem? Edit this page.]()

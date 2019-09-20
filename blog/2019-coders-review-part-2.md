@@ -2,6 +2,7 @@
 title: Coders by Clive Thompson – Review – Part 2
 path: coders-review-part-2
 date: 2019-09-19
+summary: I encourage every programmer to read Coders by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
 tags: ['coding']
 ---
 
@@ -9,7 +10,9 @@ I encourage every programmer to read ***_Coders_*** by Clive Thompson. This book
 
 I had to split this review into 2 parts because there is a lot I wanted to emphasize.
 
-## Uncontrolled Social Problems Online
+[Read part 1.]()
+
+## Uncontrolled social problems online
 
 I was glad to find a chapter that included the relentless harassment users can face when being involved on the web.
 
@@ -25,9 +28,9 @@ I wanted to point out that someone did go out of his way to try to address the i
 
 I appreciate that Hoffman-Andrews sought out a way to alleviate this problem even after he already left Twitter after witnessing the uncontrollable “dogpiling” on the site. If Twitter had gotten control of the situation sooner, maybe things would not have gotten as bad as they did.
 
-Aside from harassment, we can all agree that there are some extremely inappropriate (if not illegal) content on the internet. Online moderators is definitely a thankless job. They spend their hours purposely searching for obscene, horrific, or damaging material online just to report or remove it. Unfortunately, this is a job that we don’t expect to be able to use AI for because the data teaching machines is problematic in itself. What if the messages were filtered before posting them? Cursing would be obvious, but what about common statements initiating threats to others? It’s easier to lock the gate than to wrangle the horses once they’ve left the stable.
+Aside from harassment, we can all agree that there are some extremely inappropriate (if not illegal) content on the internet. Online moderators is definitely a thankless job. They spend their hours _purposely searching_ for obscene, horrific, or damaging material online just to report or remove it. Unfortunately, this is a job that we don’t expect to be able to use AI for because the data teaching machines is problematic in itself. What if the messages were filtered _before_ posting them? Cursing would be obvious, but what about common statements initiating threats to others? It’s easier to lock the gate than to wrangle the horses once they’ve left the stable.
 
-## Standing Against Your Company’s Decisions
+## Standing against your company’s decisions
 
 When Google employees found out their company was involved in building technology for the military drones for image recognition, there was strong pushback.
 
@@ -39,7 +42,7 @@ This reminds me of Microsoft and Amazon’s involvement in contributing to ICE. 
 
 As long as software developers are in high demand, you should be picking up more than what’s on a job board online. Care about what the company does! Your work goes towards making them successful, not everyone has this luxury.
 
-## Coding can be considered a Blue-Collar Job
+## Coding can be considered a blue-collar job
 
 There is a chapter that describes the notion of coding becoming a blue-color job for its common use in almost every company. 
 
@@ -47,7 +50,7 @@ When Rusty Justice (who worked in the mining industry) decided to teach coal min
 
 I found this story inspiring not only because of the miners learning new skills, but for battling stereotypes imposed on them from others. This can relate to being bias towards older programmers that aren’t fresh out of college and wish to change careers into a more technical role. 
 
-## Another Way to Hire
+## Another way to hire
 
 While companies were finding developers using resumes and interviews, a Baltimore software firm called Catalyte decided to take a different approach to the hiring process. They administered an aptitude test in locations that didn’t normally have a high offer of coders to come apply to them. Those who scored well were given proper training and a guaranteed job.
 
@@ -55,7 +58,7 @@ I found the aptitude test in Baltimore relates to how things were done in the �
 
 The firm’s test results resulted in a diverse group of people from different racial and working class backgrounds. This enabled the company to find more people who had experience and a different perspective.
 
-## Not All Coding Jobs Are Considered Equal
+## Not all coding jobs are considered equal
 
 It seems as coding has become more diverse in fields, so has the salary range expectations for a role. The book mentions the perspective of some developers who consider “front-end” jobs (using HTML, CSS which is what’s encouraged to learn for any newbie coder) not real coding because it’s not complex enough. I’d like to see those who say this try to get a site to look appealing and functional on Internet Explorer.
 
@@ -67,7 +70,9 @@ One computer scientist, Edsger W. Dijkstra, expresses his scorn for higher-level
 
 > _“But Dijkstra’s disdain was also pure snobbishness, a sense that you shouldn’t even try to make coding easier for the beginner. For him, a central glory of coding seemed to lie precisely in its difficulty, that it chased people away, leaving only the monk-like devotees behind, to ponder their ASCII printouts in blissful silence.” (pg. 368)_
 
-I don’t understand the opinion of those who don’t want to make coding easier for beginners to learn. At one end of the spectrum, there are all these “programming 101” sites that keep it fun and simple for a newbie while encouraging the learner to challenge themselves to progress. The other end looks down on these implications and insists that coding should only be done by those who get it.
+I don’t understand the opinion of those who don’t want to make coding easier for beginners to learn. At one end of the spectrum, there are all these “programming 101” sites that keep it fun and simple for a newbie while encouraging the learner to challenge themselves to progress. The other end looks down on these implications and insists that coding should only be done by those who _get it_.
+
+## To conclude
 
 
 [Found a typo or problem? Edit this page.]()

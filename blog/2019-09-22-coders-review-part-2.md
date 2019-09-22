@@ -10,7 +10,7 @@ I encourage every programmer to read ***_Coders_*** by Clive Thompson. This book
 
 I had to split this review into 2 parts because there is a lot I wanted to emphasize.
 
-[Read part 1.]()
+[Read part 1.](/coders-review-part-1)
 
 ## Uncontrolled social problems online
 
@@ -78,4 +78,4 @@ When I first started reading this book, I did not have any inclination to write 
 
 I would recommend this book to anyone who isn’t only a coder, but who has an interest in technology because in the end, it’s the coders who will be impacting the future.
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-09-22-coders-review-part-2.md)

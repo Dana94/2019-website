@@ -74,5 +74,8 @@ I don’t understand the opinion of those who don’t want to make coding easier
 
 ## To conclude
 
+When I first started reading this book, I did not have any inclination to write a blog post about it. But my mind changed when Thompson not only mentioned the usual traits, experiences, and stereotypes about us coders, but he mentioned opinions that challenged things differently. He included engineers from all different backgrounds and responsibilities to help educate the reader on the experience of a coder.
+
+I would recommend this book to anyone who isn’t only a coder, but who has an interest in technology because in the end, it’s the coders who will be impacting the future.
 
 [Found a typo or problem? Edit this page.]()

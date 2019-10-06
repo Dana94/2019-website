@@ -9,7 +9,6 @@
       :to="nextPage"
       :class="{ 'text-gray-400 hover:text-gray-400 cursor-not-allowed': !showNextPage }"
     >Next &rarr;</g-link>
-    <font-awesome :icon="['fab', 'github']"/>
   </div>
 </template>
 

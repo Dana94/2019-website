@@ -10,6 +10,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fullhuman/postcss-purgecss": "^1.1.0",
+    "@gridsome/plugin-google-analytics": "^0.1.0",
     "@gridsome/plugin-sitemap": "^0.2.1",
     "@gridsome/source-filesystem": "^0.5.0",
     "@gridsome/transformer-remark": "^0.3.2",
@@ -18,6 +19,7 @@
     "gridsome-plugin-remark-shiki": "^0.3.0",
     "gridsome-plugin-rss": "^1.1.0",
     "lodash.pick": "^4.4.0",
+    "remark-toc": "^6.0.0",
     "vue-fuse": "^2.1.0",
     "vue-scrollto": "^2.15.0"
   },

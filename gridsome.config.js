@@ -32,7 +32,8 @@ module.exports = {
         },
         remark: {
           plugins: [
-            [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ]
+            [ 'gridsome-plugin-remark-shiki', { theme: 'Material-Theme-Palenight', skipInline: true } ],
+            'remark-toc'
           ]
         }
       }
@@ -65,6 +66,12 @@ module.exports = {
         cacheTime: 600000, // default
       }
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-145381255-1'
+      }
+    }
   ],
   transformers: {
     remark: {

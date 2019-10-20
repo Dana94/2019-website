@@ -90,4 +90,4 @@ So this began with my frustration with Docker on Windows, and ended with me havi
 
 - [It’s FOSS](https://itsfoss.com/)
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-10-20-first-experience-with-linux.md)

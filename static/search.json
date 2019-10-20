@@ -32,5 +32,10 @@
     "title": "Coders by Clive Thompson – Review – Part 2",
     "path": "/coders-review-part-2",
     "summary": "I encourage every programmer to read Coders by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now."
+  },
+  {
+    "title": "My first experience with Linux (installing lubuntu)",
+    "path": "/first-experience-with-linux",
+    "summary": "I've always used Windows. There really was no reason. It's just that the computers I've owned came with it and it's what I knew how to use the most. My knowledge with Linux was so small it was negligible. I only knew that it was open source and there were many different kinds to choose from (known as distributions, or \"distros\")."
   }
 ]

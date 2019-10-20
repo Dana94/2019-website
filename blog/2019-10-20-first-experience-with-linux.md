@@ -1,6 +1,6 @@
 ---
 title: My first experience with Linux (installing lubuntu)
-path: linux
+path: first-experience-with-linux
 date: 2019-10-20
 summary: I've always used Windows. There really was no reason. It's just that the computers I've owned came with it and it's what I knew how to use the most. My knowledge with Linux was so small it was negligible. I only knew that it was open source and there were many different kinds to choose from (known as distributions, or "distros").
 tags: ['linux']
@@ -90,4 +90,4 @@ So this began with my frustration with Docker on Windows, and ended with me havi
 
 - [It’s FOSS](https://itsfoss.com/)
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-10-20-first-experience-with-linux.md)

@@ -25,6 +25,8 @@ _Mirrors to download on Linux Mint website_
 
 This step was not something I did when installing lubuntu. Linux Mint strongly suggests checking to make sure the ISO downloaded has not been corrupted.
 
+I followed the instructions from Linux Mint and then these [verification steps for Windows](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093).
+
 I created a folder called "ISO" and put the file in it.
 
 ![Folder created for ISO file](./images/2019-11-09/documents.png)
@@ -34,3 +36,56 @@ Make sure to _right click and save the files_, I didn't read the instructions an
 
 ![Files to add to your folder](./images/2019-11-09/prepare.jpg)
 _Files to add to your folder_
+
+Download the installer. I chose the first "download sig" for Windows.
+
+![](./images/2019-11-09/installer.png)
+
+For help in copy and pasting in the terminal for Windows, I looked at [this](https://www.bonkersabouttech.com/howto/how-to-copy-and-paste-in-cmd/468).
+
+Open your terminal in the ISO directory and run this command:
+```shell
+CertUtil -hashfile filename.iso SHA256
+```
+
+![](./images/2019-11-09/cmd1.png)
+
+This took less than 1 min to finish.
+
+There will be a hash given that is meant to be compared to the one in your ISO file to ensure that they are the same.
+
+You could check them in the terminal.
+
+```shell
+find "hash-from-previous-step" sha256sum.txt
+```
+
+Of course, replace the hash you received in the quotations.
+
+![](./images/2019-11-09/cmd2.png)
+
+If the hash wasn't found then the integrity check was not passed. DO NOT use this ISO file.
+
+## Authenticity Check
+
+Yep, we have to do both an _integrity_ and _authentication_ check.
+
+From the [instructions]() there were 3 different commands you could use for ths step. The first one worked for me.
+
+```shell
+gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
+```
+
+![](./images/2019-11-09/cmd3.png)
+
+```shell
+gpg --verify sha256sum.txt.gpg sha256sum.txt
+```
+
+![](./images/2019-11-09/cmd4.png)
+
+I received a "Good Signature" message and as the post advises, I can ignore the warning message that came after.
+
+Phew, with the ISO passing both integrity and authentication, it's time to create a bootable USB (finally).
+
+

@@ -12,11 +12,9 @@ Unlike the previous post, you'll notice I was ready to document this. 😉
 
 ## Create the bootable USB
 
-First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. After looking at some forums, it seems my best bet was to just download the ISO file from the first of the 16 choices for USA mirrors. It took about 20 min for the file to download.
+First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. According to [this post on Quora](https://www.quora.com/What-do-mirrors-mean-in-Linux), it seems that mirrors are copies of the Linux program available for download. 
 
-I’m still not entirely sure why they are called "mirrors".
-
-The one I went with was from "advancedhosters.com".
+After looking at some forums, it seems my best bet was to just download the ISO file from the first of the 16 choices for USA mirrors. It took about 20 min for the file to download. The one I went with was from "advancedhosters.com".
 
 ![Mirrors to download on Linux Mint website](./images/2019-11-09/mirrors.png)
 _Mirrors to download on Linux Mint website_
@@ -25,7 +23,7 @@ _Mirrors to download on Linux Mint website_
 
 This step was not something I did when installing lubuntu. Linux Mint strongly suggests checking to make sure the ISO downloaded has not been corrupted.
 
-I followed the instructions from Linux Mint and then these [verification steps for Windows](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093).
+I followed the [instructions from Linux Mint](https://linuxmint-installation-guide.readthedocs.io/en/latest/verify.html) which led me to these [verification steps for Windows](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093).
 
 I created a folder called "ISO" and put the file in it.
 
@@ -70,7 +68,7 @@ If the hash wasn't found then the integrity check was not passed. DO NOT use thi
 
 Yep, we have to do both an _integrity_ and _authentication_ check.
 
-From the [instructions](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093) there were 3 different commands you could use for ths step. The first one worked for me.
+From the [Windows instructions](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093) there were 3 different commands you could use for ths step. The first one worked for me.
 
 ```shell
 gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
@@ -86,7 +84,7 @@ gpg --verify sha256sum.txt.gpg sha256sum.txt
 
 I received a "Good Signature" message and as the post advises, I can ignore the warning message that came after.
 
-Phew, with the ISO passing both integrity and authentication, it's time to create a bootable USB (finally).
+With the ISO passing both integrity and authentication, it's time to create a bootable USB (finally).
 
 ## Create bootable USB
 
@@ -100,7 +98,7 @@ After inserting the USB, you will get a "live session" of Linux Mint. The OS has
 ![Linux Mint home screen](./images/2019-11-09/home-screen.jpg)
 _Linux Mint home screen_
 
-This is the step for opting for the dual os route. So I will have both lubuntu and Linux Mint side by side and can decide which oe I want to use once I start my computer.
+This is the step for opting for the dual OS route. So I will have both lubuntu and Linux Mint side by side and can decide which one I want to use once I start my computer.
 
 ![Dual OS option](./images/2019-11-09/dual-os.jpg)
 _Dual OS option_

@@ -70,7 +70,7 @@ If the hash wasn't found then the integrity check was not passed. DO NOT use thi
 
 Yep, we have to do both an _integrity_ and _authentication_ check.
 
-From the [instructions]() there were 3 different commands you could use for ths step. The first one worked for me.
+From the [instructions](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093) there were 3 different commands you could use for ths step. The first one worked for me.
 
 ```shell
 gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
@@ -88,4 +88,33 @@ I received a "Good Signature" message and as the post advises, I can ignore the 
 
 Phew, with the ISO passing both integrity and authentication, it's time to create a bootable USB (finally).
 
+## Create bootable USB
 
+I follow [Linux Mint's instructions](https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html) and used [Etcher](https://etcher.io/) for this step.
+
+## Installing Linux Mint
+
+I followed the instructions for [booting Linux Mint](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot.html) and the [installation options](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html) right from their website.
+After inserting the USB, you will get a "live session" of Linux Mint. The OS hasn't been installed yet, this is sort of a "testing area" so you could preview what you intend to install. There will be a installer on the desktop when you decide to use it. 
+
+![Linux Mint home screen](./images/2019-11-09/home-screen.jpg)
+_Linux Mint home screen_
+
+This is the step for opting for the dual os route. So I will have both lubuntu and Linux Mint side by side and can decide which oe I want to use once I start my computer.
+
+![Dual OS option](./images/2019-11-09/dual-os.jpg)
+_Dual OS option_
+
+This step shows only if you decide to install Linux Mint alongside your current OS. You can choose how much space each OS can take up on your hard drive.
+
+Ubuntu 16.04.3 is lubuntu.
+
+![Partition option](./images/2019-11-09/partition.jpg)
+_Partition option_
+
+Unlike when I installed lubuntu, I knew when to remove my USB when this message came up.
+
+![Remove USB message](./images/2019-11-09/remove-usb.jpg)
+_Remove USB message_
+
+All in all, I found the instructions on Linux Mint website extremely well documented.

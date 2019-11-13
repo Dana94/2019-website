@@ -8,6 +8,8 @@
       <g-link to="/">
         <button
           role="button"
+          type="button"
+          aria-label="Back to Home"
           class="block bg-purple-700 hover:bg-purple-800 text-white text-sm font-semibold tracking-wide uppercase shadow rounded cursor-pointer px-6 py-3 mb-4"
         >Back to Home</button>
       </g-link>

@@ -1,5 +1,5 @@
 ---
-title: Installing Linux Mint
+title: Installing Linux Mint 🐧
 path: installing-linux-mint
 date: 2019-11-16
 summary: My experience with installing Linux Mint.
@@ -12,7 +12,7 @@ Unlike the previous post, you'll notice I was ready to document this. 😉
 
 ## Create the bootable USB
 
-First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. According to [this post on Quora](https://www.quora.com/What-do-mirrors-mean-in-Linux), it seems that mirrors are copies of the Linux program available for download. 
+First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. According to [this post on Quora](https://www.quora.com/What-do-mirrors-mean-in-Linux), mirrors are copies of the Linux program available for download. 
 
 After looking at some forums, it seems my best bet was to just download the ISO file from the first of the 16 choices for USA mirrors. It took about 20 min for the file to download. The one I went with was from "advancedhosters.com".
 
@@ -37,9 +37,10 @@ _Files to add to your folder_
 
 Download the installer. I chose the first "download sig" for Windows.
 
-![](./images/2019-11-09/installer.png)
+![Installer page](./images/2019-11-09/installer.png)
+_Installer page_
 
-For help in copy and pasting in the terminal for Windows, I looked at [this](https://www.bonkersabouttech.com/howto/how-to-copy-and-paste-in-cmd/468).
+For help in copy and pasting in the terminal for Windows, I looked at [this post on how to copy and paste in Windows command prompt](https://www.bonkersabouttech.com/howto/how-to-copy-and-paste-in-cmd/468).
 
 Open your terminal in the ISO directory and run this command:
 ```shell
@@ -60,9 +61,10 @@ find "hash-from-previous-step" sha256sum.txt
 
 Of course, replace the hash you received in the quotations.
 
-![](./images/2019-11-09/cmd2.png)
+![Compare hash](./images/2019-11-09/cmd2.png)
+_Compare hash_
 
-If the hash wasn't found then the integrity check was not passed. DO NOT use this ISO file.
+If the hash wasn't found then the integrity check did not pass. DO NOT use this ISO file.
 
 ## Authenticity Check
 
@@ -74,15 +76,19 @@ From the [Windows instructions](https://forums.linuxmint.com/viewtopic.php?f=42&
 gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
 ```
 
-> something here
+The string of digits is the _Linux Mint signing key_.
 
 ![](./images/2019-11-09/cmd3.png)
+__
+
+Now the authenticity of the sha256sum.txt file can be verified. If this passes, then the ISO file is good to go.
 
 ```shell
 gpg --verify sha256sum.txt.gpg sha256sum.txt
 ```
 
-![](./images/2019-11-09/cmd4.png)
+![Authentication check](./images/2019-11-09/cmd4.png)
+_Authentication check_
 
 I received a "Good Signature" message and as the post advises, I can ignore the warning message that came after.
 
@@ -90,7 +96,7 @@ With the ISO passing both integrity and authentication, it's time to create a bo
 
 ## Create bootable USB
 
-I follow [Linux Mint's instructions](https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html) and used [Etcher](https://etcher.io/) for this step.
+I followed [Linux Mint's instructions](https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html) and used [Etcher](https://etcher.io/) for this step.
 
 ## Installing Linux Mint
 
@@ -100,14 +106,14 @@ After inserting the USB, you will get a "live session" of Linux Mint. The OS has
 ![Linux Mint home screen](./images/2019-11-09/home-screen.jpg)
 _Linux Mint home screen_
 
-This is the step for opting for the dual OS route. So I will have both lubuntu and Linux Mint side by side and can decide which one I want to use once I start my computer.
+This is the step for opting for the dual OS route. So I will have both lubuntu and Linux Mint side-by-side and can decide which one I want to use once I start my computer.
+
+Ubuntu 16.04.3 is lubuntu.
 
 ![Dual OS option](./images/2019-11-09/dual-os.jpg)
 _Dual OS option_
 
 This step shows only if you decide to install Linux Mint alongside your current OS. You can choose how much space each OS can take up on your hard drive.
-
-Ubuntu 16.04.3 is lubuntu.
 
 ![Partition option](./images/2019-11-09/partition.jpg)
 _Partition option_
@@ -117,7 +123,7 @@ Unlike when I installed lubuntu, I knew when to remove my USB when this message 
 ![Remove USB message](./images/2019-11-09/remove-usb.jpg)
 _Remove USB message_
 
-All in all, I found the instructions on Linux Mint website extremely well documented.
+All in all, I found the instructions on Linux Mint website extremely well documented. If anyone were to try installing a Linux distro for the first time, then I would recommend Linux Mint.
 
 ## Resources:
 
@@ -129,5 +135,8 @@ All in all, I found the instructions on Linux Mint website extremely well docume
 
 - [How to Copy and Paste in CMD](https://www.bonkersabouttech.com/howto/how-to-copy-and-paste-in-cmd/468)
 
+- [What do mirrors mean in Linux?](https://www.quora.com/What-do-mirrors-mean-in-Linux)
+
+- [Etcher](https://www.balena.io/etcher/)
 
 [Found a typo or problem? Edit this page.]()

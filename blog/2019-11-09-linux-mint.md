@@ -1,7 +1,7 @@
 ---
 title: Installing Linux Mint
 path: installing-linux-mint
-date: 2019-11-09
+date: 2019-11-16
 summary: My experience with installing Linux Mint.
 tags: ['linux']
 ---
@@ -74,6 +74,8 @@ From the [Windows instructions](https://forums.linuxmint.com/viewtopic.php?f=42&
 gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D291300F846BA25BAE09
 ```
 
+> something here
+
 ![](./images/2019-11-09/cmd3.png)
 
 ```shell
@@ -116,3 +118,16 @@ Unlike when I installed lubuntu, I knew when to remove my USB when this message 
 _Remove USB message_
 
 All in all, I found the instructions on Linux Mint website extremely well documented.
+
+## Resources:
+
+- [Linux Mint Website](https://linuxmint.com/)
+
+- [How to verify the ISO image on Windows](https://forums.linuxmint.com/viewtopic.php?f=42&t=291093)
+
+- [Linux Mint Cinnamon vs MATE](https://linuxhint.com/linux_mint_cinnamon_vs_mate/)
+
+- [How to Copy and Paste in CMD](https://www.bonkersabouttech.com/howto/how-to-copy-and-paste-in-cmd/468)
+
+
+[Found a typo or problem? Edit this page.]()

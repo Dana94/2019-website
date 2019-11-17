@@ -78,8 +78,8 @@ gpg --keyserver hkps://keyserver.ubuntu.com:443 --recv-key 27DEB15644C6B3CF3BD7D
 
 The string of digits is the _Linux Mint signing key_.
 
-![](./images/2019-11-09/cmd3.png)
-__
+![Check the signature](./images/2019-11-09/cmd3.png)
+_Check the signature_
 
 Now the authenticity of the sha256sum.txt file can be verified. If this passes, then the ISO file is good to go.
 

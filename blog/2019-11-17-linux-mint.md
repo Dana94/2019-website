@@ -143,4 +143,4 @@ All in all, I found the instructions on Linux Mint website extremely well docume
 
 - [Etcher](https://www.balena.io/etcher/)
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-11-17-linux-mint.md)

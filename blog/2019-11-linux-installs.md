@@ -1,18 +1,24 @@
 ---
-title: Installing Linux Mint 🐧
-path: installing-linux-mint
+title: Installing Programs on Linux 🐧
+path: installing-programs-on-linux
 date: 2019-11-30
 summary: My experience with installing Linux Mint.
 tags: ['linux']
 ---
 
-[After installing lubuntu on my old computer](/first-experience-with-linux), I decided to install a popular Linux distro: Linux Mint. I heard that it's similar to the Windows layout and wanted to see for myself.
+Once I [installed Linux Mint](/installing-linux-mint), I tried to install 2 programs just to learn how it's done in Linux. I know it's not as easy as running an executable, so this is what that post is about.
 
-Unlike the previous post, you'll notice I was ready to document this. 😉
+I learned how to install programs 2 ways: through a package and a debian file.
 
-## Create the bootable USB
+## Installing Visual Studio Code
 
 
+## Installing Blender
+
+
+## Note:
+
+In Linux Mint there is a handy way to install programs that I could've used but I took the harder route.
 
 ## Resources:
 

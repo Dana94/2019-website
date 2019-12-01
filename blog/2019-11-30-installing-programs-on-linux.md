@@ -93,4 +93,4 @@ So unlike a typical Windows installer, there are a few ways someone can install 
 
 - [How to Install and Use Snap in Various Linux Distributions](https://itsfoss.com/install-snap-linux/)
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-11-30-installing-programs-on-linux.md)

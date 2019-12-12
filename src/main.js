@@ -23,7 +23,7 @@ export default function (Vue, { router, head, isClient }) {
 
   head.meta.push({
     name: 'description',
-    content: 'Dana Ottaviani\'s Portfolio Site'
+    content: 'Dana Ottaviani\'s Portfolio Site. A place to showcase my personal projects and blog posts about stuff that interests me in programming.'
   })
 
   head.meta.push({

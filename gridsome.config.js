@@ -15,7 +15,7 @@ if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
 
 module.exports = {
   siteName: 'Dana Ottaviani | Portfolio Website',
-  siteDescription: 'Dana Ottaviani\'s Portfolio Site',
+  siteDescription: 'Dana Ottaviani\'s Portfolio Site. A place to showcase my personal projects and blog posts on topics that interest me in programming.',
   siteUrl: 'https://danaottaviani.com',
   plugins: [
     {

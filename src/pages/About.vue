@@ -9,9 +9,7 @@
           class="w-48 h-48 rounded-full mb-8 lg:mb-0"
         />
         <div>
-          I'm Dana Ottaviani, a front-end developer. I'm currently on the look out for the next great company to work at so send an
-          <a href="mailto:dana.ottaviani@gmail.com">email</a> or <g-link to="/#contact">message</g-link> 
-          if you're interested.
+          I'm Dana Ottaviani, a front-end developer.
         </div>
         <br />
         <div>

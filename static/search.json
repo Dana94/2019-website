@@ -47,5 +47,10 @@
     "title": "Installing Programs on Linux",
     "path": "/installing-programs-on-linux",
     "summary": "Once I installed Linux Mint, I tried to install 2 programs just to learn how it's done in Linux. I know it's not as easy as running an executable, so this is what this post is about."
+  },
+  {
+    "title": "GraphQL in Gridsome",
+    "path": "/graphql-in-gridsome",
+    "summary": "A summary on how to understand using GraphQL queries in Gridsome."
   }
 ]

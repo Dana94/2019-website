@@ -325,4 +325,4 @@ _Autocomplete in action_
 
 - [How to query with GraphQL in Gridsome](https://gridsome.org/docs/querying-data/#how-to-query-with-graphql)
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-06-23-styling-in-vuejs.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-12-26-graphql-in-gridsome.md)

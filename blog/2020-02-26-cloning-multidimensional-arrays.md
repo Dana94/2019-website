@@ -1,8 +1,8 @@
 ---
 title: How to Properly Clone Multidimensional Arrays
 path: cloning-multidimensional-arrays
-date: 2020-02-25
-tags: ['coding', 'vue']
+date: 2020-02-26
+tags: ['coding', 'javascript']
 ---
 
 I was working on applying different board levels to my [lights puzzle](https://github.com/Dana94/lights-puzzle) (still in progress as I'm writing this post). I encountered a problem where the original board was being modified despite using the [spread operator](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax) (`...`) to clone it so its data wouldn't be affected.
@@ -56,7 +56,7 @@ console.log(boardLevel1);
 // ]
 ```
 
-What did I do wrong here? The spread operator was supposed to clone an array's contents and assign it into the state's board property.
+What did I do wrong here? The spread operator was supposed to clone the contents of `boardLevel1` and assign it into the state's board property.
 
 It turns out, multidimensional arrays (3D arrays or "an array containing arrays") require an extra step.
 

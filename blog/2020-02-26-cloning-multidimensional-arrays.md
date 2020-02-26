@@ -94,4 +94,4 @@ console.log(boardLevel1);
 
 I've only ever used 3D arrays when first learning programming in college and never realized until I came across this bug that there needed to be an extra step when cloning them properly.
 
-<!-- [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-07-07-open-source.md) -->
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-02-26-cloning-multidimensional-arrays.md)

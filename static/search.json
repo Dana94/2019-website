@@ -52,5 +52,9 @@
     "title": "GraphQL in Gridsome",
     "path": "/graphql-in-gridsome",
     "summary": "A summary on how to understand using GraphQL queries in Gridsome."
+  },
+  {
+    "title": "How to Properly Clone Multidimensional Arrays",
+    "path": "/cloning-multidimensional-arrays"
   }
 ]

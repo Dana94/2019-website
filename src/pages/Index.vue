@@ -35,7 +35,7 @@
             <div>Lights Puzzle</div>
             <div
               class="text-lg text-gray-600"
-            >A 3x3 grid puzzle where you have to light up all the squares to win the game.</div>
+            >A grid puzzle with 3 levels of difficulty.</div>
             <div class="text-lg text-gray-600">Made with VueJS.</div>
             <div class="text-lg text-gray-600">
               <a

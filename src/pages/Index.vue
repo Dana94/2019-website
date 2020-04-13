@@ -13,8 +13,27 @@
     <div class="container-inner mx-auto">
       <div class="flex justify-between items-center py-6">
         <div class="w-full sm:w-1/2 px-8 py-8 sm:py-0 mx-auto">
-          <g-image src="../../static/undraw_programmer_imem.svg" alt="A programmer."/>
+          <g-image src="../../static/undraw_programmer_imem.svg" alt="A programmer." />
         </div>
+      </div>
+    </div>
+    <div class="overflow-x-hidden">
+      <div class="container-inner mx-auto text-xl py-16 relative">
+        <h2 class="font-bold mb-6">Current Tech Stack</h2>
+        <ul>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SASS</li>
+          <li>JavaScript</li>
+          <li>Vue.js</li>
+          <li>Pug</li>
+        </ul>
+
+        <h2 class="font-bold mb-6">Frameworks I'm familiar with</h2>
+        <ul>
+          <li>GraphQL</li>
+          <li>React.js</li>
+        </ul>
       </div>
     </div>
 
@@ -26,16 +45,14 @@
 
         <div class="absolute right-0" style="top: 50px; transform: translate(100%) rotate(180deg)">
           <svg width="170px" height="170px">
-            <use xlink:href="#dots-triangle"></use>
+            <use xlink:href="#dots-triangle" />
           </svg>
         </div>
 
         <ul class="text-lg sm:text-xl">
           <li class="checkmark mb-6">
             <div>Lights Puzzle</div>
-            <div
-              class="text-lg text-gray-600"
-            >A grid puzzle with 3 levels of difficulty.</div>
+            <div class="text-lg text-gray-600">A grid puzzle with 3 levels of difficulty.</div>
             <div class="text-lg text-gray-600">Made with VueJS.</div>
             <div class="text-lg text-gray-600">
               <a
@@ -51,7 +68,7 @@
               >Live</a>
             </div>
           </li>
-           <li class="checkmark mb-6">
+          <li class="checkmark mb-6">
             <div>Random Quote Machine</div>
             <div
               class="text-lg text-gray-600"
@@ -71,7 +88,7 @@
               >Live</a>
             </div>
           </li>
-           <li class="checkmark mb-6">
+          <li class="checkmark mb-6">
             <div>TARDIS</div>
             <div
               class="text-lg text-gray-600"
@@ -102,11 +119,16 @@
 
           <div class="absolute right-0 top-0" style="transform: translate(100%) rotate(180deg)">
             <svg width="170px" height="170px">
-              <use xlink:href="#dots-triangle"></use>
+              <use xlink:href="#dots-triangle" />
             </svg>
           </div>
           <div class="text-lg sm:text-lg mb-16">
-            <form class="mb-12" name="contact" method="POST" action="https://formspree.io/dana.ottaviani@gmail.com">
+            <form
+              class="mb-12"
+              name="contact"
+              method="POST"
+              action="https://formspree.io/dana.ottaviani@gmail.com"
+            >
               <div class="flex flex-wrap mb-6 -mx-4">
                 <div class="w-full md:w-1/2 mb-6 md:mb-0 px-4">
                   <label class="block mb-2 text-copy-primary" for="name">Name</label>
@@ -118,7 +140,7 @@
                     placeholder="Dana Scully"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-purple-700 mb-2 p-4"
                     required
-                  >
+                  />
                 </div>
 
                 <div class="w-full px-4 md:w-1/2">
@@ -131,7 +153,7 @@
                     placeholder="email@example.com"
                     class="block w-full bg-background-form border border-border-color-primary shadow rounded outline-none focus:border-purple-700 mb-2 p-4"
                     required
-                  >
+                  />
                 </div>
               </div>
 
@@ -153,7 +175,7 @@
                   type="submit"
                   value="Submit"
                   class="block bg-purple-700 hover:bg-purple-800 text-white text-sm font-semibold tracking-wide uppercase shadow rounded cursor-pointer px-6 py-3"
-                >
+                />
               </div>
             </form>
           </div>

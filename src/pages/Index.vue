@@ -1,6 +1,6 @@
 <template>
   <Layout>
-    <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-16">
+    <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-3 sm:py-6 sm:py-16">
       <div class="text-4xl font-bold w-full text-center sm:text-left">
         <div class="leading-tight">Hi, I'm Dana.</div>
         <div
@@ -18,19 +18,21 @@
       </div>
     </div>
     <div class="overflow-x-hidden">
-      <div class="container-inner mx-auto text-xl py-16 relative">
+      <div class="tech-list container-inner mx-auto text-xl pb-16 sm:py-6 sm:py-16 relative">
         <h2 class="font-bold mb-6">Current Tech Stack</h2>
         <ul>
-          <li>HTML</li>
+          <li>HTML5</li>
           <li>CSS</li>
           <li>SASS</li>
           <li>JavaScript</li>
           <li>Vue.js</li>
           <li>Pug</li>
+          <li>Git</li>
         </ul>
 
-        <h2 class="font-bold mb-6">Frameworks I'm familiar with</h2>
+        <h2 class="font-bold mb-6 mt-6">Tech and Frameworks I'm Familiar With</h2>
         <ul>
+          <li>Node.js</li>
           <li>GraphQL</li>
           <li>React.js</li>
         </ul>
@@ -39,7 +41,7 @@
 
     <div class="overflow-x-hidden">
       <div
-        class="projects container-inner mx-auto text-xl border-t border-gray-500 border-b py-16 mb-16 relative"
+        class="projects container-inner mx-auto text-xl border-t border-gray-500 py-6 sm:py-16 relative"
       >
         <h2 class="font-bold mb-6" id="projects">Here are some projects I've worked on:</h2>
 

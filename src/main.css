@@ -121,9 +121,27 @@ a:hover {
   grid-row-gap: 2rem;
 }
 
+.tech-list ul {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.tech-list li {
+  margin: .5rem 0;
+}
+
+.tech-list li:before {
+  content: "•";
+  color: var(--lead-purple);
+  margin-right: .5rem;
+}
+
 @screen sm {
   .social-icons {
     grid-template-columns: repeat(6, 1fr);
     grid-column-gap: 2rem;
+  }
+  .tech-list ul {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

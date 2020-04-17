@@ -2,7 +2,7 @@
 title: Styling In VueJS
 path: styling-in-vuejs
 date: 2019-06-23
-summary: There are various ways to attach styles on elements in VueJS. Here, I'm going to explain the methods for binding to the `class` and `style` attributes.
+summary: There are various ways to attach styles on elements in VueJS. Here, I'm going to explain the methods for binding to the `class` and `style` attribjjjjutes.
 tags: ['frontend', 'coding', 'vue']
 ---
 

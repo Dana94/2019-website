@@ -8,7 +8,11 @@ tags: ['coding', 'graphql']
 I'm currently building a GraphQL API with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) (still in progress).
 The API contains data for authors and quotes.
 
-Data:
+Since I'm still understanding how to build an API, I wanted to share 2 things that are used:
+- schema types (defining the types for your data)
+- resolvers (instructions for what data to return for a GraphQL operation - query, mutation, subscription)
+
+This is a snippet of the list of authors and quotes I'm using. There are 2 lists with authors containing an `id` and `name` and quotes having an `id`, `authorId`, and the `quote`.
 
 ```js
 exports.authors = [
@@ -76,96 +80,19 @@ exports.quotes = [
     }
 ];
 ```
-In order to retrieve any data for a query, resolvers are used to determine what information should be returned.
 
-If you're not familiar with resolvers, they are sort of like instructions for what to send back to the query. A common resolver example is just to simply return the list of authors for the query `authors`.
+For schema types, I will have one for `Author` and `Quote` to define what are the types of their data.
 
-If I wanted to return all authors for the query `authors`, the resolver would like this.
+For `Author`:
+- `id` is type `Int` (Integer)
+- `name` is type `String`
+- `quotes` will be a list of `Quotes` (a created schema type we'll see in a moment) that is type `[Quotes]`
+> The brackets around `Quotes` mean that it is a list and not just one quote of type `Quote` in case this author has more than 1 quote in the database.
 
-```js
-const resolvers = {
-  Query: {
-    authors: () => authors,
-  }
-};
-```
-The `authors` returned in this function is the `exports.authors` referenced in the first code block of this post.
-
-Query:
-```js
-query {
-  authors {
-    name
-  }
-}
-```
-Data Returned:
-```js
-{
-  "data": {
-    "authors": [
-      {
-        "name": "Eleanor Roosevelt"
-      },
-      {
-        "name": "M.F.K. Fisher"
-      },
-      {
-        "name": "Norman Cousins"
-      },
-      {
-        "name": "Wicked by Gregory Maguire"
-      },
-      {
-        "name": "Maya Angelou"
-      },
-      {
-        "name": "Edith Sitwell"
-      }
-    ]
-  }
-}
-```
-
-For another query, I want to return a list of quotes based on an author parameter entered by a user.
-In learning about resolvers, I had to understand how to connect the authors with their quotes. The connection is finding the `id` in `authors` and returning the `quotes` that have a matching `authorId`.
-
-```js
-const resolvers = {
-    Query: {
-        quotesByAuthorName(parent, args, context, info) {
-            const author = authors.find(author => author.name.includes(args.authorName));
-            return quotes.filter(quote => quote.authorId === author.id);
-        },
-    }
-};
-```
-For this resolver, there are 4 arguments accepted:
-- `parent`
-- `args`
-- `context`
-- `info`
-
-What we're focusing on is the `args` which is an object of all the arguments passed in the query.
-
-Query:
-```js
-query {
-    quotesByAuthorName(authorName: "Edith") {
-        quote
-    }
-}
-```
-Data Returned:
-```js
-"data": {
-    "quotesByAuthorName": [
-      {
-        "quote": "I am patient with stupidity, but not with those who are proud of it."
-      }
-    ]
-}
-```
-
+For `Quote`:
+- `id` is type `Int`
+- `authorId` is type `Int`
+- `quote` is type `String`
+- `author` is type `Author` (a created schema type we'll see in a moment)
 
 [Found a typo or problem? Edit this page.]()

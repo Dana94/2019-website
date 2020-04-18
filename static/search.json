@@ -56,5 +56,9 @@
   {
     "title": "How to Properly Clone Multidimensional Arrays",
     "path": "/cloning-multidimensional-arrays"
+  },
+  {
+    "title": "Schema Types and Resolvers in GraphQL",
+    "path": "/schema-types-and-resolvers-in-graphql"
   }
 ]

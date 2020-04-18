@@ -202,4 +202,4 @@ As you can see, the schema and resolvers both relate to each other in that the r
 
 I've learned a lot so far and I hope this helps someone else better understand GraphQL if they're just starting out.
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-04-18-schema-types-and-resolvers-in-graphql.md)

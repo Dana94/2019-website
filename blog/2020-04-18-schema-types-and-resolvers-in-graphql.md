@@ -1,13 +1,11 @@
 ---
 title: Schema Types and Resolvers in GraphQL
-path: new-post-apollo
+path: schema-types-and-resolvers-in-graphql
 date: 2020-04-17
 tags: ['coding', 'graphql']
 ---
 
-> Schema types (plural, whole thing?)
-
-I'm currently building a GraphQL API with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) (still in progress).
+I'm currently building a GraphQL API with [Apollo Server](https://www.apollographql.com/docs/apollo-server/).
 The API contains data for authors and quotes.
 
 Since I'm still understanding how to build an API, I wanted to share 2 things that are used:
@@ -89,7 +87,7 @@ exports.quotes = [
 
 ## Schema Types
 
-I created a schema type for `Author` to define all authors and the same with `Quote` for quotes. This is where the types of their data are defined.
+My schema has a type for `Author` to define all authors and the same with `Quote` for quotes. Within each schema type, their data is defined.
 
 For `Author`:
 - `id` is type `Int` (Integer)
@@ -103,7 +101,7 @@ For `Quote`:
 - `quote` is type `String`
 - `author` is type `Author`
 
-You'll notice that both `Author` and `Quote` are referencing the other as one of their types. This is possible and useful for returning a specific type of data that already exists in another created type.
+You'll notice that both `Author` and `Quote` are referencing the other as one of their data types.
 
 ```js
 type Author {
@@ -166,12 +164,12 @@ const resolvers = {
 };
 ```
 
-This follows the types we expected to be returned:
+This follows the types we expected to be returned for each operation:
 
 - `authors` is the `[Authors]`
 - `quotes` is the `[Quotes]`
 
-This is a wrap up of the schema type and resolvers we've defined:
+This is a wrap-up of the schema and resolvers we've defined:
 
 ```js
 const typeDefs = gql`
@@ -200,6 +198,8 @@ const resolvers = {
 };
 ```
 
-I didn't want to build a whole "how to use Apollo" post _just_ yet but I've learned a lot so far and I hope this helps someone else better understand GraphQL if they're just starting out.
+As you can see, the schema and resolvers both relate to each other in that the resolvers are what can be accessed through the API and the schema defines what data is returned.
+
+I've learned a lot so far and I hope this helps someone else better understand GraphQL if they're just starting out.
 
 [Found a typo or problem? Edit this page.]()

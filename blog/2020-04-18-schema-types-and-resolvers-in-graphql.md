@@ -1,7 +1,7 @@
 ---
 title: Schema Types and Resolvers in GraphQL
 path: schema-types-and-resolvers-in-graphql
-date: 2020-04-17
+date: 2020-04-18
 tags: ['coding', 'graphql']
 ---
 

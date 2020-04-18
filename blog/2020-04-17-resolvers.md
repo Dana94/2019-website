@@ -1,18 +1,24 @@
 ---
-title: Using Apollo in GraphQL
+title: Schema Types and Resolvers in GraphQL
 path: new-post-apollo
 date: 2020-04-17
 tags: ['coding', 'graphql']
 ---
 
+> Schema types (plural, whole thing?)
+
 I'm currently building a GraphQL API with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) (still in progress).
 The API contains data for authors and quotes.
 
 Since I'm still understanding how to build an API, I wanted to share 2 things that are used:
-- schema types (defining the types for your data)
-- resolvers (instructions for what data to return for a GraphQL operation - query, mutation, subscription)
+- **schema types** for defining the types for your data
+- **resolvers** which are instructions for what data to return for a GraphQL operation (query, mutation, subscription)
 
-This is a snippet of the list of authors and quotes I'm using. There are 2 lists with authors containing an `id` and `name` and quotes having an `id`, `authorId`, and the `quote`.
+This is a snippet of the 2 lists of authors and quotes I'm using.
+
+Each author has an `id` and `name`.
+
+Each quote has an `id`, `authorId`, and `quote`.
 
 ```js
 exports.authors = [
@@ -81,18 +87,119 @@ exports.quotes = [
 ];
 ```
 
-For schema types, I will have one for `Author` and `Quote` to define what are the types of their data.
+## Schema Types
+
+I created a schema type for `Author` to define all authors and the same with `Quote` for quotes. This is where the types of their data are defined.
 
 For `Author`:
 - `id` is type `Int` (Integer)
 - `name` is type `String`
-- `quotes` will be a list of `Quotes` (a created schema type we'll see in a moment) that is type `[Quotes]`
+- `quotes` is type `[Quotes]`
 > The brackets around `Quotes` mean that it is a list and not just one quote of type `Quote` in case this author has more than 1 quote in the database.
 
 For `Quote`:
 - `id` is type `Int`
 - `authorId` is type `Int`
 - `quote` is type `String`
-- `author` is type `Author` (a created schema type we'll see in a moment)
+- `author` is type `Author`
+
+You'll notice that both `Author` and `Quote` are referencing the other as one of their types. This is possible and useful for returning a specific type of data that already exists in another created type.
+
+```js
+type Author {
+  id: Int
+  name: String
+  quotes: [Quote]
+}
+type Quote {
+  id: Int
+  authorId: Int
+  quote: String
+  author: Author
+}
+```
+
+Before we talk about resolvers, we need to create a few GraphQL operations that will be under type `Query`.
+
+```js
+type Query {
+  authors: [Author]
+  quotes: [Quote]
+}
+```
+The `authors` and `quotes` queries will return a list of their respected types.
+
+Let's put all the schema types together:
+
+```js
+const typeDefs = gql`
+type Query {
+  authors: [Author]
+  quotes: [Quote]
+}
+type Author {
+  id: Int
+  name: String
+  quotes: [Quote]
+}
+type Quote {
+  id: Int
+  authorId: Int
+  quote: String
+  author: Author
+}
+`;
+```
+
+## Resolvers
+
+Now we can create resolvers to define the data returned for the queries defined above under type `Query`.
+
+The code for this is pretty straightforward. All we're doing is returning the lists of `authors` and `quotes` for each query.
+
+```js
+const resolvers = {
+  Query: {
+    authors: () => authors,
+    quotes: () => quotes
+  },
+};
+```
+
+This follows the types we expected to be returned:
+
+- `authors` is the `[Authors]`
+- `quotes` is the `[Quotes]`
+
+This is a wrap up of the schema type and resolvers we've defined:
+
+```js
+const typeDefs = gql`
+type Query {
+  authors: [Author]
+  quotes: [Quote]
+}
+type Author {
+  id: Int
+  name: String
+  quotes: [Quote]
+}
+type Quote {
+  id: Int
+  authorId: Int
+  quote: String
+  author: Author
+}
+`;
+
+const resolvers = {
+  Query: {
+    authors: () => authors,
+    quotes: () => quotes
+  }
+};
+```
+
+I didn't want to build a whole "how to use Apollo" post _just_ yet but I've learned a lot so far and I hope this helps someone else better understand GraphQL if they're just starting out.
 
 [Found a typo or problem? Edit this page.]()

@@ -1,12 +1,11 @@
 ---
 title: Using Resolvers to Connect Your Data
-path: new-post
-date: 2020-04-17
+path: using-resolvers-to-connect-your-data
+date: 2020-04-24
 tags: ['coding', 'graphql']
 ---
 
-I'm currently building a GraphQL API with [Apollo Server](https://www.apollographql.com/docs/apollo-server/) (still in progress).
-The API contains data for authors and quotes.
+Referencing [this post](/schema-types-and-resolvers-in-graphql), I want to show how to use arguments to return specific data in the resolvers.
 
 Data:
 
@@ -76,9 +75,7 @@ exports.quotes = [
     }
 ];
 ```
-In order to retrieve any data for a query, resolvers are used to determine what information should be returned.
-
-If you're not familiar with resolvers, they are sort of like instructions for what to send back to the query. A common resolver example is just to simply return the list of authors for the query `authors`.
+A common resolver example is just to simply return the list of authors for the query `authors`.
 
 If I wanted to return all authors for the query `authors`, the resolver would like this.
 
@@ -140,7 +137,14 @@ const resolvers = {
     }
 };
 ```
-For this resolver, there are 4 arguments accepted:
+
+Let's break this down:
+
+The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` parameter). I didn't make this search case-sensitive.
+
+After the author is found, all quotes that contain an `authorId` that matches the author's `id` will be returned.
+
+You'll notice that there are 4 arguments accepted in resolvers:
 - `parent`
 - `args`
 - `context`
@@ -157,6 +161,7 @@ query {
 }
 ```
 Data Returned:
+
 ```js
 "data": {
     "quotesByAuthorName": [

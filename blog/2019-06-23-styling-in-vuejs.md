@@ -1,14 +1,14 @@
 ---
-title: Styling In VueJS
+title: Styling In Vue.js
 path: styling-in-vuejs
 date: 2019-06-23
-summary: There are various ways to attach styles on elements in VueJS. Here, I'm going to explain the methods for binding to the `class` and `style` attributes.
+summary: There are various ways to attach styles on elements in Vue.js. Here, I'm going to explain the methods for binding to the `class` and `style` attributes.
 tags: ['frontend', 'coding', 'vue']
 ---
 
-> There are various ways to attach styles on elements in VueJS. Here, I'm going to explain the methods for binding to the `class` and `style` attributes.
+> There are various ways to attach styles on elements in Vue.js. Here, I'm going to explain the methods for binding to the `class` and `style` attributes.
 
-I still sometimes find myself looking back at the <a href="https://vuejs.org/v2/guide/class-and-style.html" target="_blank">VueJS docs</a> when applying styles to my elements so this is more of a review for me to finally have this memorized.
+I still sometimes find myself looking back at the <a href="https://vuejs.org/v2/guide/class-and-style.html" target="_blank">Vue.js docs</a> when applying styles to my elements so this is more of a review for me to finally have this memorized.
 
 Bear with me, these styles will be horribly boring but this is for syntax notes so hopefully you get something out of this.
 
@@ -148,6 +148,6 @@ is equivalent to:
   <h1 :class="{pink: false, purple: true}">Heading</h1>
 ```
 
-As you can see, there are many ways to implement styles and classes to your elements in VueJS. These methods can help your app change appropriately depending on user input, placement, or just about anything!
+As you can see, there are many ways to implement styles and classes to your elements in Vue.js. These methods can help your app change appropriately depending on user input, placement, or just about anything!
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-06-23-styling-in-vuejs.md)

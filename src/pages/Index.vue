@@ -54,8 +54,8 @@
         <ul class="text-lg sm:text-xl">
           <li class="checkmark mb-6">
             <div>Lights Puzzle</div>
-            <div class="text-lg text-gray-600">A grid puzzle with 3 levels of difficulty.</div>
-            <div class="text-lg text-gray-600">Made with VueJS.</div>
+            <div class="text-lg text-gray-600">A grid game with 3 levels of difficulty.</div>
+            <div class="text-lg text-gray-600">Made with Vue.js and Vuex.</div>
             <div class="text-lg text-gray-600">
               <a
                 href="https://github.com/Dana94/lights-puzzle"
@@ -94,8 +94,7 @@
             <div>TARDIS</div>
             <div
               class="text-lg text-gray-600"
-            >The TARDIS made with CSS. I also used transitions to replicate the fade in/out effects.</div>
-            <div class="text-lg text-gray-600">Made with VueJS.</div>
+            >The TARDIS made with CSS and Vue.js. I used transitions to replicate the fade in/out effects.</div>
             <div class="text-lg text-gray-600">
               <a
                 href="https://github.com/Dana94/TARDIS"

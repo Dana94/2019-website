@@ -77,7 +77,7 @@ exports.quotes = [
 ```
 A common resolver example is just to simply return the list of authors for the query `authors`.
 
-If I wanted to return all authors for the query `authors`, the resolver would like this.
+If I want to return all authors for the query `authors`, the resolver would like this.
 
 ```js
 const resolvers = {
@@ -124,7 +124,8 @@ Data Returned:
 }
 ```
 
-For another query, I want to return a list of quotes based on an author parameter entered by a user.
+For another query, I want to return a list of quotes based on an author's name entered by a user.
+
 In learning about resolvers, I had to understand how to connect the authors with their quotes. The connection is finding the `id` in `authors` and returning the `quotes` that have a matching `authorId`.
 
 ```js
@@ -140,7 +141,7 @@ const resolvers = {
 
 Let's break this down:
 
-The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` parameter). I didn't make this search case-sensitive.
+The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` argument). I didn't make this search case-sensitive.
 
 After the author is found, all quotes that contain an `authorId` that matches the author's `id` will be returned.
 
@@ -172,5 +173,6 @@ Data Returned:
 }
 ```
 
+As long as both `authors` and `quotes` data are available, they can be used together to manage more complex queries.
 
 [Found a typo or problem? Edit this page.]()

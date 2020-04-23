@@ -141,7 +141,7 @@ const resolvers = {
 
 Let's break this down:
 
-The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` argument). I didn't make this search case-sensitive.
+The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` argument).
 
 After the author is found, all quotes that contain an `authorId` that matches the author's `id` will be returned.
 

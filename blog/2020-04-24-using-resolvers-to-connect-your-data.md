@@ -175,4 +175,4 @@ Data Returned:
 
 As long as both `authors` and `quotes` data are available, they can be used together to manage more complex queries.
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-04-24-using-resolvers-to-connect-your-data.md)

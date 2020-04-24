@@ -60,5 +60,9 @@
   {
     "title": "Schema Types and Resolvers in GraphQL",
     "path": "/schema-types-and-resolvers-in-graphql"
+  },
+  {
+    "title": "Using Resolvers to Connect Your Data",
+    "path": "/using-resolvers-to-connect-your-data"
   }
 ]

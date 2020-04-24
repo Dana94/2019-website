@@ -77,8 +77,6 @@ exports.quotes = [
 ```
 A common resolver example is just to simply return the list of authors for the query `authors`.
 
-If I want to return all authors for the query `authors`, the resolver would like this.
-
 ```js
 const resolvers = {
   Query: {
@@ -96,7 +94,7 @@ query {
   }
 }
 ```
-Data Returned:
+Data returned:
 ```js
 {
   "data": {
@@ -124,7 +122,7 @@ Data Returned:
 }
 ```
 
-For another query, I want to return a list of quotes based on an author's name entered by a user.
+For another query, I want to return a list of quotes of a specific author. The author's name will be given as an argument.
 
 In learning about resolvers, I had to understand how to connect the authors with their quotes. The connection is finding the `id` in `authors` and returning the `quotes` that have a matching `authorId`.
 
@@ -141,9 +139,9 @@ const resolvers = {
 
 Let's break this down:
 
-The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` argument).
+The first step is to find the author that has the `name` containing the `authorName` argument (given by the `args` argument). I'm using Array's `find()` method here, assuming that no author shares the same name.
 
-After the author is found, all quotes that contain an `authorId` that matches the author's `id` will be returned.
+After the author is found, the list of quotes will be filtered using Array's `filter()` method to only return a list of quotes that contain an `authorId` that matches the author's `id`.
 
 You'll notice that there are 4 arguments accepted in resolvers:
 - `parent`
@@ -161,7 +159,7 @@ query {
     }
 }
 ```
-Data Returned:
+Data returned:
 
 ```js
 "data": {

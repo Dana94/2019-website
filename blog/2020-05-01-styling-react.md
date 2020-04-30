@@ -5,28 +5,28 @@ date: 2020-05-01
 tags: ['coding', 'react', 'frontend']
 ---
 
-This is a walkthrough on how to apply styles through a basic react app created with the `create-react-app` [command] (https://github.com/facebook/create-react-app#quick-overview). The project I created is called "react-styles".
+This is a walkthrough on how to apply styles through a basic react app created with the `create-react-app` [command] (https://github.com/facebook/create-react-app#quick-overview).
 
 ```bash
-npx create-react-app react-styles
+npx create-react-app <app-name>
 ```
 
 ## Inline styles
 
-In the `style` attribute within double curly braces, CSS properties are written in camel-case with their values in quotations.
+For inline styles, the CSS properties are written in camel-case with their values in quotations. The properties are in the `style` attribute within double curly braces.
 
 ```js
 <p style={{color: 'red', textAlign: 'center'}}>This text will have inline styles.</p>
 ```
 
-## Using classes
+## Classes
 
 Import a stylesheet into the component file to have its declared classes available to elements. The element lists the classes within the attribute `className` instead of `class`.
 
 ```css
 /* App.css */
 
-.button {
+.Button {
   background-color: black;
   color: white;
   padding: 1rem;
@@ -39,20 +39,18 @@ import './App.css';
 
 // ...
 
-<button className="button">App Button</button>
+<button className="Button">App Button</button>
 ```
 
-## Scoped styles:
+## Scoped styles
 
 If you're coming from a Vue.js background, you would be familiar with "scoped-styles" which keep a component's styles separate from affecting other components.
 
-React uses Webpack to accomplish this. No need to install anything, it's already a part of the starter-react app.
-
-Simply create a `<name>.module.css` file to use scoped styles.
+All you need to do is create a `<name>.module.css` file to use scoped styles.
 
 I created a `Button` component with a class created in `Button.module.css`.
 
-Unlike the `button` class created before, this one has the background-color and text color switched.
+Unlike the `Button` class created in `App.css`, this one has the background-color and text color switched.
 
 ```css
 /* Button.module.css */
@@ -66,7 +64,7 @@ Unlike the `button` class created before, this one has the background-color and 
 }
 ```
 
-You need name the import (here I used `classes`) to access the classes.
+You need to name the import (here I used `classes`) to access the classes.
 
 `classes` is an object of all the classes in `Button.module.css`.
 
@@ -94,17 +92,42 @@ In the console, `classes` looks like this:
 {Button: "Button_Button__SRy8D"}
 ```
 
-When rendered, the button will have the `Button` value as its class.
+When rendered, the button will have the `Button` value as its class. The unique hash you see makes this class unique to this component so any other `Button` class won't clash styles with it.
 
 ```html
 <button class="Button_Button__SRy8D">Button with scoped styles</button>
 ```
 
-What you're seeing is Webpack's work. It creates a unique hash to make the class unique to this component.
+## Tip
 
-To append more than 1 class from the stylesheet:
+To append more than 1 class from a stylesheet, join them with the Array's `join()` method:
 
-`className={[classes.Button, classes.error].join(' ')}`
+```css
+/* Button.module.css */
 
+.Button {
+    background-color: white;
+    color: black;
+    padding: 1rem;
+    display: block;
+    margin: 1rem auto;
+}
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-04-24-using-resolvers-to-connect-your-data.md)
+.Purple {
+    background-color: purple;
+    color: white;
+}
+```
+
+```js
+<button className={[classes.Button, classes.Purple].join(' ')}>Purple Button with scoped styles</button>
+```
+Rendered to the page:
+```html
+<button class="Button_Button__SRy8D Button_Purple__2tiEH">Purple Button with scoped styles</button>
+```
+
+Here is a screenshot of the inline, classes, and scoped style examples:
+![The text and 2 buttons styles in this post.](./images/2020-05-01/using-styles.png)
+
+[Found a typo or problem? Edit this page.]()

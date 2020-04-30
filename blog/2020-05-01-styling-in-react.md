@@ -1,11 +1,11 @@
 ---
-title: Styling In React
+title: Styling in React
 path: styling-in-react
 date: 2020-05-01
 tags: ['coding', 'react', 'frontend']
 ---
 
-This is a walkthrough on how to apply styles through a basic react app created with the `create-react-app` [command] (https://github.com/facebook/create-react-app#quick-overview).
+This is an overview on how to apply styles through a basic react app created with the `create-react-app` [command] (https://github.com/facebook/create-react-app#quick-overview).
 
 ```bash
 npx create-react-app <app-name>
@@ -64,9 +64,7 @@ Unlike the `Button` class created in `App.css`, this one has the background-colo
 }
 ```
 
-You need to name the import (here I used `classes`) to access the classes.
-
-`classes` is an object of all the classes in `Button.module.css`.
+You need to name the import (here I used `classes`) to access the classes. Assign a class with `classes.Button` put in the `className` attribute.
 
 ```js
 // Button.js
@@ -86,7 +84,7 @@ class Button extends Component {
 export default Button;
 ```
 
-In the console, `classes` looks like this:
+`classes` is an object of all the classes in `Button.module.css`. In the console, `classes` looks like this:
 
 ```bash
 {Button: "Button_Button__SRy8D"}
@@ -94,7 +92,33 @@ In the console, `classes` looks like this:
 
 When rendered, the button will have the `Button` value as its class. The unique hash you see makes this class unique to this component so any other `Button` class won't clash styles with it.
 
+You can see this when the `<Button />` component is used in the `App` component.
+
+```js
+// App.js
+
+import React from 'react';
+import './App.css';
+
+import Button from './component/Button';
+
+function App() {
+  return (
+    <div className="App">
+      <button className="Button">App Button</button>
+      <Button />
+    </div>
+  );
+}
+
+export default App;
+```
+
+These unique class names keep the App and Button component's styles from affecting the other even though they have the same class name `Button`.
+
 ```html
+<button class="App_Button__1oc6-">App Button</button>
+
 <button class="Button_Button__SRy8D">Button with scoped styles</button>
 ```
 

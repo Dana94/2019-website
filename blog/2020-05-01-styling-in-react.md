@@ -35,6 +35,8 @@ Import a stylesheet into the component file to have its declared classes availab
 }
 ```
 ```js
+// App.js
+
 import './App.css';
 
 // ...
@@ -114,8 +116,9 @@ function App() {
 export default App;
 ```
 
-These unique class names keep the App and Button component's styles from affecting the other even though they have the same class name `Button`.
+These unique class names keep the `App` and `Button` component's styles from affecting the other even though they have the same class name `Button`.
 
+Rendered to the page:
 ```html
 <button class="App_Button__1oc6-">App Button</button>
 

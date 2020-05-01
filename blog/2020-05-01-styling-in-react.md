@@ -157,4 +157,4 @@ Rendered to the page:
 Here is a screenshot of the inline, classes, and scoped style examples:
 ![The text and 2 buttons styles in this post.](./images/2020-05-01/using-styles.png)
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-01-styling-in-react.md)

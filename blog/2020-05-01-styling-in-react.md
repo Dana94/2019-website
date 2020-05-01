@@ -50,7 +50,7 @@ If you're coming from a Vue.js background, you would be familiar with "scoped-st
 
 All you need to do is create a `<name>.module.css` file to use scoped styles.
 
-I created a `Button` component with a class created in `Button.module.css`.
+I created a `Button` component which uses the `Button` class created in `Button.module.css`.
 
 Unlike the `Button` class created in `App.css`, this one has the background-color and text color switched.
 
@@ -115,15 +115,13 @@ function App() {
 
 export default App;
 ```
-
-These unique class names keep the `App` and `Button` component's styles from affecting the other even though they have the same class name `Button`.
-
 Rendered to the page:
 ```html
 <button class="App_Button__1oc6-">App Button</button>
 
 <button class="Button_Button__SRy8D">Button with scoped styles</button>
 ```
+These unique class names keep the `App` and `Button` component's styles from affecting the other even though they have the same class name `Button`.
 
 ## Tip
 

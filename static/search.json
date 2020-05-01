@@ -64,5 +64,9 @@
   {
     "title": "Using Resolvers to Connect Your Data",
     "path": "/using-resolvers-to-connect-your-data"
+  },
+  {
+    "title": "Styling in React",
+    "path": "/styling-in-react"
   }
 ]

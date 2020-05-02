@@ -71,26 +71,6 @@
             </div>
           </li>
           <li class="checkmark mb-6">
-            <div>Random Quote Machine</div>
-            <div
-              class="text-lg text-gray-600"
-            >The user can view different quotes and have the ability to post them on Twitter.</div>
-            <div class="text-lg text-gray-600">Made with HTML5, CSS, JavaScript.</div>
-            <div class="text-lg text-gray-600">
-              <a
-                href="https://github.com/Dana94/random-quote-machine"
-                target="_blank"
-                class="text-copy-leadpurple"
-              >Source</a>
-              &nbsp;
-              <a
-                href="https://dana94.github.io/random-quote-machine/"
-                target="_blank"
-                class="text-copy-leadpurple"
-              >Live</a>
-            </div>
-          </li>
-          <li class="checkmark mb-6">
             <div>TARDIS</div>
             <div
               class="text-lg text-gray-600"

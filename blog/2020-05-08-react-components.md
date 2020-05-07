@@ -40,6 +40,7 @@ class ShoppingCart extends Component {
       <div>
         <p>Total price: {this.props.totalPrice}</p>
         <button onClick={this.handleCheckout}>Checkout</button>
+        <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
       </div>
     );
   }
@@ -48,9 +49,23 @@ class ShoppingCart extends Component {
 export default ShoppingCart;
 ```
 
+Used in another component:
+
+```js
+import ShoppingCart from './component/ShoppingCart';
+
+//...
+
+<ShoppingCart totalPrice="$0"/>
+```
+
 ## Functional Components
 
-- Functional components are used when state management is not needed in the component or you don't need to use lifecycle hooks.
+- Functional components are simply JavaScript functions.
+
+- Cannot use state management or lifecycle hooks.
+
+- Only `React` needs to be imported from the `react` package.
 
 - In order to pass data to the component (known as `props`) it needs to be declared as a parameter and is accessed with `props.<data>`.
 
@@ -64,6 +79,16 @@ const modal = (props) => {
 };
 
 export default modal;
+```
+
+Used in another component:
+
+```js
+import Modal from './component/Modal';
+
+//...
+
+<Modal error="Problem!" />
 ```
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-08-react-components.md)

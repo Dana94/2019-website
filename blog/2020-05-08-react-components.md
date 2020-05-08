@@ -10,13 +10,13 @@ There are 2 types of components you can use in a React project:
 - class
 - functional
 
-## Class Components
-
-- When you need to hold data in a state for a component and to use logic in lifecycle hooks (I'll be making a future post on this).
+## Class components
 
 - Both `React` and `Component` need to be imported from the `react` package.
 
 - Can access a local `state` where data only needed in this component can be stored and managed (see example below).
+
+- Can use lifecycle hooks (I'll be making a future post on this).
 
 - Can access `props` with `this.props.<data>`.
 
@@ -72,20 +72,20 @@ import ShoppingCart from './component/ShoppingCart';
 
 //...
 
-<ShoppingCart totalPrice="$0"/>
+<ShoppingCart totalPrice="0"/>
 ```
 
-## Functional Components
-
-- Functional components are simply JavaScript functions.
-
-- Cannot use local state or lifecycle hooks.
+## Functional components
 
 - Only `React` needs to be imported from the `react` package.
 
+- Essentially are JavaScript functions.
+
+- Cannot use local state or lifecycle hooks.
+
 - In order to pass data to the component (known as `props`) it needs to be declared as a parameter and is accessed with `props.<data>`.
 
-- The body of the component's function is wrapped in `return`, no `render()` needed.
+- The body of the component's function is wrapped in a single `return` statement.
 
 ```js
 import React from 'react';

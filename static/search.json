@@ -68,5 +68,9 @@
   {
     "title": "Styling in React",
     "path": "/styling-in-react"
+  },
+  {
+    "title": "React Components",
+    "path": "/react-components"
   }
 ]

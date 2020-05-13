@@ -19,81 +19,111 @@ State data is accessed using `this.state.<data>`.
 render() {
     return (
         <div>
-            <p>List: {this.state.list}</p>
+            List:
+            <ul>
+                {
+                    this.state.list.map(item => {
+                        return <li key={item}>{item}</li>;
+                    })
+                }
+            </ul>
             <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
-        </div>
+            <button onClick={this.onCheckout}>Check out</button>
+        </div >
     )
 }
 ```
 
 Change state data using `this.setState()`.
 
-In the example below, `checkingOut` is set to `true`.
+In the example below, `checkingOut` is set to `true` when the button "Check out" is clicked.
 
-`this.setState()` does not overwrite the other data (like `list`) that is not modified.
+`this.setState()` does not overwrite the other data (like `list`) even though it's not modified.
 
 ```js
 state = {
     list: ['bread', 'apples', 'tea'],
     checkingOut: false
-}
+  }
 
-onCheckout() {
-    this.setState({checkingOut: true})
+onCheckout = () => {
+    this.setState({checkingOut: true});
 }
 
 render() {
     return (
         <div>
-            <p>List: {this.state.list}</p>
+            List:
+            <ul>
+                {
+                    this.state.list.map(item => {
+                        return <li key={item}>{item}</li>;
+                    })
+                }
+            </ul>
             <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
             <button onClick={this.onCheckout}>Check out</button>
-        </div>
-    );
+        </div >
+    )
 }
 ```
 
-If you need to know the data's current state in order to modify it, an argument that represents the current `state` can be passed.
+If you need to know the data's current state in order to modify it, an argument that represents the current state can be passed (which I named the argument as `prevState`).
+
+So `checkingOut` will be set to true or false depending on its current value.
 
 ```js
 this.setState((prevState) => {
     return {
         checkingOut: !prevState.checkingOut
     }
-})
+});
 ```
 
-If there is other data in the `state`, it will not be overridden. [CHECK]
+If there is other data in the state, it will not be overridden.
 
 Example with everything discussed:
 
 ```js
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-class Modal extends Component {
-    state = {
-        list: ['bread', 'apples', 'tea'],
-        checkingOut: false
-    }
+class ShoppingCart extends Component {
 
-    onCheckout() {
-        this.setState({checkingOut: true})
-    }
+  state = {
+    list: ['bread', 'apples', 'tea'],
+    checkingOut: false
+  }
 
-    render() {
-        return (
-            <div>
-                <p>List: {this.state.list}</p>
-                <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
-                <button onClick={this.onCheckout}>Check out</button>
-            </div>
-        );
-    }
-}
+  onCheckout = () => {
+    // this.setState({checkingOut: true});
+    this.setState((prevState) => {
+        return {
+            checkingOut: !prevState.checkingOut
+        }
+    });
+  }
 
-export default Modal;
+  render() {
+    return (
+      <div>
+        List:
+        <ul>
+          {
+            this.state.list.map(item => {
+                return <li key={item}>{item}</li>;
+            })
+          }
+        </ul>
+        <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
+        <button onClick={this.onCheckout}>Check out</button>
+      </div >
+    )
+  }
+};
+
+export default ShoppingCart;
 ```
 
-
+Coming from a Vue.js background, I found a component's internal state to be similar to the data returned in a Vue component. The data is managed directly from the component and is modified there.
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-08-react-components.md)

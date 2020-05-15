@@ -72,5 +72,9 @@
   {
     "title": "React Components",
     "path": "/react-components"
+  },
+  {
+    "title": "Using State in React Components",
+    "path": "/using-state-in-react-components"
   }
 ]

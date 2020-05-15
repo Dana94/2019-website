@@ -15,30 +15,30 @@ state = {
     checkingOut: false
 }
 ```
-State data is accessed using `this.state.<data>` in the component.
+State data is accessed in the component using `this.state.<data>`.
 
 ```js
 render() {
     return (
-        <div>
-            List:
-            <ul>
-                {
-                    this.state.list.map(item => {
-                        return <li key={item}>{item}</li>;
-                    })
-                }
-            </ul>
-            <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
-            <button onClick={this.onCheckout}>Check out</button>
-        </div >
+      <div>
+        List:
+        <ul>
+          {
+            this.state.list.map(item => {
+              return <li key={item}>{item}</li>;
+            })
+          }
+        </ul>
+        <p>Checking out? {this.state.checkingOut ? 'Yes' : 'No'}</p>
+        <button onClick={this.onCheckout}>Check out</button>
+      </div >
     )
 }
 ```
 
 State data can also be modified using `this.setState()`.
 
-In the example below, `checkingOut` is set to `true` when the button "Check out" is clicked.
+In the example below, `checkingOut` is set to `true` when the button is clicked.
 
 `this.setState()` does not overwrite the other data (like `list`) even though it's not included in the update to the state object.
 
@@ -59,7 +59,7 @@ render() {
         <ul>
           {
             this.state.list.map(item => {
-                return <li key={item}>{item}</li>;
+              return <li key={item}>{item}</li>;
             })
           }
         </ul>
@@ -95,12 +95,11 @@ class ShoppingCart extends Component {
   }
 
   onCheckout = () => {
-    // this.setState({checkingOut: true});
     this.setState((prevState) => {
-        return {
-            checkingOut: !prevState.checkingOut
-        }
-    });
+      return {
+          checkingOut: !prevState.checkingOut
+      }
+  });
   }
 
   render() {
@@ -110,7 +109,7 @@ class ShoppingCart extends Component {
         <ul>
           {
             this.state.list.map(item => {
-                return <li key={item}>{item}</li>;
+              return <li key={item}>{item}</li>;
             })
           }
         </ul>
@@ -124,6 +123,6 @@ class ShoppingCart extends Component {
 export default ShoppingCart;
 ```
 
-Coming from a Vue.js background, I found a component's internal state to be similar to the data returned in a Vue component where the data is managed directly from the component and is modified there.
+Coming from a Vue.js background, I found a component's internal state to be similar to the `data()` returned in a Vue component where it is managed and modified directly from the component.
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-08-react-components.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-15-using-state-in-react-components.md)

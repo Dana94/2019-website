@@ -16,7 +16,7 @@ To start off, an element will be assigned the `animation` property.
 One line can hold 8 values to creating an animation:
 
 - duration
-- timing
+- timing-function
 - delay
 - how many times the animation runs
 - direction
@@ -28,17 +28,56 @@ That's a lot packed into 1 CSS property. Let's look at each one in more detail.
 
 ### Duration
 
-### Timing
+How long it takes for the animation to fully run. The value can be an integer or float with the unit for seconds (s).
+
+### Timing-function
+
+The format the animation moves. This is a bit hard to explain, but it can set up the speed of the animation at a specific part in the duration. Like if you want the animation to start off slow, then speed up before it finishes.
+
+There are many standard values you can use:
+
+- ease
+- ease-in
+- ease-out
+- ease-in-out
+- linear
+- step-start
+- step-end
+- cubic-bezier
+- steps
 
 ### Delay
 
+How long to wait before starting the animation.
+
 ### Iteration
+
+How many times to repeat the animation.
 
 ### Direction
 
+The direction the animation moves:
+
+Options:
+
+- forwards
+- reverse
+- alternate
+- alternate-reverse
+- normal
+
 ### Fill-mode
 
+Sets the animation style before and after it runs. I've never needed to use this setting myself.
+
 ### Play-state
+
+Set if the animation is running or not.
+
+Options:
+
+- paused
+- running
 
 ### Name
 

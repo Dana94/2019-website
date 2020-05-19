@@ -50,6 +50,11 @@ There are many standard values you can use:
 
 How long to wait before starting the animation.
 
+<!-- not working -->
+
+https://codepen.io/Dana94/pen/YpZKWv?tabs=result,html
+
+
 ### Iteration
 
 How many times to repeat the animation.

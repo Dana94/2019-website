@@ -1,6 +1,6 @@
 ---
-title: CSS Animations
-path: css-animations
+title: CSS Animations Part 1
+path: css-animations-part-1
 date: 2020-05-22
 tags: ['coding', 'css', 'frontend']
 ---
@@ -25,6 +25,8 @@ One line can hold 8 values to creating an animation:
 - name (could be created animation or a standard one - more on this later)
 
 That's a lot packed into 1 CSS property. Let's look at each one in more detail.
+
+Since I want to be as explicit as I can with this, I'm splitting this post up into 2 parts.
 
 ### Duration
 
@@ -54,60 +56,11 @@ How long to wait before starting the animation.
 
 How many times to repeat the animation. You can use an integer, a float, or the value `infinite` to repeat endlessly.
 
-### Direction
 
-The direction the animation moves:
-
-- forwards (once the animation is over, it remains where it finishes)
-- reverse (same as forwards, only reversed)
-- alternate
-- alternate-reverse
-- normal
-
-### Fill-mode
-
-Sets the animation style before and after it runs. I've never needed to use this setting myself.
-
-### Play-state
-
-Set if the animation is running or not.
-
-- paused
-- running
-
-### Name
-
-With an animation created using `keyframes`, you can use its name to set it as the element's animation.
-
-I created an animation to gently rise and lower an element for a loading screen.
-
-```css
-@keyframes levitate {
-  0% {
-    transform: translateY(0);
-  }
-
-  50% {
-    transform: translateY(30px);
-  }
-
-  100% {
-    transform: translateY(0);
-  }
-}
-```
-
-## Examples
-
-Drop-down menu:
 
 
 ## Resources
 
 - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
-
-
-
-
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/)

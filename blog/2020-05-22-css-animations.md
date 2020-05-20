@@ -50,23 +50,16 @@ There are many standard values you can use:
 
 How long to wait before starting the animation.
 
-<!-- not working -->
-
-https://codepen.io/Dana94/pen/YpZKWv?tabs=result,html
-
-
 ### Iteration
 
-How many times to repeat the animation.
+How many times to repeat the animation. You can use an integer, a float, or the value `infinite` to repeat endlessly.
 
 ### Direction
 
 The direction the animation moves:
 
-Options:
-
-- forwards
-- reverse
+- forwards (once the animation is over, it remains where it finishes)
+- reverse (same as forwards, only reversed)
 - alternate
 - alternate-reverse
 - normal
@@ -79,14 +72,32 @@ Sets the animation style before and after it runs. I've never needed to use this
 
 Set if the animation is running or not.
 
-Options:
-
 - paused
 - running
 
 ### Name
 
+With an animation created using `keyframes`, you can use its name to set it as the element's animation.
 
+I created an animation to gently rise and lower an element for a loading screen.
+
+```css
+@keyframes levitate {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(30px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+```
+
+## Examples
 
 Drop-down menu:
 

@@ -1,5 +1,5 @@
 ---
-title: CSS Animations Part 1
+title: CSS Animations - Part 1
 path: css-animations-part-1
 date: 2020-05-22
 tags: ['coding', 'css', 'frontend']
@@ -22,7 +22,7 @@ One line can hold 8 values to creating an animation:
 - direction
 - fill-mode
 - play-state
-- name (could be created animation or a standard one - more on this later)
+- name
 
 That's a lot packed into 1 CSS property. Let's look at each one in more detail.
 
@@ -30,7 +30,11 @@ Since I want to be as explicit as I can with this, I'm splitting this post up in
 
 ### Duration
 
-How long it takes for the animation to fully run. The value can be an integer or float with the unit for seconds (s).
+How long it takes for the animation to fully run. The value can be an integer or float with the unit for seconds (s) or milliseconds (ms).
+
+If you give 0 as the value, then no animation will happen.
+
+> example
 
 ### Timing-function
 
@@ -45,19 +49,24 @@ There are many standard values you can use:
 - linear
 - step-start
 - step-end
-- cubic-bezier
-- steps
+- cubic-bezier (> explain)
+- steps (> explain)
+
+> example
 
 ### Delay
 
-How long to wait before starting the animation.
+How long to wait before starting the animation. The value can be an integer or float with the unit for seconds (s) or milliseconds (ms).
+
+The value can be negative which starts the animation immediately but start the value indicated into it.
+
+> example
 
 ### Iteration
 
 How many times to repeat the animation. You can use an integer, a float, or the value `infinite` to repeat endlessly.
 
-
-
+> example
 
 ## Resources
 

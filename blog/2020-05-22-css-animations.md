@@ -34,7 +34,8 @@ How long it takes for the animation to fully run. The value can be an integer or
 
 If you give 0 as the value, then no animation will happen.
 
-> example
+Example:
+
 
 ### Timing-function
 
@@ -49,8 +50,14 @@ There are many standard values you can use:
 - linear
 - step-start
 - step-end
-- cubic-bezier (> explain)
+- cubic-bezier
 - steps (> explain)
+
+All the values aside from steps are are a cubic-bezier value. You could replace each one with its actual value and ge the same result.
+So what's a cubic-bezier? It's a curve. It sets the animation speed - when it increases, decreases, or stays at a linear pace when running.
+
+
+Steps allow you to momentarily sto the animation for a period of time.
 
 > example
 
@@ -60,16 +67,20 @@ How long to wait before starting the animation. The value can be an integer or f
 
 The value can be negative which starts the animation immediately but start the value indicated into it.
 
-> example
+Example:
+
 
 ### Iteration
 
 How many times to repeat the animation. You can use an integer, a float, or the value `infinite` to repeat endlessly.
 
-> example
+Example:
+
 
 ## Resources
 
 - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+
+- [Khanacademy - Bezier curves](https://www.khanacademy.org/partner-content/pixar/animate/ball/v/animation3)
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/)

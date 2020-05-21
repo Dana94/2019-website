@@ -9,7 +9,7 @@ I've been meaning to write a post on CSS animations for a long time now. I am in
 
 Yet.
 
-And after the umpteenth time I had to visit the [animation section on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation), I thought it would be a good idea to note all the things I've come to understand by now when making animations in CSS.
+After the umpteenth time I had to visit the [animation section on MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation), I thought it would be a good idea to note all the things I've come to understand by now when making animations in CSS.
 
 To start off, an element will be assigned the `animation` property.
 

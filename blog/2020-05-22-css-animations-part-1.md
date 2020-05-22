@@ -15,7 +15,7 @@ To start off, an element will be assigned the `animation` property.
 
 ```css
 div {
-    animation: 1s linear .5s 1 forwards both paused levitate;
+    animation: 1s linear .5s 1 forwards both paused slide;
 }
 ```
 
@@ -28,13 +28,13 @@ One line can hold 8 values to creating an animation:
 - direction (`forwards`)
 - fill-mode (`both`)
 - play-state (`paused`)
-- name (`levitate`)
+- name (`slide`)
 
 That's a lot packed into 1 CSS property. Let's look at each one in more detail.
 
 Since I want to be as explicit as I can with this, I'm splitting this post up into 2 parts.
 
-## Duration [DONE]
+## Duration
 
 How long it takes for the animation to fully run. The value can be an integer or float with the unit for seconds (s) or milliseconds (ms).
 
@@ -77,9 +77,9 @@ Example:
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
-## Timing-function [NOT DONE]
+## Timing-function
 
-The format the animation moves. It sets the speed of the animation at every moment in the duration. For example, if you want the animation to start off slow, then speed up before it finishes, use `ease-in` as the value. The element will "ease in" or start slowly when the animation starts, and increase its speed until it stops moving.
+It sets the speed of the animation at every moment in the duration. For example, if you want the animation to start off slow, then speed up before it finishes, use `ease-in` as the value. The element will "ease in" or start slowly when the animation starts, and increase its speed until it stops moving.
 
 There are many standard values you can use:
 
@@ -98,23 +98,69 @@ There are many standard values you can use:
 All the values aside from steps are are a cubic-bezier value. You could replace each one with its actual value and ge the same result.
 So what's a cubic-bezier? It's a curve. It sets the animation speed - when it increases, decreases, or stays at a linear pace when running.
 
-There are 4 arguments - which are 4 points to create the curve. The first 3 points need to be bewtween  and 1. The 4th one is the
+I found this [site](https://cubic-bezier.com/#.17,.67,.83,.67) very useful in displaying the affects of bezier curves.
 
 ### Steps
 
 Steps allow you to momentarily stop the animation for a period of time.
 
-The first argument is the number of steps to stop. These are spaced evenly throughout the animation. and the second argument is the "jumpterm" which signifies when these jumps happen. This is a bit harder to explain so you can see more detail of these options [here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function).
+The first argument is the number of steps to stop. These are spaced evenly throughout the animation. and the second argument is the "jumpterm" which signifies when these jumps happen. You can see more detail of these options [here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function).
 
 Example:
 
+```css
+.square-blue {
+  background-color: rgb(0, 0, 78);
+  animation: 3s ease-in forwards slide;
+}
 
+.square-purple {
+  background-color: rgb(83, 0, 99);
+  animation: 3s linear forwards slide;
+}
 
-## Delay [DONE]
+.square-black {
+  background-color: black;
+  animation: 3s ease-out forwards slide;
+}
+
+.square-brown {
+  background-color: #615050;
+  animation: 3s steps(5, jump-start) forwards slide;
+}
+
+.square-grey {
+  background-color: #d8d8d8;
+  color: black;
+  animation: 3s cubic-bezier(0.35, 0.5, 0.99, 3) forwards slide;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(300px);
+  }
+}
+```
+
+<iframe
+     src="https://codesandbox.io/embed/timing-example-2b4cu?fontsize=14&hidenavigation=1&theme=dark"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     title="Timing Example"
+     allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
+     sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
+   ></iframe>
+
+## Delay
 
 How long to wait before starting the animation. The value can be an integer or float with the unit for seconds (s) or milliseconds (ms).
 
-The value can be negative which starts the animation immediately but start the value indicated into it. So if an animation is set to play for 4 sec and the delay is set to -3 sec, then the animation will start running in the position where there will be 1 sec before it stops (the black square shows this below).
+The value can be negative which starts the animation immediately, but the animation will begin the number subtracted from the value.
+
+So if an animation is set to play for 4 sec and the delay is set to -3 sec, then the animation will start running in the position where there will be 1 sec before it stops (the black square shows this below).
 
 Example:
 
@@ -153,7 +199,7 @@ Example:
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
-## Iteration [DONE]
+## Iteration
 
 How many times to repeat the animation. You can use an integer, a float, or the value `infinite` to repeat endlessly.
 
@@ -205,5 +251,7 @@ Example:
 - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
 - [Khanacademy - Bezier curves](https://www.khanacademy.org/partner-content/pixar/animate/ball/v/animation3)
+
+- [cubic-bezier.com](https://cubic-bezier.com/#.17,.67,.83,.67)
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/)

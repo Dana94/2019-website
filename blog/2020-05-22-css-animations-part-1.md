@@ -6,7 +6,7 @@ summary: Part 1 of CSS animation property.
 tags: ['coding', 'css', 'frontend']
 ---
 
-I've been meaning to write a post on CSS animations for a long time now. I am in no way an expert in creating breath-taking animations in code.
+I've been meaning to write a post on CSS animations for a long time. I am in no way an expert in creating breath-taking animations in code.
 
 Yet.
 
@@ -20,7 +20,7 @@ div {
 }
 ```
 
-One line can hold 8 values to creating an animation:
+One line can hold 8 values for creating an animation:
 
 - duration (`1s`)
 - timing-function (`linear`)
@@ -39,7 +39,7 @@ Since I want to be as explicit as I can with this, I'm splitting this post up in
 
 How long it takes for the animation to fully run. The value can be an integer or float with the unit for seconds (s) or milliseconds (ms).
 
-If you give 0 as the value, then no animation will happen.
+If you give 0 as the value, then the animation will not run at all.
 
 Example:
 
@@ -91,12 +91,12 @@ There are many standard values you can use:
 - `linear` (even speed throughout)
 - `step-start` (stops 1 time when the animation begins)
 - `step-end` (stops 1 time when the animation ends)
-- `cubic-bezier` (see description below)
-- `steps` (see description below)
+- `cubic-bezier(p1, p2, p3, p4)` (see description below)
+- `steps(n, <jumpterm>)` (see description below)
 
 ### Cubic-bezier
 
-All the values aside from steps are are a cubic-bezier value. You could replace each one with its actual value and ge the same result.
+All the values aside from steps are are a cubic-bezier value. You could replace each one with its cubic-bezier value and get the same result.
 So what's a cubic-bezier? It's a curve. It sets the animation speed - when it increases, decreases, or stays at a linear pace when running.
 
 I found this [site](https://cubic-bezier.com/#.17,.67,.83,.67) very useful in displaying the affects of bezier curves.
@@ -105,7 +105,7 @@ I found this [site](https://cubic-bezier.com/#.17,.67,.83,.67) very useful in di
 
 Steps allow you to momentarily stop the animation for a period of time.
 
-The first argument is the number of steps to stop. These are spaced evenly throughout the animation. and the second argument is the "jumpterm" which signifies when these jumps happen. You can see more detail of these options [here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function).
+The first argument is the number of steps to stop. These are spaced evenly throughout the animation The second argument is the "jumpterm" which signifies when these jumps happen. You can see more detail of these options [here](https://developer.mozilla.org/en-US/docs/Web/CSS/animation-timing-function).
 
 Example:
 
@@ -240,12 +240,13 @@ Example:
 
 <iframe
      src="https://codesandbox.io/embed/iteration-example-t90uk?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;margin-bottom: 2rem;"
      title="Iteration Example"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
+_Part 2 coming soon!_
 
 ## Resources
 

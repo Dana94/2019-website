@@ -76,5 +76,9 @@
   {
     "title": "Using State in React Components",
     "path": "/using-state-in-react-components"
+  },
+  {
+    "title": "CSS Animations - Part 1",
+    "path": "/css-animations-part-1"
   }
 ]

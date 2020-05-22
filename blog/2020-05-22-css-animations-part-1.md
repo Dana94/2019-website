@@ -2,6 +2,7 @@
 title: CSS Animations - Part 1
 path: css-animations-part-1
 date: 2020-05-22
+summary: Part 1 of CSS animation property.
 tags: ['coding', 'css', 'frontend']
 ---
 
@@ -254,4 +255,4 @@ Example:
 
 - [cubic-bezier.com](https://cubic-bezier.com/#.17,.67,.83,.67)
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-22-css-animations-part-1.md)

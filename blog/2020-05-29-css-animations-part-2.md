@@ -49,7 +49,7 @@ Set the animation to run or not. This can pause the element during a cycle, whic
 
 With an animation created using `keyframes`, you can use its name to set it as the element's animation.
 
-If you don't use a keyframe, the only other value to use is `none` to stop an aimation without affecting the other settings.
+If you don't use a keyframe, the only other value to use is `none` to stop an animation without affecting the other settings.
 
 I created an animation to gently rise and lower an element for a loading screen.
 

@@ -17,11 +17,43 @@ The direction the animation moves.
 - `alternate` (during each cycle, the animation reverses direction, first cycle is forwards)
 - `alternate-reverse` (during each cycle, the animation reverses direction, first cycle is backwards)
 
-A simple example using `ease-in` for all squares. While the first and second square go in the same direction, the second _alternates_ its direction so it only runs along the first square _every other_ duration.
+A simple example using `ease-in` for all squares. While the first and second square go in the same direction, the second _alternates_ its direction so it only runs along the first square in _every other_ duration.
 
 The same idea applies for the third and fourth squares. While they move in the same _reverse_ direction the first time, the fourth square _alternates_ its direction so it only runs along the third square in _every other_ duration.
 
 Changing direction also affects the `ease-in` value as it will transform to `ease-out` for squares reversing their direction.
+
+```css
+.square-blue {
+  background-color: rgb(0, 0, 78);
+  animation: 2s ease-in infinite normal slide;
+}
+
+.square-purple {
+  background-color: rgb(83, 0, 99);
+  animation: 2s ease-in infinite alternate slide;
+}
+
+.square-black {
+  background-color: black;
+  animation: 2s ease-in infinite reverse slide;
+}
+
+.square-brown {
+  background-color: #615050;
+  animation: 2s ease-in infinite alternate-reverse slide;
+}
+
+@keyframes slide {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateX(200px);
+  }
+}
+```
 
 <iframe
      src="https://codesandbox.io/embed/direction-example-pywec?fontsize=14&hidenavigation=1&theme=dark"
@@ -158,7 +190,7 @@ Clicking the button will set the `animation-name` to `none` which resets the ani
 
 <iframe
      src="https://codesandbox.io/embed/levitate-example-wii2j?fontsize=14&hidenavigation=1&theme=dark"
-     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;"
+     style="width:100%; height:500px; border:0; border-radius: 4px; overflow:hidden;margin-bottom: 2rem;"
      title="Levitate Example"
      allow="accelerometer; ambient-light-sensor; camera; encrypted-media; geolocation; gyroscope; hid; microphone; midi; payment; usb; vr; xr-spatial-tracking"
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts allow-autoplay"

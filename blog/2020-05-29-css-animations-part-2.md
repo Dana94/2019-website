@@ -196,7 +196,7 @@ Clicking the button will set the `animation-name` to `none` which resets the ani
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts allow-autoplay"
    ></iframe>
 
-I found a gained a new understanding after taking the time to create examples and read more of what CSS animations has to offer.
+I found that I have gained a new understanding after taking the time to create examples and read more of what CSS animations has to offer.
 
 ## Resources
 

@@ -6,7 +6,7 @@ summary: Part 2 of CSS animation property.
 tags: ['coding', 'css', 'frontend']
 ---
 
-Continuation of [part 1](/css-animations-part-1) of CSS animation property.
+Continuation of [part 1](/css-animations-part-1) of CSS `animation` property.
 
 ## Direction
 
@@ -17,11 +17,13 @@ The direction the animation moves.
 - `alternate` (during each cycle, the animation reverses direction, first cycle is forwards)
 - `alternate-reverse` (during each cycle, the animation reverses direction, first cycle is backwards)
 
-A simple example using `ease-in` for all squares. While the first and second square go in the same direction, the second _alternates_ its direction so it only runs along the first square in _every other_ duration.
+Consider this example using `ease-in` for all squares. While the first and second square go in the same direction, the second _alternates_ its direction so it only runs in the same direction as the first square in _every other_ duration.
 
-The same idea applies for the third and fourth squares. While they move in the same _reverse_ direction the first time, the fourth square _alternates_ its direction so it only runs along the third square in _every other_ duration.
+The same idea applies for the third and fourth squares. While they move in the same _reverse_ direction the first time, the fourth square _alternates_ its direction so it only matches the third square's direction in _every other_ duration.
 
 Changing direction also affects the `ease-in` value as it will transform to `ease-out` for squares reversing their direction.
+
+Example:
 
 ```css
 .square-blue {
@@ -76,9 +78,9 @@ Sets the animation style before and after it runs.
 
 The element will keep the values from the last moment of animating.
 
-A common example is have the element remain where it is after it's moved, not reset its location.
+A common example is to have the element remain where it is after it's moved, not resetting its location.
 
-<!-- -This is affected the direction and iteration values.- -->
+Example:
 
 ```css
 .square-blue {
@@ -129,6 +131,8 @@ Set the animation to run or not. This can pause the element during a cycle, whic
 
 In the example, you can click the button to start and stop the animation. The button adds/removes the class `stop` from the square.
 
+Example:
+
 ```css
 .square-blue {
   background-color: rgb(0, 0, 78);
@@ -167,6 +171,8 @@ I created an animation to levitate a square. You'll see that it rises back up us
 
 Clicking the button will set the `animation-name` to `none` which resets the animation.
 
+Example:
+
 ```css
 .square-blue {
   background-color: rgb(0, 0, 78);
@@ -196,7 +202,9 @@ Clicking the button will set the `animation-name` to `none` which resets the ani
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts allow-autoplay"
    ></iframe>
 
-I found that I have gained a new understanding after taking the time to create examples and read more of what CSS animations has to offer.
+This concludes my CSS Animation series.
+
+While I wrote these articles for myself, I hope it helped someone else understand what CSS animation has to offer and give you loads of ideas of how to use it it your projects.
 
 ## Resources
 

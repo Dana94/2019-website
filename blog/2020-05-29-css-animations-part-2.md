@@ -210,4 +210,4 @@ While I wrote these articles for myself, I hope it helped someone else understan
 
 - [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-22-css-animations-part-1.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-29-css-animations-part-2.md)

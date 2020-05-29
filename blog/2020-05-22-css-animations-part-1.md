@@ -246,7 +246,7 @@ Example:
      sandbox="allow-forms allow-modals allow-popups allow-presentation allow-same-origin allow-scripts"
    ></iframe>
 
-_Part 2 coming soon!_
+[Read part 2 here](/css-animations-part-2).
 
 ## Resources
 

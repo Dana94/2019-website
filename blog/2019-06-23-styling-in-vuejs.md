@@ -106,7 +106,7 @@ Just make sure the inline styles are wrapped in curly braces. Then drop it into 
 
 The syntax for classes is similar to styles. Something to keep in mind to avoid confusion:
 * `style` attribute holds properties. Their value can determined by data values as well as packaged up in an object.
-* `class` attribute holds class names like usual. But they can also be set as properties with a boolean value detemining if the element is assigned the class (this is useful if there is a specific pattern in which elements get assigned the class). Computed properties can also be used for assigning the classes.
+* `class` attribute holds class names like usual. But they can also be set as properties with a boolean value determining if the element is assigned the class (this is useful if there is a specific pattern in which elements get assigned the class). Computed properties can also be used for assigning the classes.
 
 Let's see how to assign the class `active` to only the even numbered list items using a boolean statement.
 

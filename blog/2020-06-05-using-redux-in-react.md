@@ -29,7 +29,53 @@ npm install --save redux react-redux
 
 ## Actions
 
+Actions are functions to declare what needs to modify the state. They return an object containing a `type` and optional arguments.
+
+React is not needed to create action files. Each action needs to be exported if it's used in a component.
+```js
+export const addColor = (color) => {
+    return {
+        type: 'ADD_COLOR',
+        color: color
+    }
+}
+
+export const removeColor = (color) => {
+    return {
+        type: 'REMOVE_COLOR',
+        color: color
+    }
+}
+```
+
 ## Reducers
+
+Reducers hold the state for a value. It's best practice to name the reducer and action file the name of the value being changed. In this case there would be an `colors.js` in both `actions/` and `reducers/` folders.
+
+```js
+const initialState = {
+    colors: []
+}
+
+const reducer = (state = initialState, action) => {
+    switch (action.type) {
+        case 'ADD_COLOR':
+            const colors = [...state.colors];
+            colors.push(action.color);
+            return {
+                colors: colors
+            }
+        case 'REMOVE_COLOR':
+            return {
+                colors: state.colors.filter(color => color !== action.color)
+            }
+        default:
+            return state;
+    }
+}
+
+export default reducer;
+```
 
 ## Use in a Component
 
@@ -80,5 +126,12 @@ In the `./src/index.js` file, Redux needs to connect all reducers by creating a 
 # When Not to use Redux
 
 You don't need to use Redux if you only have to manage data in one component.
+
+# Notes
+
+Create an `actionTypes` file.
+
+Utility file
+
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-05-using-vue-apollo-in-vuejs.md)

@@ -35,6 +35,38 @@ Here there will be separate `actions/` and `reducers/` folders to separate actio
 
 ![](./images/2020-redux/folders.jpg)
 
+## Connect Redux to App
+
+Redux needs to connect all reducers by creating a store in the `index.js` file located in the root of the project.
+
+The `createStore` from `redux` takes the `reducer` to create the store.
+
+The `Provider` from `react-redux` provides the wrapping tags to make the store available to the app.
+
+The reducers file imported here will be introduced later.
+
+`./src/index.js`
+
+```js
+import { createStore } from 'redux';
+import { Provider } from 'react-redux';
+
+import reducer from './store/reducers/colors';
+
+const store = createStore(reducer);
+
+ReactDOM.render(
+  <Provider store={store}>
+    <React.StrictMode>
+      <App />
+    </React.StrictMode>
+  </Provider>,
+  document.getElementById('root')
+);
+```
+
+<b>Note:</b> The Provider tags should wrap <i>everything</i>.
+
 ## Actions
 
 Actions are functions to declare what needs to modify the state. They return an object containing a `type` and optional arguments.
@@ -66,7 +98,7 @@ If you have multiple action files, it's useful to include an index.js to allow a
 export {addColor, removeColor} from './colors';
 ```
 
-That way, there is no confusion if the correct actions file is being called. Of course, there is only one actions file in this example so it's not really necessary.
+That way in a component, there is no confusion if the correct actions file is being called. Of course, there is only one actions file in this example so it's not really necessary.
 
 ```js
 import * as actions from '../store/actions/index.js';
@@ -107,6 +139,26 @@ export default reducer;
 
 ## Subscriptions
 
+Subscriptions are executed whenever an action is dispatched and the store is updated.
+
+The subscription is declared immediately under where the store is created. This is used to avoid having to call `getState` manually to get the most up-to-date state.
+
+It contains a function that executed when the state is updated.
+
+`./src/index.js`
+
+```js
+const store = createStore(
+  reducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
+
+store.subscribe(() => {
+  console.log('[Subscription]', store.getState());
+});
+```
+
+
 ## Use in a Component
 
 Create a function to handle the state and in receiving an updated version of it.
@@ -114,6 +166,8 @@ Create a function to handle the state and in receiving an updated version of it.
 `mapStateToProps` is the common name for mapping global state values in a component. They will be accessed using `props.<state value>`.
 
 All this step is doing is assigning a local prop value to a state value to make it available.
+
+This is declared outside of the component, typically before the line exporting the component.
 
 ```js
 const mapStateToProps = state => {
@@ -123,7 +177,7 @@ const mapStateToProps = state => {
 }
 ```
 
-Used in a component:
+Referenced in a component:
 
 ```js
 <ul>
@@ -163,14 +217,27 @@ The last thing to do is to use the `connect` package from `react-redux` to conne
 ```js
 import { connect } from 'react-redux';
 
-// ...
+import * as actions from '../store/actions/index.js';
+
+// component
+
+const mapStateToProps = state => {
+    return {
+        colors: state.colors
+    }
+}
+
+const mapDispatchToProps = dispatch => {
+    return {
+        onAddColor: (color) => dispatch(actions.addColor(color)),
+        onRemoveColor: (color) => dispatch(actions.removeColor(color)),
+    }
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
 ```
 
-Order is important! Make sure to add `null` as a value to the first parameter if `mapStateToProps` is not used. If `mapDispatchToProps` is omitted, then just send one argument in.
-
-These names `mapStateToProps` and `mapDispatchToProps` are commonly used in Redux apps, but they can be whatever you prefer.
+When it comes to connecting your functions, order is important! Make sure to add `null` as a value to the first parameter if `mapStateToProps` is not used. If `mapDispatchToProps` is omitted, then just send one argument in.
 
 Examples:
 ```js
@@ -180,40 +247,13 @@ export default connect(mapStateToProps)(App);
 export default connect(null, mapDispatchToProps)(App);
 ```
 
-
-## Connect Redux to App
-
-Redux needs to connect all reducers by creating a store in the `index.js` file located in the root of the project.
-
-The `createStore` from `redux` takes the `reducer` to create the store.
-
-The `Provider` from `react-redux` provides the wrapping tags to make the store available to the app.
-
-`./src/index.js`
-
-```js
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-
-import reducer from './store/reducers/colors';
-
-const store = createStore(reducer);
-
-ReactDOM.render(
-  <Provider store={store}>
-    <React.StrictMode>
-      <App />
-    </React.StrictMode>
-  </Provider>,
-  document.getElementById('root')
-);
-```
-
-<b>Note:</b> The Provider tags should wrap <i>everything</i>.
+These names `mapStateToProps` and `mapDispatchToProps` are commonly used in Redux apps, but they can be whatever you prefer.
 
 ## Chrome Extension
 
 [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension) is a useful browser extension specifically for reporting all changes in Redux state.
+
+Whenever an action is dispatched, it wll show in the extension along with what was changed in the state.
 
 If you aren't using middleware (in a future post), it's as simple as adding this line in the `createStore` line.
 

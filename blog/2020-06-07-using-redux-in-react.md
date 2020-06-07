@@ -340,6 +340,6 @@ export const removeColor = (color) => {
 }
 ```
 
-If you're interested in the repo for this example, it is available [here]().
+If you're interested in the repo for this example, it is available [here](https://github.com/Dana94/redux-intro).
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-05-using-vue-apollo-in-vuejs.md)

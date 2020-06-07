@@ -1,8 +1,8 @@
 ---
 title: Using Redux in React
 path: using-redux-in-react
-date: 2020-06-05
-summary: Something...
+date: 2020-06-07
+summary: Redux is a commonly used library that is not affiliated with React. It is used to manage state throughout the app. If you know Vue.js you may have used Vuex, the state management library for Vue.js projects. It's the same idea.
 tags: ['frontend', 'coding', 'react']
 ---
 
@@ -10,7 +10,7 @@ Redux is a commonly used library that is not affiliated with React. It is used t
 
 Vuex has `Actions`, `Mutations` and `Getters`.
 
-React has `Actions`, `Reducers` and `Subscriptions`.
+Redux has `Actions`, `Reducers` and `Subscriptions`.
 
 So in both libraries there are 3 main functions when managing state:
 - what to do with the state (actions)
@@ -33,7 +33,10 @@ There will be a designated `store` folder to hold all actions and reducers for y
 
 Here there will be separate `actions/` and `reducers/` folders to separate actions and reducers files.
 
-![](./images/2020-redux/folders.jpg)
+It's best practice to name the reducer and action file the name of the value being changed. In this case there would be an `colors.js` in both the `actions/` and `reducers/` folders.
+
+![Folder structure with Redux](./images/2020-redux/folders.jpg)
+_Folder structure with Redux_
 
 ## Connect Redux to App
 
@@ -41,7 +44,7 @@ Redux needs to connect all reducers by creating a store in the `index.js` file l
 
 The `createStore` from `redux` takes the `reducer` to create the store.
 
-The `Provider` from `react-redux` provides the wrapping tags to make the store available to the app.
+The `Provider` from `react-redux` provides the wrapping tags to make the store available to the app. The `store` created is passed in through the tags.
 
 The reducers file imported here will be introduced later.
 
@@ -74,6 +77,9 @@ Actions are functions to declare what needs to modify the state. They return an 
 React is not needed to create action files. Each action needs to be exported if it's used in a component.
 
 The actions below either add or remove a color value from the state.
+
+`./src/store/actions/colors.js`
+
 ```js
 export const addColor = (color) => {
     return {
@@ -106,7 +112,7 @@ import * as actions from '../store/actions/index.js';
 
 ## Reducers
 
-Reducers hold the state for a value and also modify it depending on what actions are called. It's best practice to name the reducer and action file the name of the value being changed. In this case there would be an `colors.js` in both the `actions/` and `reducers/` folders.
+Reducers hold the state for a value and also modify it depending on what actions are called.
 
 The switch statement checks what the `action.type` is to know how to modify the `colors` array with `action.color` being the value passed.
 
@@ -160,8 +166,6 @@ store.subscribe(() => {
 
 
 ## Use in a Component
-
-Create a function to handle the state and in receiving an updated version of it.
 
 `mapStateToProps` is the common name for mapping global state values in a component. They will be accessed using `props.<state value>`.
 
@@ -219,7 +223,7 @@ import { connect } from 'react-redux';
 
 import * as actions from '../store/actions/index.js';
 
-// component
+// component declared here
 
 const mapStateToProps = state => {
     return {
@@ -247,13 +251,15 @@ export default connect(mapStateToProps)(App);
 export default connect(null, mapDispatchToProps)(App);
 ```
 
+Wrap connect around everything...
+
 These names `mapStateToProps` and `mapDispatchToProps` are commonly used in Redux apps, but they can be whatever you prefer.
 
 ## Chrome Extension
 
 [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension) is a useful browser extension specifically for reporting all changes in Redux state.
 
-Whenever an action is dispatched, it wll show in the extension along with what was changed in the state.
+Whenever an action is dispatched, it will show in the extension along with what was changed in the state.
 
 If you aren't using middleware (in a future post), it's as simple as adding this line in the `createStore` line.
 
@@ -303,6 +309,8 @@ export const removeColor = (color) => {
     }
 }
 ```
+
+Combine reducers...
 
 If you're interested in the repo for this example, it is available [here]().
 

@@ -112,7 +112,7 @@ export const removeColor = (color) => {
 }
 ```
 
-If you have multiple action files, it's useful to include an index.js to allow a component to export any actions all in one place.
+If you have multiple action files, it's useful to include an index.js to allow a component to import any actions all from one place.
 
 `./src/store/actions/index.js`
 
@@ -120,7 +120,7 @@ If you have multiple action files, it's useful to include an index.js to allow a
 export {addColor, removeColor} from './colors';
 ```
 
-That way in a component, there is no confusion if the correct actions file is being called. Of course, there is only one actions file in this example so it's not really necessary.
+That way, there is no confusion if the correct actions file is being called. Of course, there is only one actions file in this example so it's not necessary.
 
 ```js
 import * as actions from '../store/actions/index.js';
@@ -128,7 +128,7 @@ import * as actions from '../store/actions/index.js';
 
 ## Reducers
 
-Reducers hold the state for a value and also modify it depending on what actions are called.
+Reducers hold the state for a value and modify it depending on what actions are called.
 
 The switch statement checks what the `action.type` is to know how to modify the `colors` array with `action.color` being the value passed.
 
@@ -165,7 +165,7 @@ Subscriptions are executed whenever an action is dispatched and the store is upd
 
 The subscription is declared immediately under where the store is created. This is used to avoid having to call `getState` manually to get the most up-to-date state.
 
-It contains a function that executed when the state is updated.
+It contains a function that executes when the state is updated.
 
 `./src/index.js`
 
@@ -202,6 +202,25 @@ Referenced in a component:
     return <li key={color}>{color}</li>;
     })}
 </ul>
+```
+
+If using more than one reducer, the names assigned to them are used to access their individual states.
+
+`./src/index.js`
+```js
+const rootReducer = combineReducers({
+    colorsReducer: reducer,
+    otherReducer: anotherReducer
+});
+```
+So `colorsReducer` and `otherReducer` are used here.
+```js
+const mapStateToProps = state => {
+    return {
+        colors: state.colorsReducer.colors,
+        other: state.otherReducer.value
+    }
+};
 ```
 
 `mapDispatchToProps` is the common name for mapping actions to accessible functions in the component. They will be called using `props.<dispatch>`.
@@ -289,9 +308,9 @@ export default withRouter(connect(null, mapDispatchToProps)(App));
 
 [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension) is a useful browser extension specifically for reporting all changes in Redux state.
 
-Whenever an action is dispatched, it will show in the extension along with what was changed in the state.
+Whenever an action is dispatched, it will show in the extension along with what was changed.
 
-If you aren't using middleware (in a future post), then just add this line in the `createStore` line.
+If you aren't using middleware (in a future post), then just add the value shown below as a second argument in the `createStore`.
 
 ```js
 const store = createStore(
@@ -307,7 +326,7 @@ _Redux Devtools_
 
 You don't need to use Redux if you only have to manage data in one component. Using the hook `useState` or creating a class component would be able to handle local state change.
 
-Redux is useful to having the state available anywhere along with the actions to modify the state.
+Redux is useful to having the state available anywhere along with the actions to modify it.
 
 ## Notes
 
@@ -340,6 +359,6 @@ export const removeColor = (color) => {
 }
 ```
 
-If you're interested in the repo for this example, it is available [here](https://github.com/Dana94/redux-intro).
+If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/redux-intro).
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-07-using-redux-in-react.md)

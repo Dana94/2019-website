@@ -33,7 +33,7 @@ There will be a designated `store` folder to hold all actions and reducers for y
 
 Here there will be separate `actions/` and `reducers/` folders to separate actions and reducers files.
 
-It's best practice to name the reducer and action file the name of the value being changed. In this case there would be an `colors.js` in both the `actions/` and `reducers/` folders.
+It's best practice to name the reducer and action file the name of the state value being changed. In this case there would be a `colors.js` in both the `actions/` and `reducers/` folders.
 
 ![Folder structure with Redux](./images/2020-redux/folders.jpg)
 _Folder structure with Redux_
@@ -70,9 +70,25 @@ ReactDOM.render(
 
 <b>Note:</b> The Provider tags should wrap <i>everything</i>.
 
+If you have more than one reducer, you can use `combineReducers` from `redux` to combine them.
+
+```js
+import { createStore, combineReducers } from 'redux';
+
+import reducer from './store/reducers/colors';
+import anotherReducer from './store/reducers/other';
+
+const rootReducer = combineReducers({
+    colorsReducer: reducer,
+    other: anotherReducer
+});
+
+const store = createStore(rootReducer);
+```
+
 ## Actions
 
-Actions are functions to declare what needs to modify the state. They return an object containing a `type` and optional arguments.
+Actions are functions to declare how to the state will be changed. They return an object containing a `type` and optional arguments.
 
 React is not needed to create action files. Each action needs to be exported if it's used in a component.
 
@@ -154,10 +170,7 @@ It contains a function that executed when the state is updated.
 `./src/index.js`
 
 ```js
-const store = createStore(
-  reducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
-);
+const store = createStore(reducer);
 
 store.subscribe(() => {
   console.log('[Subscription]', store.getState());
@@ -198,7 +211,7 @@ Similar to `mapStateToProps`, props are bring assigned functions to handle dispa
 The arguments `state` and `dispatch` are given by Redux. The `actions` are the imports available at `./src/store/actions/index.js` to be used.
 
 ```js
-import * as actions from '../store/actions/index.js';
+import * as actions from '../store/actions/index';
 
 // ...
 
@@ -216,12 +229,14 @@ Used in an element:
 <button onClick={() => props.onAddColor('blue')}>Add blue</button> :
 ```
 
+The names `mapStateToProps` and `mapDispatchToProps` are commonly used in Redux apps, but they can be whatever you prefer.
+
 The last thing to do is to use the `connect` package from `react-redux` to connect these functions to the component.
 
 ```js
 import { connect } from 'react-redux';
 
-import * as actions from '../store/actions/index.js';
+import * as actions from '../store/actions/index';
 
 // component declared here
 
@@ -251,9 +266,24 @@ export default connect(mapStateToProps)(App);
 export default connect(null, mapDispatchToProps)(App);
 ```
 
-Wrap connect around everything...
+If there is already a higher order component wrapping the component in the export default statement, you can wrap the entire thing with `connect`.
 
-These names `mapStateToProps` and `mapDispatchToProps` are commonly used in Redux apps, but they can be whatever you prefer.
+```js
+export default connect(mapStateToProps, mapDispatchToProps)(withErrorHandler(App));
+```
+
+If using `react-router` in your app, it will break the functionality.
+
+Use `withRouter` from `react-router-dom` to fix this.
+
+```js
+import { Route, Switch, withRouter } from 'react-router-dom';
+import { connect } from 'react-redux';
+
+//...
+
+export default withRouter(connect(null, mapDispatchToProps)(App));
+```
 
 ## Chrome Extension
 
@@ -261,7 +291,7 @@ These names `mapStateToProps` and `mapDispatchToProps` are commonly used in Redu
 
 Whenever an action is dispatched, it will show in the extension along with what was changed in the state.
 
-If you aren't using middleware (in a future post), it's as simple as adding this line in the `createStore` line.
+If you aren't using middleware (in a future post), then just add this line in the `createStore` line.
 
 ```js
 const store = createStore(
@@ -309,8 +339,6 @@ export const removeColor = (color) => {
     }
 }
 ```
-
-Combine reducers...
 
 If you're interested in the repo for this example, it is available [here]().
 

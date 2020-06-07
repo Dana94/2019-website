@@ -84,5 +84,9 @@
   {
     "title": "CSS Animations - Part 2",
     "path": "/css-animations-part-2"
+  },
+  {
+    "title": "Using Redux in React",
+    "path": "/using-redux-in-react"
   }
 ]

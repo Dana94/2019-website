@@ -180,6 +180,43 @@ Used in computed properties and as [Actions, Getters].
 
 ```
 
+Actions
+
+2 ways to sue actions.
+
+- `dispatch` command
+- `mapActions`
+
+With the action's name, use `this.$store.dispatch` in your component to dispatch an action in your store. If you need to pass a value, that is the second argument.
+
+Calling the `addColor` action:
+
+```js
+this.$store.dispatch('addColor', this.color);
+```
+
+With `mapActions`, this needs to be imported from `vuex`.
+
+Within `methods`, `mapActions` contains the string values of the created actions in the store.
+
+With these actions available, they can be called instead through `dispatch`.
+
+```js
+import { mapActions } from 'vuex'
+
+methods: {
+    ...mapActions([
+      'addColor',
+      'removeColor'
+    ]),
+    addColorHandler() {
+      this.addColor(this.color);
+    },
+    removeColorHandler() {
+      this.removeColor(this.color);
+    },
+  }
+```
 
 ## Chrome Extension
 

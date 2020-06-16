@@ -53,17 +53,90 @@ export default new Vuex.Store({
 
 You'll see the `modules` object in the new store we created. This is similar to how [Redux combines reducers](/using-redux-in-react#use-in-a-component) in the project's root `index.js` file. If I have more than one module, their functions are separated.
 
-In `store/` add a `modules/` folder with a name to encompass the store data or this file.
-
-```js
-```
+In `store/` add a `modules/` folder with a name to encompass the store data or this file. Here there will be a `colors.js` for this.
 
 ![Folder structure with Vuex](./images/2020-06-19/folders.jpg)
 _Folder structure with Vuex_
 
 ## Create the Store
 
+The `colors.js` will contain:
 
+- state
+- mutations
+- actions
+- getters
+
+For the state, there just needs to be an array holding all the color names.
+
+```js
+const state = {
+    colors: []
+}
+```
+
+This state declared will be modified with mutations. Wither a color will be added or removed from the array.
+
+I was taught to name mutations in all uppercase so that's what you see below.
+
+The arguments will always have `state` since this is how it's accessed with any other optional arguments used to modify it.
+
+For `ADD_COLOR`, the new `color` is pushed onto the `state.colors` array.
+
+For `REMOVE_COLORS`, a new `state.colors` is assigned by filtering the array and returning all colors that don't match the one we're removing.
+
+```js
+const mutations = {
+    ADD_COLOR(state, color) {
+        state.colors.push(color);
+    },
+    REMOVE_COLOR(state, color) {
+        state.colors = state.colors.filter(aColor => aColor !== color);
+    }
+};
+```
+
+Next are the actions. These will be dispatched from a component to call the mutation.
+
+Every action has at least the `{commit}` argument used to call a mutation.
+
+`addColor` calls `ADD_COLOR` passing the payload (which is `color`).
+
+`removeColor` calls `REMOVE_COLOR` passing the payload (which is `color`).
+
+```js
+const actions = {
+    addColor({commit}, payload) {
+        commit('ADD_COLOR', payload);
+    },
+    removeColor({commit}, payload) {
+        commit('REMOVE_COLOR', payload)
+    }
+};
+```
+
+Finally there is a single getter fo ra component to receive the latest `state.colors`.
+
+Like with mutations, the state needs t be passed as a parameter to return it.
+
+```js
+const getters = {
+    getColors(state) {
+        return state.colors;
+    }
+};
+```
+
+Then everything declared needs to be exported to be imported into the `store.js`.
+
+```js
+export default {
+    state,
+    mutations,
+    actions,
+    getters
+}
+```
 
 ## Connect the Store to App
 

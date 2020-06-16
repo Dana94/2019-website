@@ -174,15 +174,11 @@ store.subscribe(() => {
 
 ## Use in a Component
 
-Used in computed properties and as [Actions, Getters].
-
-```js
-
-```
+Actions and getters are used in components to declare current state and modify it.
 
 Actions
 
-2 ways to sue actions.
+2 ways to ue actions.
 
 - `dispatch` command
 - `mapActions`
@@ -197,7 +193,7 @@ this.$store.dispatch('addColor', this.color);
 
 With `mapActions`, this needs to be imported from `vuex`.
 
-Within `methods`, `mapActions` contains the string values of the created actions in the store.
+Within methods, `mapActions` contains the string values of the created actions in the store.
 
 With these actions available, they can be called instead through `dispatch`.
 
@@ -205,18 +201,47 @@ With these actions available, they can be called instead through `dispatch`.
 import { mapActions } from 'vuex'
 
 methods: {
-    ...mapActions([
-      'addColor',
-      'removeColor'
-    ]),
-    addColorHandler() {
-      this.addColor(this.color);
-    },
-    removeColorHandler() {
-      this.removeColor(this.color);
-    },
+  ...mapActions([
+    'addColor',
+    'removeColor'
+  ]),
+  addColorHandler() {
+    this.addColor(this.color);
+  },
+  removeColorHandler() {
+    this.removeColor(this.color);
   }
+}
 ```
+
+Getters
+
+2 ways to ue actions.
+
+- `dispatch` command
+- `mapGetters`
+
+With the action's name, use `this.$store.getters` in your component to dispatch an action in your store. If you need to pass a value, that is the second argument.
+
+Calling the `getColors` getter:
+
+```js
+this.$store.getters.getColors;
+```
+
+Similar to `mapActions`, there is a `mapGetters` that can be used in the component's computed properties (unlike `mapActions` being declared in methods).
+
+```js
+import { mapGetters } from 'vuex';
+
+computed: {
+  ...mapGetters([
+    'getColors'
+  ])
+}
+```
+
+This would be called with `this.getColors` in the component.
 
 ## Chrome Extension
 

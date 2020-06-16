@@ -6,7 +6,7 @@ summary: Something...
 tags: ['frontend', 'coding', 'vue']
 ---
 
-I recently made a [Redux]() post and thought it's make sense to finally make another Vue.js related post and introduce Vuex.
+I recently made a [Redux](/using-redux-in-react) post and thought it's make sense to finally make another Vue.js related post and introduce Vuex.
 
 Vuex has `Actions`, `Mutations` and `Getters`.
 
@@ -34,34 +34,38 @@ There is a `store.js` file here. Depending on your store, you can hold all the c
 
 In `./src/store/store.js` we're just creating the store.
 
-`Vue` and `Vuex` are both used here with `grid` being imported by that subdirectory mentioned earlier (we'll et to this in a moment).
+`Vue` and `Vuex` are both used here with `colors` being imported by that subdirectory mentioned earlier (we'll get to this in the next step).
 
 ```js
-import Vue from "vue";
-import Vuex from "vuex";
+import Vue from 'vue';
+import Vuex from 'vuex';
 
-import grid from './modules/grid';
+import colors from './modules/colors';
 
 Vue.use(Vuex);
 
 export default new Vuex.Store({
-  modules: {
-    grid
-  }
+    modules: {
+        colors
+    }
 });
 ```
 
 You'll see the `modules` object in the new store we created. This is similar to how [Redux combines reducers](/using-redux-in-react#use-in-a-component) in the project's root `index.js` file. If I have more than one module, their functions are separated.
 
-In `store/` add a `modules/` folder with a name to encompass the store data or this file. [USE COLORS AS A VUEX EXAMPLE]
+In `store/` add a `modules/` folder with a name to encompass the store data or this file.
 
 ```js
 ```
 
-![Folder structure with Vuex](./images/2020-redux/folders.jpg)
+![Folder structure with Vuex](./images/2020-06-19/folders.jpg)
 _Folder structure with Vuex_
 
-## Connect Redux to App
+## Create the Store
+
+
+
+## Connect the Store to App
 
 The store needs to be imported and passed as an argument in the created `Vue` instance.
 
@@ -71,13 +75,14 @@ The store needs to be imported and passed as an argument in the created `Vue` in
 import Vue from 'vue'
 import App from './App.vue'
 
-import store from './store/store'
+import store from './store/store';
+
+Vue.config.productionTip = false
 
 new Vue({
-  el: '#app',
   store,
-  render: h => h(App)
-})
+  render: h => h(App),
+}).$mount('#app')
 ```
 
 ## Actions
@@ -247,7 +252,7 @@ This would be called with `this.getColors` in the component.
 
 [Vue.js Devtools](https://github.com/vuejs/vue-devtools) has a part for managing state in your store. I've only used it by installing it in Chrome.
 
-![Redux Devtools](./images/2020-redux/redux_devtools.jpg)
+![Redux Devtools](./images/2020-06-07/redux_devtools.jpg)
 _Redux Devtools_
 
 If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/redux-intro).

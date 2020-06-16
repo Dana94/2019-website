@@ -35,7 +35,7 @@ Here there will be separate `actions/` and `reducers/` folders to separate actio
 
 It's best practice to name the reducer and action file the name of the state value being changed. In this case there would be a `colors.js` in both the `actions/` and `reducers/` folders.
 
-![Folder structure with Redux](./images/2020-redux/folders.jpg)
+![Folder structure with Redux](./images/2020-06-07/folders.jpg)
 _Folder structure with Redux_
 
 ## Connect Redux to App
@@ -319,7 +319,7 @@ const store = createStore(
 );
 ```
 
-![Redux Devtools](./images/2020-redux/redux_devtools.jpg)
+![Redux Devtools](./images/2020-06-07/redux_devtools.jpg)
 _Redux Devtools_
 
 ## When Not to use Redux

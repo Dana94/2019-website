@@ -6,21 +6,21 @@ summary: Something...
 tags: ['frontend', 'coding', 'vue']
 ---
 
-I recently made a [Redux](/using-redux-in-react) post and thought it's make sense to finally make another Vue.js related post and introduce Vuex.
+I recently made a [Redux](/using-redux-in-react) post and thought it was time to finally make another Vue.js post and introduce Vuex.
 
 Vuex has `Actions`, `Mutations` and `Getters`.
 
-Actions decide what to do with the state.
+Actions dictate what to do with the state.
 
 Mutations are what affects the state (they are called by actions).
 
-Getters return the state to your components.
+Getters return the state.
 
 ## Table of Contents
 
 ## Install
 
-Save `vuex` as a dev dependencies in your project.
+Save `vuex` as a dev dependency in your project.
 
 ```bash
 npm install vuex --save
@@ -28,9 +28,11 @@ npm install vuex --save
 
 ## Folder Structure
 
-There will be a designated `store` folder to hold all actions and reducers for your project.
+There will be a designated `store` folder to hold all parts of the store.
 
-There is a `store.js` file here. Depending on your store, you can hold all the code for the store here, but I'm going to not do that and instead make a subdirectory that handles all the actions, mutations, and getters.
+There will be a `store.js` file here.
+
+Depending on your store, you can hold all the code here. I'm going to not do that and instead make a subdirectory that handles all the actions, mutations, and getters to show how you would manage separate states for a bigger application.
 
 In `./src/store/store.js` we're just creating the store.
 
@@ -51,9 +53,9 @@ export default new Vuex.Store({
 });
 ```
 
-You'll see the `modules` object in the new store we created. This is similar to how [Redux combines reducers](/using-redux-in-react#use-in-a-component) in the project's root `index.js` file. If I have more than one module, their functions are separated.
+You'll see the `modules` object in the new store we created. If I have more than one module, their functions are separated.
 
-In `store/` add a `modules/` folder with a name to encompass the store data or this file. Here there will be a `colors.js` for this.
+In `store/` add a `modules/` folder with a name to encompass the store data for this file. Here there will be a `colors.js` for this.
 
 ![Folder structure with Vuex](./images/2020-06-19/folders.jpg)
 _Folder structure with Vuex_
@@ -79,7 +81,7 @@ This state declared will be modified with mutations adding or removing colors fr
 
 I was taught to name mutations in all uppercase so that's what you see below.
 
-The arguments will always have `state` and other optional arguments used to modify it.
+The arguments will always have `state` first and other optional arguments used to modify it.
 
 For `ADD_COLOR`, the new `color` is pushed onto the `state.colors` array.
 
@@ -100,9 +102,13 @@ Next are the actions. These will be dispatched from a component to call the muta
 
 Every action has at least the `{commit}` argument used to call a mutation.
 
-`addColor` calls `ADD_COLOR` passing the payload (which is `color`).
+Commits are what calls the mutations through an action.
 
-`removeColor` calls `REMOVE_COLOR` passing the payload (which is `color`).
+The `payload` you see is the typical name for the optional arguments passed to an action. For here, it's the `color` value as the second argument in the mutations.
+
+`addColor` calls `ADD_COLOR` and passes the payload.
+
+`removeColor` calls `REMOVE_COLOR` and passes the payload.
 
 ```js
 const actions = {
@@ -115,7 +121,30 @@ const actions = {
 };
 ```
 
-Finally there is a single getter for a component to receive the latest `state.colors`.
+A commit can also be written as an object with the `type` being the mutation to call.
+
+```js
+addColor({commit}, payload) {
+    commit({
+        type: 'ADD_COLOR',
+        color: payload
+    });
+}
+```
+
+Keep in mind that changing this setup will mean the mutation needs to be changed to reflect the payload's value.
+
+`{ "type": "ADD_COLOR", "payload": "orange" }`
+
+So the color value will need to be accessed by destructuring to push `color` onto the array.
+
+```js
+ADD_COLOR(state, {color}) {
+    state.colors.push(color);
+},
+```
+
+Finally, there is a single getter for a component to receive the latest `state.colors`.
 
 Like with mutations, the state needs to be passed as a parameter to return it.
 
@@ -127,7 +156,7 @@ const getters = {
 };
 ```
 
-Then everything declared needs to be exported to be imported into the `store.js`.
+Then everything declared needs to be exported to be used in the `store.js`.
 
 ```js
 export default {
@@ -138,7 +167,7 @@ export default {
 }
 ```
 
-## Connect the Store to App
+## Connect the Store to the App
 
 The store needs to be imported and passed as an argument in the created `Vue` instance for the project.
 
@@ -162,33 +191,27 @@ new Vue({
 
 Now that the store is all set up, a component can access the state using actions and getters created previously.
 
-2 ways to use actions.
+There are 2 ways to use actions:
 
 - `dispatch` command
 - `mapActions`
 
 With the action's name, use `this.$store.dispatch` in your component to dispatch an action in your store. If you need to pass a value, that's the second argument.
 
-Calling the `addColor` action:
-
 ```js
-this.$store.dispatch('addColor', this.color);
+ methods: {
+    addColorHandler() {
+      this.$store.dispatch('addColor', this.color);
+    },
+    removeColorHandler() {
+      this.$store.dispatch('removeColor', this.color);
+    },
+  }
 ```
 
-With `mapActions`, this needs to be imported from `vuex`.
+If `mapActions`, this first needs to be imported from `vuex`.
 
 Within methods, `mapActions` contains the string values of the created actions in the store.
-
-With these actions available, they can be called without the use of `dispatch`.
-
-```js
-
-// both commands are equal
-this.$store.dispatch('addColor', this.color)
-
-this.addColor(this.color)
-
-```
 
 ```js
 import { mapActions } from 'vuex'
@@ -207,20 +230,26 @@ methods: {
 }
 ```
 
-2 ways to use getters.
+There are 2 ways to use getters:
 
 - `dispatch` command
 - `mapGetters`
 
 With the name of the getter, use `this.$store.getters` in your component to receive the state data.
 
-Calling the `getColors` getter:
+Calling the `getColors` getter will have the current state accessible with `this.colors` in the component.
 
 ```js
-this.$store.getters.getColors;
+computed: {
+    colors() {
+        return this.$store.getters.getColors;
+    }
+}
 ```
 
-Similar to `mapActions`, there is a `mapGetters` that can be used in the component's computed properties (unlike `mapActions` being declared in methods).
+Similar to `mapActions`, there is a `mapGetters` that can be used in the component's computed properties.
+
+This would be called with `this.getColors` in the component.
 
 ```js
 import { mapGetters } from 'vuex';
@@ -232,14 +261,12 @@ computed: {
 }
 ```
 
-This would be called with `this.getColors` in the component.
-
 ## Chrome Extension
 
 [Vue.js Devtools](https://github.com/vuejs/vue-devtools) has a part for managing state in your store. I've only used it by installing it in Chrome.
 
-![Redux Devtools](./images/2020-06-07/redux_devtools.jpg)
-_Redux Devtools_
+![Vue.js Devtools]()
+_Vue.js Devtools_
 
 If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/redux-intro).
 

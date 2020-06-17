@@ -75,15 +75,15 @@ const state = {
 }
 ```
 
-This state declared will be modified with mutations. Wither a color will be added or removed from the array.
+This state declared will be modified with mutations adding or removing colors from the array.
 
 I was taught to name mutations in all uppercase so that's what you see below.
 
-The arguments will always have `state` since this is how it's accessed with any other optional arguments used to modify it.
+The arguments will always have `state` and other optional arguments used to modify it.
 
 For `ADD_COLOR`, the new `color` is pushed onto the `state.colors` array.
 
-For `REMOVE_COLORS`, a new `state.colors` is assigned by filtering the array and returning all colors that don't match the one we're removing.
+For `REMOVE_COLORS`, a new `state.colors` is assigned by filtering the array and returning all colors that don't match the one being removed.
 
 ```js
 const mutations = {
@@ -115,9 +115,9 @@ const actions = {
 };
 ```
 
-Finally there is a single getter fo ra component to receive the latest `state.colors`.
+Finally there is a single getter for a component to receive the latest `state.colors`.
 
-Like with mutations, the state needs t be passed as a parameter to return it.
+Like with mutations, the state needs to be passed as a parameter to return it.
 
 ```js
 const getters = {
@@ -140,7 +140,7 @@ export default {
 
 ## Connect the Store to App
 
-The store needs to be imported and passed as an argument in the created `Vue` instance.
+The store needs to be imported and passed as an argument in the created `Vue` instance for the project.
 
 `./src/main.js`
 
@@ -158,110 +158,16 @@ new Vue({
 }).$mount('#app')
 ```
 
-## Actions
-
-Actions are functions to declare how to the state will be changed. They return an object containing a `type` and optional arguments.
-
-React is not needed to create action files. Each action needs to be exported if it's used in a component.
-
-The actions below either add or remove a color value from the state.
-
-`./src/store/actions/colors.js`
-
-```js
-export const addColor = (color) => {
-    return {
-        type: 'ADD_COLOR',
-        color: color
-    }
-}
-
-export const removeColor = (color) => {
-    return {
-        type: 'REMOVE_COLOR',
-        color: color
-    }
-}
-```
-
-If you have multiple action files, it's useful to include an index.js to allow a component to import any actions all from one place.
-
-`./src/store/actions/index.js`
-
-```js
-export {addColor, removeColor} from './colors';
-```
-
-That way, there is no confusion if the correct actions file is being called. Of course, there is only one actions file in this example so it's not necessary.
-
-```js
-import * as actions from '../store/actions/index.js';
-```
-
-## Mutations
-
-Reducers hold the state for a value and modify it depending on what actions are called.
-
-The switch statement checks what the `action.type` is to know how to modify the `colors` array with `action.color` being the value passed.
-
-`./src/store/reducers/colors.js`
-
-```js
-const initialState = {
-    colors: []
-}
-
-const reducer = (state = initialState, action) => {
-    switch (action.type) {
-        case 'ADD_COLOR':
-            const colors = [...state.colors];
-            colors.push(action.color);
-            return {
-                colors: colors
-            }
-        case 'REMOVE_COLOR':
-            return {
-                colors: state.colors.filter(color => color !== action.color)
-            }
-        default:
-            return state;
-    }
-}
-
-export default reducer;
-```
-
-## Getters
-
-Subscriptions are executed whenever an action is dispatched and the store is updated.
-
-The subscription is declared immediately under where the store is created. This is used to avoid having to call `getState` manually to get the most up-to-date state.
-
-It contains a function that executes when the state is updated.
-
-`./src/index.js`
-
-```js
-const store = createStore(reducer);
-
-store.subscribe(() => {
-  console.log('[Subscription]', store.getState());
-});
-```
-
-
 ## Use in a Component
 
-Actions and getters are used in components to declare current state and modify it.
+Now that the store is all set up, a component can access the state using actions and getters created previously.
 
-Actions
-
-2 ways to ue actions.
+2 ways to use actions.
 
 - `dispatch` command
 - `mapActions`
 
-With the action's name, use `this.$store.dispatch` in your component to dispatch an action in your store. If you need to pass a value, that is the second argument.
+With the action's name, use `this.$store.dispatch` in your component to dispatch an action in your store. If you need to pass a value, that's the second argument.
 
 Calling the `addColor` action:
 
@@ -273,7 +179,16 @@ With `mapActions`, this needs to be imported from `vuex`.
 
 Within methods, `mapActions` contains the string values of the created actions in the store.
 
-With these actions available, they can be called instead through `dispatch`.
+With these actions available, they can be called without the use of `dispatch`.
+
+```js
+
+// both commands are equal
+this.$store.dispatch('addColor', this.color)
+
+this.addColor(this.color)
+
+```
 
 ```js
 import { mapActions } from 'vuex'
@@ -292,14 +207,12 @@ methods: {
 }
 ```
 
-Getters
-
-2 ways to ue actions.
+2 ways to use getters.
 
 - `dispatch` command
 - `mapGetters`
 
-With the action's name, use `this.$store.getters` in your component to dispatch an action in your store. If you need to pass a value, that is the second argument.
+With the name of the getter, use `this.$store.getters` in your component to receive the state data.
 
 Calling the `getColors` getter:
 

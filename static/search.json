@@ -1,8 +1,8 @@
 [
   {
-    "title": "Styling In VueJS",
+    "title": "Styling In Vue.js",
     "path": "/styling-in-vuejs",
-    "summary": "There are various ways to attach styles on elements in VueJS. Here, I'm going to explain the methods for binding to the `class` and `style` attributes."
+    "summary": "There are various ways to attach styles on elements in Vue.js. Here, I'm going to explain the methods for binding to the `class` and `style` attributes."
   },
   {
     "title": "How I Got Into Open Source",
@@ -56,5 +56,37 @@
   {
     "title": "How to Properly Clone Multidimensional Arrays",
     "path": "/cloning-multidimensional-arrays"
+  },
+  {
+    "title": "Schema Types and Resolvers in GraphQL",
+    "path": "/schema-types-and-resolvers-in-graphql"
+  },
+  {
+    "title": "Using Resolvers to Connect Your Data",
+    "path": "/using-resolvers-to-connect-your-data"
+  },
+  {
+    "title": "Styling in React",
+    "path": "/styling-in-react"
+  },
+  {
+    "title": "React Components",
+    "path": "/react-components"
+  },
+  {
+    "title": "Using State in React Components",
+    "path": "/using-state-in-react-components"
+  },
+  {
+    "title": "CSS Animations - Part 1",
+    "path": "/css-animations-part-1"
+  },
+  {
+    "title": "CSS Animations - Part 2",
+    "path": "/css-animations-part-2"
+  },
+  {
+    "title": "Using Redux in React",
+    "path": "/using-redux-in-react"
   }
 ]

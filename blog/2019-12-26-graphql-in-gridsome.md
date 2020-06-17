@@ -247,7 +247,7 @@ query {
         },
         {
           "node": {
-            "title": "Styling In VueJS",
+            "title": "Styling In Vue.js",
             "date": "2019-06-23T00:00:00.000Z"
           }
         },

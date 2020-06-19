@@ -29,7 +29,7 @@ npm install vuex --save
 
 There will be a designated `store` folder to hold all parts of the store containing a `store.js` file.
 
-Depending on your store, you can hold all the code here. I'm going to not do that and instead make a subdirectory that handles all the actions, mutations, and getters to show how you would manage separate states for a bigger application.
+Depending on your store, you can hold all the code here. I'm not going to do that and instead make a subdirectory that handles all the actions, mutations, and getters to show how you would manage separate states for a bigger application.
 
 In `./src/store/store.js` we're just creating the store.
 
@@ -101,7 +101,7 @@ Every action has at least the `{commit}` argument used to call a mutation.
 
 Commits are what calls the mutations through an action.
 
-The `payload` you see is the typical name for the optional arguments passed to an action. For here, it's the `color` value as the second argument in the mutations.
+The `payload` you see is the typical name for the optional arguments passed to an action. For here, it's the `color` value as seen as the second argument in the mutations.
 
 `addColor` calls `ADD_COLOR` and passes the payload.
 
@@ -138,7 +138,7 @@ So the color value will need to be accessed by destructuring to push `color` ont
 ```js
 ADD_COLOR(state, {color}) {
     state.colors.push(color);
-},
+}
 ```
 
 Finally, there is a single getter for a component to receive the latest `state.colors`.
@@ -174,7 +174,7 @@ The store needs to be imported and passed as an argument in the created `Vue` in
 import Vue from 'vue'
 import App from './App.vue'
 
-import store from './store/store';
+import store from './store/store'
 
 Vue.config.productionTip = false
 
@@ -271,4 +271,4 @@ _Vue.js Devtools_
 
 If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/vuex-intro).
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-07-using-redux-in-react.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-19-using-vuex-in-vuejs.md)

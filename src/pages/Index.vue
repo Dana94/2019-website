@@ -71,6 +71,23 @@
             </div>
           </li>
           <li class="checkmark mb-6">
+            <div>Quotes Database</div>
+            <div class="text-lg text-gray-600">A database of quotes using Vue.js and GraphQL.</div>
+            <div class="text-lg text-gray-600">
+              <a
+                href="https://github.com/Dana94/quotes-database"
+                target="_blank"
+                class="text-copy-leadpurple"
+              >Source</a>
+              &nbsp;
+              <a
+                href="https://dazzling-lewin-1b7d00.netlify.app/"
+                target="_blank"
+                class="text-copy-leadpurple"
+              >Live</a>
+            </div>
+          </li>
+          <li class="checkmark mb-6">
             <div>TARDIS</div>
             <div
               class="text-lg text-gray-600"

@@ -88,5 +88,9 @@
   {
     "title": "Using Redux in React",
     "path": "/using-redux-in-react"
+  },
+  {
+    "title": "Using Vuex in Vue.js",
+    "path": "/using-vuex-in-vuejs"
   }
 ]

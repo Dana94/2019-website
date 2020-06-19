@@ -2,7 +2,6 @@
 title: Using Vuex in Vue.js
 path: using-vuex-in-vuejs
 date: 2020-06-19
-summary: Something...
 tags: ['frontend', 'coding', 'vue']
 ---
 
@@ -28,9 +27,7 @@ npm install vuex --save
 
 ## Folder Structure
 
-There will be a designated `store` folder to hold all parts of the store.
-
-There will be a `store.js` file here.
+There will be a designated `store` folder to hold all parts of the store containing a `store.js` file.
 
 Depending on your store, you can hold all the code here. I'm going to not do that and instead make a subdirectory that handles all the actions, mutations, and getters to show how you would manage separate states for a bigger application.
 
@@ -57,7 +54,7 @@ You'll see the `modules` object in the new store we created. If I have more than
 
 In `store/` add a `modules/` folder with a name to encompass the store data for this file. Here there will be a `colors.js` for this.
 
-![Folder structure with Vuex](./images/2020-06-19/folders.jpg)
+![Folder structure with Vuex](./images/2020-06-19/folders.png)
 _Folder structure with Vuex_
 
 ## Create the Store
@@ -134,7 +131,7 @@ addColor({commit}, payload) {
 
 Keep in mind that changing this setup will mean the mutation needs to be changed to reflect the payload's value.
 
-`{ "type": "ADD_COLOR", "payload": "orange" }`
+`{ "type": "ADD_COLOR", "color": "orange" }`
 
 So the color value will need to be accessed by destructuring to push `color` onto the array.
 
@@ -209,12 +206,14 @@ With the action's name, use `this.$store.dispatch` in your component to dispatch
   }
 ```
 
-If `mapActions`, this first needs to be imported from `vuex`.
+If using `mapActions`, this first needs to be imported from `vuex`.
 
 Within methods, `mapActions` contains the string values of the created actions in the store.
 
+They can be used by calling `this.<action>`.
+
 ```js
-import { mapActions } from 'vuex'
+import { mapActions } from 'vuex';
 
 methods: {
   ...mapActions([
@@ -265,9 +264,11 @@ computed: {
 
 [Vue.js Devtools](https://github.com/vuejs/vue-devtools) has a part for managing state in your store. I've only used it by installing it in Chrome.
 
-![Vue.js Devtools]()
+You can select the clock symbol in the toolbar to see all the actions dispatched when testing your project.
+
+![Vue.js Devtools](./images/2020-06-19/vuex-devtools.png)
 _Vue.js Devtools_
 
-If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/redux-intro).
+If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/vuex-intro).
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-07-using-redux-in-react.md)

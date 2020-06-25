@@ -29,9 +29,15 @@ const logger = store => {
   }
 }
 ```
-This is used as the second argument in the `createStore()` method.
+There are a few things going on here:
 
-In my previous [Redux post](/using-redux-in-react), the Redux Devtools was declared as the second argument, this will be changed soon.
+- `store` is the created store being used
+- `next(action)` is the same as `store.dispatch(action)` which is dispatching the given `action`
+- `store.getState()` returns the current state of the store
+
+`applyMiddleware()` passes `logger` as an argument and is the second argument in the `createStore()` method.
+
+In my [Redux post](/using-redux-in-react), the Redux Devtools was declared as the second argument, this will be changed soon.
 
 ```js
 const store = createStore(
@@ -39,16 +45,54 @@ const store = createStore(
     applyMiddleware(logger)
 );
 ```
-There are a few things going on here:
 
-- `store` is the created store being used
-- `next(action)` is the same as `store.dispatch(action)` which is dispatching the given `action`
-- `store.getState()` returns the current state of the store
 
 There are some pre-made middlewares you can use such as [`redux-thunk`](https://github.com/reduxjs/redux-thunk) which is made for using async actions in your store.
 
-[EXAMPLE]
+Install:
 
+```bash
+npm install redux-thunk
+```
+
+Import `thunk` from `redux-thunk` in `./src/index.js`:
+
+```js
+import thunk from 'redux-thunk';
+```
+Then add it to the `applyMiddleware()` method.
+
+```js
+const store = createStore(
+  reducer,
+  composeEnhancers(applyMiddleware(logger, thunk))
+);
+```
+
+Where the actions for removing the color is declared, I renamed it `removeColorAction` which still old the logic for removing a color.
+
+The new created `removeColorDelay` is what will be used in a component. Because of `redux-thunk`, I can create a `setTimeout` to make an asynchronous dispatch.
+
+`./src/store/actions/colors.js`
+
+```js
+const removeColorAction = (color) => {
+    return {
+        type: actionTypes.REMOVE_COLOR,
+        color: color
+    }
+}
+
+export const removeColorDelay = (color) => {
+    // dispatch is from redux-thunk
+    return dispatch => {
+        setTimeout(() => {
+            dispatch(removeColorAction(color));
+        }, 3000)
+    }
+}
+```
+Now there will be a 3 sec delay before the color is removed from the state.
 
 Note: If using the [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension), you need to change the set up when using middleware.
 

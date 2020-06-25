@@ -45,9 +45,12 @@ const store = createStore(
     applyMiddleware(logger)
 );
 ```
+The console messages declared in `logger` will be printed whenever an action is dispatched.
 
+![console example from logger middleware](./images/2020-06-26/console.png)
+_console example from logger middleware_
 
-There are some pre-made middlewares you can use such as [`redux-thunk`](https://github.com/reduxjs/redux-thunk) which is made for using async actions in your store.
+There are some pre-made middlewares you can use such as [`redux-thunk`](https://github.com/reduxjs/redux-thunk) which is made for using asynchronous actions in your store.
 
 Install:
 
@@ -69,9 +72,7 @@ const store = createStore(
 );
 ```
 
-Where the actions for removing the color is declared, I renamed it `removeColorAction` which still old the logic for removing a color.
-
-The new created `removeColorDelay` is what will be used in a component. Because of `redux-thunk`, I can create a `setTimeout` to make an asynchronous dispatch.
+In `colors.js` where the actions are declared, I renamed `removeColor` to `removeColorAction` and kept the same logic. Instead of a component removing a color immediately, a new created `removeColorDelay` will be used to dispatch this action. Because of `redux-thunk`, I can create a `setTimeout` to make an asynchronous dispatch.
 
 `./src/store/actions/colors.js`
 
@@ -92,9 +93,9 @@ export const removeColorDelay = (color) => {
     }
 }
 ```
-Now there will be a 3 sec delay before the color is removed from the state.
+With a component calling `removeColorDelay`, there will be a 3 sec delay before the color is removed from the state.
 
-Note: If using the [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension), you need to change the set up when using middleware.
+If using the [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension), you need to change the set up when using middleware.
 
 Import `compose` from `redux`.
 
@@ -108,8 +109,8 @@ Declare a `composeEnhancers` constant which is what will be wrapping the `applyM
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const store = createStore(
-    reducer,
-    composeEnhancers(applyMiddleware(logger))
+  reducer,
+  composeEnhancers(applyMiddleware(logger, thunk))
 );
 ```
 
@@ -124,4 +125,4 @@ Resources:
 
 If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/vuex-intro).
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-19-using-vuex-in-vuejs.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-26-middleware-in-redux.md)

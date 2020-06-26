@@ -105,7 +105,7 @@ Import `compose` from `redux`.
 import { createStore, applyMiddleware, compose } from 'redux';
 ```
 
-Declare a `composeEnhancers` constant which is what will be wrapping the `applyMiddleware()` function.
+Declare a `composeEnhancers` constant which wraps the `applyMiddleware()` function.
 
 ```js
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;

@@ -125,6 +125,4 @@ Resources:
 - [Redux Devtools - Advanced store setup](https://github.com/zalmoxisus/redux-devtools-extension#12-advanced-store-setup)
 
 
-If you're interested in the repo for these examples, it is available [here](https://github.com/Dana94/vuex-intro).
-
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-26-middleware-in-redux.md)

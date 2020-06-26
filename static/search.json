@@ -92,5 +92,9 @@
   {
     "title": "Using Vuex in Vue.js",
     "path": "/using-vuex-in-vuejs"
+  },
+  {
+    "title": "Middleware in Redux",
+    "path": "/middleware-in-redux"
   }
 ]

@@ -15,7 +15,7 @@ It can be used when to log whenever an action has occurred or even give crash re
 import { createStore, applyMiddleware } from 'redux';
 ```
 
-This next snippet based off the [Redux docs](https://redux.js.org/advanced/middleware/#the-final-approach) since it's the most common use for middleware. This needs to be declared before creating the store.
+This next snippet is from the [Redux docs](https://redux.js.org/advanced/middleware/#the-final-approach) since it's a good example. This needs to be declared before creating the store.
 
 ```js
 const logger = store => {
@@ -32,8 +32,9 @@ const logger = store => {
 There are a few things going on here:
 
 - `store` is the created store being used
-- `next(action)` is the same as `store.dispatch(action)` which is dispatching the given `action`
-- `store.getState()` returns the current state of the store
+- logs to the console what action is being dispatched
+- `next(action)` is the same as `store.dispatch(action)`, which is dispatching the given `action`
+- `store.getState()` returns the current state of the store and logs it to the console
 
 `applyMiddleware()` passes `logger` as an argument and is the second argument in the `createStore()` method.
 
@@ -45,7 +46,8 @@ const store = createStore(
     applyMiddleware(logger)
 );
 ```
-The console messages declared in `logger` will be printed whenever an action is dispatched.
+
+The image below shows the 2 console messages.
 
 ![console example from logger middleware](./images/2020-06-26/console.png)
 _console example from logger middleware_
@@ -68,7 +70,7 @@ Then add it to the `applyMiddleware()` method.
 ```js
 const store = createStore(
   reducer,
-  composeEnhancers(applyMiddleware(logger, thunk))
+  applyMiddleware(logger, thunk)
 );
 ```
 
@@ -95,7 +97,7 @@ export const removeColorDelay = (color) => {
 ```
 With a component calling `removeColorDelay`, there will be a 3 sec delay before the color is removed from the state.
 
-If using the [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension), you need to change the set up when using middleware.
+If using the [Redux Devtools](https://github.com/zalmoxisus/redux-devtools-extension), you need to change the setup when using middleware.
 
 Import `compose` from `redux`.
 

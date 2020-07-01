@@ -1,5 +1,5 @@
 ---
-title: Using Vue-Apollo
+title: Using Vue-Apollo to Query for Data
 path: using-vue-apollo
 date: 2020-07-03
 tags: ['frontend', 'coding', 'vue', 'graphql']
@@ -7,7 +7,7 @@ tags: ['frontend', 'coding', 'vue', 'graphql']
 
 My first project where I had to use a GraphQL API was my quotes database. The quotes were all set up and I needed a tool to integrate it into my Vue.js project.
 
-Make sure I understand this...
+You can do so much more than query for data with Vue Apollo and I urge you to check it out. This post is only for querying since this is why I needed it and I found a few "gotchas" along the way that I wanted to show to clarify.
 
 [Vue Apollo](https://apollo.vuejs.org/) is a library that makes it easy to integrate [Apollo](https://www.apollographql.com/),
 
@@ -62,7 +62,7 @@ new Vue({
 
 Next step is optional. If using VS Code, you can install the [Apollo GraphQL](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) extension. Then have a `apollo.config.js` file in the root of the project to configure it.
 
-I kept everything the same as in the docs, except add the url to the API I'm using.
+I kept everything the same as in the [docs](https://vue-apollo.netlify.app/guide/installation.html#visual-studio-code), except add the url to the API I'm using.
 
 ```js
 module.exports = {
@@ -83,17 +83,63 @@ module.exports = {
 
 ## Component
 
+First things first, import `gql` from `graphql-tag`. This is used to define the query.
+
+```js
+import gql from 'graphql-tag';
+```
+
 In the component, there will be an `apollo` object for mapping the query to local data.
 
-A very basic query will just have `apollo` containing an attribute for the query.
+A basic query will just have `apollo` containing an attribute for the query, such as this simple query example from the [Vue Apollo docs](https://vue-apollo.netlify.app/guide/apollo/queries.html#simple-query):
+
+```js
+import gql from 'graphql-tag';
+
+export default {
+  apollo: {
+    hello: gql`{hello}`,
+  }
+}
+```
+You could also create a constant for the query and assign it like this:
+
+```js
+import gql from 'graphql-tag';
+
+const helloQuery = gql`{hello}`;
+
+export default {
+  apollo: {
+    hello: {
+      query: helloQuery,
+    }
+  }
+}
+```
+
+The data from this query can be accessed in the `template` like so:
+
+```html
+<template>
+  <div class="apollo">
+    <h3>Hello</h3>
+    <p>
+      {{hello}}
+    </p>
+  </div>
+</template>
+```
+
+The Pokemon API doesn't have any queries that don't require parameters, so the rest of the examples make use of what else Vue Apollo offers.
 
 ## Examples:
-
-### No Parameters
 
 ### Set Parameters
 
 If you aren't using reactive parameters, you can just put the values in the query.
+
+This query is more defined. The `gql` defines the query by encompassing the query in `query{}` for it to work.
 
 In this example, the values `dragonite` for argument `pokemon`, `true` for argument `reverse` and `1` for argument `take` are hard-coded.
 
@@ -114,17 +160,23 @@ export default {
 }
 ```
 
-The `loadingKey` and `update` will be explained in the last section.
+I queried for the `sprite` which is a gif that can be used in the template like so:
+
+```html
+<img :src="dragonite.sprite" />
+```
+
+The `loadingKey` and `update` will be explained in the Query Options section.
 
 ### Reactive Parameters
 
-The `variables` option is useful when you don't want to hard-code the arguments. AN example of this if you had the query running based on a user search input.
+The `variables` option is useful when you don't want to hard-code the values. An example of this if you had the query running based on a user search input.
 
 One addition to the previous example is that the argument's type has to be defined in the query. I created a name called `getPokemon` to define this part. The name can be whatever you want - it doesn't affect the query.
 
-Looking in the docs, the query `getDexEntries` receives the argument `pokemon` of type `String!` (a string that is required, hence the exclamation point).
+From the Pokemon API docs, the query `getDexEntries` receives the argument `pokemon` of type `String!` (a string that is required, hence the exclamation point).
 
-The variable defined `pokemon` in the `variables()` object is connected to the `$pokemon` in the `getDexEntries` query.
+The variable defined `pokemon` in the `variables()` object is connected to `$pokemon` in the `getDexEntries` query.
 
 ```js
 export default {
@@ -149,20 +201,28 @@ export default {
 }
 ```
 
-### The `$apollo` helper
+### Reactive Query
+
+<!-- if-else if statement -->
+
+## Query Options
+
+### Loading
 
 The `loadingKey` can be a message that shows while the data is loading. It's accessed by `$apollo.queries.<query>.loadingKey`.
 
-To know if the query is still loading, you can use `$apollo.queries.<query>.loading` in a conditional. The paragraph containing the loading message "Loading dragonite..." will show until the data is ready to be displayed.
+To know if the query is still loading, you can use `$apollo.queries.<query>.loading` in a conditional. The paragraph containing the loading message "Loading dragonite..." will show until the sprite is ready to be displayed.
 
 ```html
 <p v-if="$apollo.queries.dragonite.loading">{{$apollo.queries.dragonite.loadingKey}}</p>
 <img v-else :src="dragonite.sprite" />
 ```
 
+### Update
+
 The `update` option is important if the apollo query attribute is named differently from the query name itself. I normally change the names if they are too long or don't describe what the data is being queried.
 
-In the bulbasaur example, the data from `getDexEntries` is mapped to the value `bulbasaur`.
+In the bulbasaur example, the data from `getDexEntries` is mapped to the value `bulbasaur`, the apollo object for this query.
 
 ```js
 update: data => data.getDexEntries,
@@ -192,11 +252,9 @@ I noticed that despite the query working and the data being displayed, the edito
 
 [image]
 
-<!-- Declare query before vue instance (like tags) -->
+This example can be found in the [`vue-apollo-example` repo]().
 
-<!-- This example can be found in the [`redux-intro` repo](https://github.com/Dana94/redux-intro). -->
-
-I sometimes still struggle using Vue Apollo to be honest. This post summarized everything I've come to understand so far when using the library. I hope this helps anyone else understand how to query with GraphQL in their projects.
+This post summarized everything I've come to understand so far when using the library. I hope this helps anyone else understand how to query with GraphQL in their projects.
 
 Resources:
 
@@ -207,4 +265,4 @@ Resources:
 - [Vue Apollo - Dollar Apollo](https://apollo.vuejs.org/api/dollar-apollo.html#properties)
 
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-06-26-middleware-in-redux.md)
+[Found a typo or problem? Edit this page.]()

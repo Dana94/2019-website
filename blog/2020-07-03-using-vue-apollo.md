@@ -1,13 +1,13 @@
 ---
-title: Using Vue-Apollo to Query for Data
+title: Using Vue-Apollo to Query Data
 path: using-vue-apollo
 date: 2020-07-03
 tags: ['frontend', 'coding', 'vue', 'graphql']
 ---
 
-My first project where I had to use a GraphQL API was my quotes database. The quotes were all set up and I needed a tool to integrate it into my Vue.js project.
+My first project where I had to use a GraphQL API was in my [quotes database](). The quotes were all set up and I needed a tool to integrate it into my Vue.js project.
 
-You can do so much more than query for data with Vue Apollo and I urge you to check it out. This post is only for querying since this is why I needed it and I found a few "gotchas" along the way that I wanted to show to clarify.
+You can do so much more than query for data with Vue Apollo and I urge you to check it out. This post is only for querying since this is why I needed it and I found a few "gotchas" along the way that I wanted to clarify.
 
 [Vue Apollo](https://apollo.vuejs.org/) is a library that makes it easy to integrate [Apollo](https://www.apollographql.com/),
 
@@ -45,7 +45,7 @@ import VueApollo from 'vue-apollo';
 Vue.use(VueApollo)
 ```
 
-Last part is to create a `VueApollo` instance with its `defaultClient` as the `apolloClient` created in the previous step and add it to the app.
+Finally, create a `VueApollo` instance with its `defaultClient` as the `apolloClient` created in the previous step and add it to the app.
 
 `./src/main.js`
 
@@ -62,7 +62,7 @@ new Vue({
 
 Next step is optional. If using VS Code, you can install the [Apollo GraphQL](https://marketplace.visualstudio.com/items?itemName=apollographql.vscode-apollo) extension. Then have a `apollo.config.js` file in the root of the project to configure it.
 
-I kept everything the same as in the [docs](https://vue-apollo.netlify.app/guide/installation.html#visual-studio-code), except add the url to the API I'm using.
+I kept everything the same as in the [docs](https://vue-apollo.netlify.app/guide/installation.html#visual-studio-code), except changed the url to the API I'm using.
 
 ```js
 module.exports = {
@@ -139,7 +139,7 @@ The Pokemon API doesn't have any queries that don't require parameters, so the r
 
 If you aren't using reactive parameters, you can just put the values in the query.
 
-This query is more defined. The `gql` defines the query by encompassing the query in `query{}` for it to work.
+The `gql` defines the query by encompassing the query in `query{}` for it to work.
 
 In this example, the values `dragonite` for argument `pokemon`, `true` for argument `reverse` and `1` for argument `take` are hard-coded.
 
@@ -203,7 +203,79 @@ export default {
 
 ### Reactive Query
 
-<!-- if-else if statement -->
+You can set up conditionals to determine what query is called. Here I have an input for entering a pokemon name and another for entering the pokedex id. Depending if the name is entered, the `getPokemonDetailsByFuzzy` query is called, else the `getDexEntryByDexNumber` query is called if the id was given.
+
+If neither input has a value, the query is skipped with the `skip()` helper.
+
+```js
+import gql from 'graphql-tag';
+
+export default {
+  name: 'Search',
+  data() {
+    return {
+      name: "",
+      id: ""
+    }
+  },
+  apollo: {
+    searchedPokemon: {
+      query() {
+        //name
+        if(this.name !== "") {
+          return gql`query getWithName($pokemon: String!) {
+            getPokemonDetailsByFuzzy(pokemon: $pokemon) {
+              species
+              color
+            }
+          }`
+        }
+        // id
+        else if (this.id) {
+          return gql`query getWithDexNumber($num: Float!){
+            getDexEntryByDexNumber(num: $num)
+          }`
+        }
+      },
+      loadingKey: "Loading...",
+      update: data => data.getPokemonDetailsByFuzzy || data.getDexEntryByDexNumber,
+      variables() {
+        return {
+          pokemon: this.name,
+          num: this.id
+        }
+      },
+      skip() {
+        return this.name === "" && this.id === ""
+      }
+    }
+  }
+}
+```
+
+The `update` helper doesn't know which query is being called so it needs to be set up either mapping the first query or the second one. If you have more than 2 queries in a conditional, you would keep appending them with the `||` operator.
+
+```js
+update: data => data.getPokemonDetailsByFuzzy || data.getDexEntryByDexNumber,
+```
+
+This is the html holding the search inputs and displaying the data once it's available.
+
+```html
+<template>
+  <div class="hello">
+    <input v-model.trim="name" placeholder="name" />
+    <input v-model.trim.number="id" placeholder="id" />
+
+    <div v-if="searchedPokemon">
+      <ul>
+        <li>Species: {{searchedPokemon.species}}</li>
+        <li>Color: {{searchedPokemon.color}}</li>
+      </ul>
+    </div>
+  </div>
+</template>
+```
 
 ## Query Options
 
@@ -245,6 +317,10 @@ bulbasaur: {
   }
 }
 ```
+
+### Skip
+
+Depending on the logic, the query is skipped. There is an example of this being used in the Reactive Query section.
 
 ## Note
 

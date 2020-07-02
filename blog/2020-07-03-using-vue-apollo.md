@@ -5,11 +5,11 @@ date: 2020-07-03
 tags: ['frontend', 'coding', 'vue', 'graphql']
 ---
 
-My first project where I had to use a GraphQL API was in my [quotes database](). The quotes were all set up and I needed a tool to integrate it into my Vue.js project.
+My first project where I had to use a GraphQL API was in my [quotes database](https://github.com/Dana94/quotes-database). The quotes were all set up and I needed a tool to integrate it into my Vue.js project.
 
-You can do so much more than query for data with Vue Apollo and I urge you to check it out. This post is only for querying since this is why I needed it and I found a few "gotchas" along the way that I wanted to clarify.
+[Vue Apollo](https://apollo.vuejs.org/) is a library that makes it easy to integrate [Apollo](https://www.apollographql.com/) and connect to your API.
 
-[Vue Apollo](https://apollo.vuejs.org/) is a library that makes it easy to integrate [Apollo](https://www.apollographql.com/),
+You can do so much more than query for data with Vue Apollo and I recommend you check it out. This post is only for querying since this is why I needed it and I found a few "gotchas" along the way that I wanted to clarify.
 
 In this post I'll be using this [Pokemon API](https://graphqlpokemon.favware.tech/).
 
@@ -23,9 +23,9 @@ npm install --save vue-apollo graphql apollo-boost
 
 ## Setup
 
-Import `ApolloClient` from `apollo-boost` and create a new instance containing the url for the API.
+The `main.js` file needs to be configured to use Vue Apollo.
 
-`./src/main.js`
+Import `ApolloClient` from `apollo-boost` and create a new instance containing the url for the API.
 
 ```js
 import ApolloClient from 'apollo-boost';
@@ -37,8 +37,6 @@ const apolloClient = new ApolloClient({
 
 Then import the `VueApollo` plugin from `vue-apollo` and install it into Vue.
 
-`./src/main.js`
-
 ```js
 import VueApollo from 'vue-apollo';
 
@@ -46,8 +44,6 @@ Vue.use(VueApollo)
 ```
 
 Finally, create a `VueApollo` instance with its `defaultClient` as the `apolloClient` created in the previous step and add it to the app.
-
-`./src/main.js`
 
 ```js
 const apolloProvider = new VueApollo({
@@ -81,9 +77,9 @@ module.exports = {
 }
 ```
 
-## Component
+## Apollo Object
 
-First things first, import `gql` from `graphql-tag`. This is used to define the query.
+In a component, the queries need to be declared using the `gql` from `graphql-tag`.
 
 ```js
 import gql from 'graphql-tag';
@@ -91,7 +87,7 @@ import gql from 'graphql-tag';
 
 In the component, there will be an `apollo` object for mapping the query to local data.
 
-A basic query will just have `apollo` containing an attribute for the query, such as this simple query example from the [Vue Apollo docs](https://vue-apollo.netlify.app/guide/apollo/queries.html#simple-query):
+A basic query will just have `apollo` containing an attribute for the query, such as this simple query example from the [Vue Apollo docs](https://vue-apollo.netlify.app/guide/apollo/queries.html#simple-query) with `hello` being the local data:
 
 ```js
 import gql from 'graphql-tag';
@@ -137,11 +133,9 @@ The Pokemon API doesn't have any queries that don't require parameters, so the r
 
 ### Set Parameters
 
-If you aren't using reactive parameters, you can just put the values in the query.
+The `gql` defines the query by encompassing the query in `query{}`.
 
-The `gql` defines the query by encompassing the query in `query{}` for it to work.
-
-In this example, the values `dragonite` for argument `pokemon`, `true` for argument `reverse` and `1` for argument `take` are hard-coded.
+In this example, the values `dragonite` for parameter `pokemon`, `true` for parameter `reverse` and `1` for parameter `take` are hard-coded.
 
 ```js
 export default {
@@ -170,11 +164,11 @@ The `loadingKey` and `update` will be explained in the Query Options section.
 
 ### Reactive Parameters
 
-The `variables` option is useful when you don't want to hard-code the values. An example of this if you had the query running based on a user search input.
+The `variables` option is useful when you don't want to hard-code the values. An example of this could be if you had the query running based on a user search input.
 
-One addition to the previous example is that the argument's type has to be defined in the query. I created a name called `getPokemon` to define this part. The name can be whatever you want - it doesn't affect the query.
+One addition to the previous example is that the types for each query parameter has to be defined. I created a name called `getPokemon` to define this part. The name can be whatever you want - it doesn't affect the query. Only the parameter names and their types need to reflect the API's docs.
 
-From the Pokemon API docs, the query `getDexEntries` receives the argument `pokemon` of type `String!` (a string that is required, hence the exclamation point).
+From the Pokemon API docs, the query `getDexEntries` receives the parameter `pokemon` of type `String!` (a string that is required, hence the exclamation point).
 
 The variable defined `pokemon` in the `variables()` object is connected to `$pokemon` in the `getDexEntries` query.
 
@@ -231,7 +225,7 @@ export default {
           }`
         }
         // id
-        else if (this.id) {
+        else if (this.id !== "") {
           return gql`query getWithDexNumber($num: Float!){
             getDexEntryByDexNumber(num: $num)
           }`
@@ -253,7 +247,7 @@ export default {
 }
 ```
 
-The `update` helper doesn't know which query is being called so it needs to be set up either mapping the first query or the second one. If you have more than 2 queries in a conditional, you would keep appending them with the `||` operator.
+The `update` helper doesn't know which query is being called so it needs to be set up to either map the first query or the second one. If you have more than 2 queries in a conditional, you would keep appending them with the `||` operator.
 
 ```js
 update: data => data.getPokemonDetailsByFuzzy || data.getDexEntryByDexNumber,
@@ -297,7 +291,7 @@ The `update` option is important if the apollo query attribute is named differen
 In the bulbasaur example, the data from `getDexEntries` is mapped to the value `bulbasaur`, the apollo object for this query.
 
 ```js
-update: data => data.getDexEntries,
+update: data => data.getDexEntries
 ```
 
 ```js
@@ -320,17 +314,28 @@ bulbasaur: {
 
 ### Skip
 
-Depending on the logic, the query is skipped. There is an example of this being used in the Reactive Query section.
+The query is skipped depending on the logic returned. There is an example of this being used in the Reactive Query section where the query is skipped if both inputs are clear.
+
+```js
+skip() {
+  return this.name === "" && this.id === ""
+}
+```
 
 ## Note
 
 I noticed that despite the query working and the data being displayed, the editor may say there's an error in how the query is written.
 
-[image]
+![Editor Error](./images/2020-07-03/error.png)
+_Editor Error_
 
-This example can be found in the [`vue-apollo-example` repo]().
+It's odd, but I thought to mention it. 🤷‍♀
+
+## Conclusion
 
 This post summarized everything I've come to understand so far when using the library. I hope this helps anyone else understand how to query with GraphQL in their projects.
+
+This example can be found in the [`vue-apollo-example` repo]().
 
 Resources:
 
@@ -339,6 +344,8 @@ Resources:
 - [Vue Apollo - Smart Query](https://apollo.vuejs.org/api/smart-query.html)
 
 - [Vue Apollo - Dollar Apollo](https://apollo.vuejs.org/api/dollar-apollo.html#properties)
+
+- [Apollo GraphQL](https://www.apollographql.com/)
 
 
 [Found a typo or problem? Edit this page.]()

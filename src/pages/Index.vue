@@ -1,6 +1,8 @@
 <template>
   <Layout>
-    <div class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-6 sm:py-16">
+    <div
+      class="hero container-inner mx-auto flex flex-col sm:flex-row justify-between py-6 sm:py-16"
+    >
       <div class="text-4xl font-bold w-full text-center sm:text-left">
         <div class="leading-tight">Hi, I'm Dana.</div>
         <div
@@ -60,12 +62,14 @@
               <a
                 href="https://github.com/Dana94/lights-puzzle"
                 target="_blank"
+                rel="noopener"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
                 href="https://kind-kilby-d6c11a.netlify.com/"
                 target="_blank"
+                rel="noopener"
                 class="text-copy-leadpurple"
               >Live</a>
             </div>
@@ -77,12 +81,14 @@
               <a
                 href="https://github.com/Dana94/quotes-database"
                 target="_blank"
+                rel="noopener"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
                 href="https://dazzling-lewin-1b7d00.netlify.app/"
                 target="_blank"
+                rel="noopener"
                 class="text-copy-leadpurple"
               >Live</a>
             </div>
@@ -96,12 +102,14 @@
               <a
                 href="https://github.com/Dana94/TARDIS"
                 target="_blank"
+                rel="noopener"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
                 href="https://distracted-jang-cfb752.netlify.com/"
                 target="_blank"
+                rel="noopener"
                 class="text-copy-leadpurple"
               >Live</a>
             </div>

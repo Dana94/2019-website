@@ -8,9 +8,7 @@
           alt="Picture of me."
           class="w-48 h-48 rounded-full mb-8 lg:mb-0"
         />
-        <p>
-          I'm Dana Ottaviani, a front-end developer.
-        </p>
+        <p>I'm Dana Ottaviani, a front-end developer.</p>
         <br />
         <p>
           I went into my undergrad as undecided. I entered college with an interest
@@ -28,21 +26,29 @@
           Mathematics and C.S. had some class requirement overlap.
         </p>
         <br />
-        <p>I enjoy working in the front-end side of web development since it’s really the first thing a user sees.
+        <p>
+          I enjoy working in the front-end side of web development since it’s really the first thing a user sees.
           But I have constant curiosity in AWS, back-end, devops, I don’t want these areas to be a black box to me.
           I want at least a high-level understanding of these processes to expand my technical knowledge to be a more well-rounded developer.
         </p>
         <br />
         <p>
           I finally decided to get around having a clean, new site to showcase what I know so far and even a
-          <g-link to="/blog">blog</g-link> to document what I learn on my own.
+          <g-link to="/blog">blog</g-link>to document what I learn on my own.
         </p>
         <br />
         <p>Aside from programming, I enjoy learning about Blender and improving my drawing skills.</p>
         <br />
         <p>I have also embraced open source and constanty keep an eye out for programs and repos I can use and contribute to.</p>
         <br />
-        <p>I've been awarded among <a href="https://www.freecodecamp.org/news/fcc100-top-contributors-2019/" target="_blank">Top 100 Open Source Contributors</a> by freeCodeCamp.org in 2019.</p>
+        <p>
+          I've been awarded among
+          <a
+            href="https://www.freecodecamp.org/news/fcc100-top-contributors-2019/"
+            target="_blank"
+            rel="noopener"
+          >Top 100 Open Source Contributors</a> by freeCodeCamp.org in 2019.
+        </p>
       </div>
       <div>
         <h3 class="text-2xl">Currently Using:</h3>
@@ -51,19 +57,31 @@
           <li>Operating System: Windows 10</li>
           <li>
             Editor:
-            <a href="https://code.visualstudio.com/" target="_blank">Visual Studio Code</a>
+            <a
+              href="https://code.visualstudio.com/"
+              target="_blank"
+              rel="noopener"
+            >Visual Studio Code</a>
           </li>
           <li>
             Git Client:
-            <a href="https://www.gitkraken.com/git-client" target="_blank">GitKraken</a>
+            <a
+              href="https://www.gitkraken.com/git-client"
+              target="_blank"
+              rel="noopener"
+            >GitKraken</a>
           </li>
           <li>
             Static Site Generator:
-            <a href="https://gridsome.org/" target="_blank">Gridsome</a>
+            <a
+              href="https://gridsome.org/"
+              target="_blank"
+              rel="noopener"
+            >Gridsome</a>
           </li>
           <li>
             Hosting:
-            <a href="https://www.netlify.com/" target="_blank">Netlify</a>
+            <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>
           </li>
         </ul>
       </div>

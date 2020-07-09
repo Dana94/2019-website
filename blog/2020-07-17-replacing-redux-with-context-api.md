@@ -41,12 +41,13 @@ const ColorsContextProvider = props => {
     )
 }
 ```
+ <!-- Where does .Provider come from? -->
 
 `props.children` makes sure anything within these tags is passed along in the app.
 
 ## Wrap App in ColorsContextProvider
 
-Now we need a way for the `colors` data to be availble in the components. If you recall, Redux had `Provider` tags that inserted the store into the App. Since the `colors` state in already passed in the `ColorsContext.Provider` tags, this part doesn't need to import the state itself.
+Now we need a way for the `colors` data to be available in the components. If you recall, Redux had `Provider` tags that inserted the store into the App. Since the `colors` state in already passed in the `ColorsContext.Provider` tags, this part doesn't need to import the state itself.
 
 In `./src/index.js`, the `ColorsContextProvider` needs to be imported and then wrapped around _everything_.
 

@@ -41,7 +41,8 @@ const ColorsContextProvider = props => {
     )
 }
 ```
- <!-- Where does .Provider come from? -->
+
+The `Provider` component makes sure that components using the values in its attribute `value` are notified and update to its changes.
 
 `props.children` makes sure anything within these tags is passed along in the app.
 
@@ -172,7 +173,11 @@ export default Button;
 
 ## Replacement for redux-thunk?
 
+Not sure yet.
+
 ## Combine Contexts?
+
+https://reactjs.org/docs/context.html#consuming-multiple-contexts
 
 ## Conclusion
 
@@ -181,6 +186,8 @@ I found the Context API very easy to implement compared to Redux's use of `mapSt
 This example can be found in the [`context-api-intro` repo](https://github.com/Dana94/context-api-intro).
 
 Resources:
+
+- [React - Context](https://reactjs.org/docs/context.html)
 
 
 

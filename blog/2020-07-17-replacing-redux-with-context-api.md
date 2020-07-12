@@ -5,13 +5,15 @@ date: 2020-07-17
 tags: ['frontend', 'coding', 'react']
 ---
 
-The Context API is another way to handle data in components without having to incorporate Redux into your app.
+The Context API is an alternative way to handle data in components without having to incorporate Redux into your app.
+
+Using `React.createContext()`, you're essentially creating a globally available JavaScript object.
 
 ## Create Context File
 
 In `./src/` create a `context` folder with the file `colors-context.js`. The directory and file name can be whatever you want.
 
-This is where the states wil be managed and updated.
+This is where the states will be managed and updated.
 
 First import `React` and `useState` from `react`.
 
@@ -19,7 +21,7 @@ First import `React` and `useState` from `react`.
 import React, { useState } from 'react';
 ```
 
-The state data `colors` will be created with `createContext` which is available from the `React` package. This `ColorsContext` will be used directly in components so itn needs to be exported.
+The state data `colors` will be created with `createContext` which is available from the `React` package. This `ColorsContext` will be used directly in components so it needs to be exported.
 
 ```js
 export const ColorsContext = React.createContext({
@@ -42,7 +44,7 @@ const ColorsContextProvider = props => {
 }
 ```
 
-The `Provider` component makes sure that components using the values in its attribute `value` are notified and update to its changes.
+The `ColorsContext.Provider` tags make sure that components using the values in its attribute `value` are notified and re-rendered when they are changed.
 
 `props.children` makes sure anything within these tags is passed along in the app.
 
@@ -69,9 +71,7 @@ ReactDOM.render(
 
 Let's try just displaying the colors list in the `./src/App.js`.
 
-Import `useContext` from `react`. This will be used to make the `ColorsContext` available.
-
-Then import the `ColorsContext`.
+Import `useContext` from `react`and the `ColorsContext`.
 
 ```js
 import React, { useContext } from 'react';
@@ -79,7 +79,7 @@ import React, { useContext } from 'react';
 import { ColorsContext } from './context/colors-context';
 ```
 
-Create a local context to refer `ColorsContext`.
+Create a local context.
 
 ```js
 const colorsContext = useContext(ColorsContext);
@@ -90,7 +90,7 @@ Now `colors` can be accessed with `colorsContext.colors` in the component!
 ```js
 <ul>
     {colorsContext.colors.map(color => {
-    return <li key={color}>{color}</li>;
+        return <li key={color}>{color}</li>;
     })}
 </ul>
 ```
@@ -109,7 +109,7 @@ export const ColorsContext = React.createContext({
 });
 ```
 
-The `ColorsContextProvider` will contain the logic for these methods which is similar to how the reducer add and removed a color. Notice that we are using `setColorsList` which is actually updating `colorsList` not `colors` itself. But the `App.js` component will still get the update through `colorsContext.colors`.
+The `ColorsContextProvider` will contain the logic for these methods which is similar to how the reducer add and removed a color. Notice that we are using `setColorsList` which is actually updating `colorsList` not `colors` itself. But the `App.js` component will still get the update.
 
 ```js
 const addColorHandler = (color) => {
@@ -133,9 +133,9 @@ return (
 )
 ```
 
-## Add/Remove Color in Button.js
+## Add/Remove Colors in Button.js
 
-Similar to `App.js`, import `useContext` and `ColorsContext` in `Button.js` and create an local `colorsContext`.
+Similar to `App.js`, import `useContext` and `ColorsContext` in `Button.js` and create a local `colorsContext`.
 
 Now the methods can be accessed with `colorsContext.addColor()` and `colorsContext.removeColor()`.
 
@@ -171,6 +171,32 @@ const Button = props => {
 export default Button;
 ```
 
+## Use in Class Components
+
+If using a class component, use `contextType` to access the context file data and call `this.context` to get the values.
+
+I created an example class component that just prints a message stating the current number of colors added to the list.
+
+```js
+import React, { Component } from 'react';
+
+import { ColorsContext } from '../context/colors-context';
+
+class ColorsLength extends Component {
+
+    static contextType = ColorsContext;
+
+    render() {
+        return (
+            <p>There are currently {this.context.colors.length} colors added.</p>
+        )
+    }
+}
+
+export default ColorsLength;
+```
+
+
 ## Replacement for redux-thunk?
 
 Not sure yet.
@@ -179,9 +205,10 @@ Not sure yet.
 
 https://reactjs.org/docs/context.html#consuming-multiple-contexts
 
+
 ## Conclusion
 
-I found the Context API very easy to implement compared to Redux's use of `mapStateToProps` and `mapDispatchToProps` to access state and methods for updating it. Plus, no need to keep track of action types.
+I found Context API very easy to implement compared to Redux's use of `mapStateToProps` and `mapDispatchToProps` to access state and methods for updating it. Plus, no need to keep track of action types.
 
 This example can be found in the [`context-api-intro` repo](https://github.com/Dana94/context-api-intro).
 

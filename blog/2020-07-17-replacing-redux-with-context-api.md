@@ -197,14 +197,23 @@ export default ColorsLength;
 ```
 
 
-## Replacement for redux-thunk?
+## Replacement for redux-thunk
 
-Not sure yet.
+`redux-thunk` can be use din Redux to allow asynchronous
 
-## Combine Contexts?
+?
 
-https://reactjs.org/docs/context.html#consuming-multiple-contexts
+https://medium.com/better-programming/a-guide-to-migrating-redux-to-the-context-api-9829c66940fe
 
+## Combine Contexts
+
+Since Redux can combine multiple reducers, I was curious if the same can be done for multiple contexts. Turns out, you can do this by just wrapping each context's tags around the JSX or the whole app like this repo's example.
+
+## Note
+
+Instead of wrapping the whole App in context tags, you could use the [`Provider`](https://reactjs.org/docs/context.html#contextprovider) and [`Consumer`](https://reactjs.org/docs/context.html#contextconsumer) components to only have specific components subscribe to changes in the values.
+
+With this approach, the logic to add/remove colors would be located in the component using these methods. Personally, I prefer all the logic updating the context should be declared in the context file itself. But this is another approach you could take if it suits your needs.
 
 ## Conclusion
 
@@ -215,6 +224,9 @@ This example can be found in the [`context-api-intro` repo](https://github.com/D
 Resources:
 
 - [React - Context](https://reactjs.org/docs/context.html)
+- [React - Consuming Multiple Contexts](https://reactjs.org/docs/context.html#consuming-multiple-contexts)
+- [React - Context.Provider](https://reactjs.org/docs/context.html#contextprovider)
+- [React - Context.Consumer](https://reactjs.org/docs/context.html#contextconsumer)
 
 
 

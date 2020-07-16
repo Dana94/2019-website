@@ -197,13 +197,8 @@ export default ColorsLength;
 ```
 
 
-## Replacement for redux-thunk
 
-`redux-thunk` can be use din Redux to allow asynchronous
 
-?
-
-https://medium.com/better-programming/a-guide-to-migrating-redux-to-the-context-api-9829c66940fe
 
 ## Combine Contexts
 

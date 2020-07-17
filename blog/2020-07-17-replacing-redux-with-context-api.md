@@ -9,7 +9,7 @@ The Context API is an alternative way to handle data in components without havin
 
 Using `React.createContext()`, you're essentially creating a globally available JavaScript object.
 
-## Create Context File
+## Create the Context File
 
 In `./src/` create a `context` folder with the file `colors-context.js`. The directory and file name can be whatever you want.
 
@@ -52,7 +52,7 @@ The `ColorsContext.Provider` tags make sure that components using the values in 
 
 Now we need a way for the `colors` data to be available in the components. If you recall, Redux had `Provider` tags that inserted the store into the App. Since the `colors` state in already passed in the `ColorsContext.Provider` tags, this part doesn't need to import the state itself.
 
-In `./src/index.js`, the `ColorsContextProvider` needs to be imported and then wrapped around _everything_.
+In `./src/index.js`, the `ColorsContextProvider` needs to be imported and then wrapped around everything.
 
 ```js
 import ColorsContextProvider from './context/colors-context';
@@ -85,7 +85,7 @@ Create a local context.
 const colorsContext = useContext(ColorsContext);
 ```
 
-Now `colors` can be accessed with `colorsContext.colors` in the component!
+Now `colors` can be accessed with `colorsContext.colors` in the component.
 
 ```js
 <ul>
@@ -109,7 +109,7 @@ export const ColorsContext = React.createContext({
 });
 ```
 
-The `ColorsContextProvider` will contain the logic for these methods which is similar to how the reducer add and removed a color. Notice that we are using `setColorsList` which is actually updating `colorsList` not `colors` itself. But the `App.js` component will still get the update.
+The `ColorsContextProvider` will contain the logic for these methods which is similar to how the reducer added and removed a color. Notice that we are using `setColorsList` which is actually updating `colorsList` not `colors` itself. But the `App.js` component will still get the update.
 
 ```js
 const addColorHandler = (color) => {
@@ -123,7 +123,7 @@ const removeColorHandler = (color) => {
 }
 ```
 
-In the `ColorsContext.Provider ` tags, map these methods to the ones in `ColorsContext` so they can be accessible in any component.
+In the `ColorsContext.Provider ` tags, map these methods to the ones in `ColorsContext` so any component can use them.
 
 ```js
 return (
@@ -175,7 +175,7 @@ export default Button;
 
 If using a class component, use `contextType` to access the context file data and call `this.context` to get the values.
 
-I created an example class component that just prints a message stating the current number of colors added to the list.
+I created a class component that just prints a message stating the current number of colors added to the list.
 
 ```js
 import React, { Component } from 'react';
@@ -196,10 +196,6 @@ class ColorsLength extends Component {
 export default ColorsLength;
 ```
 
-
-
-
-
 ## Combine Contexts
 
 Since Redux can combine multiple reducers, I was curious if the same can be done for multiple contexts. Turns out, you can do this by just wrapping each context's tags around the JSX or the whole app like this repo's example.
@@ -212,7 +208,7 @@ With this approach, the logic to add/remove colors would be located in the compo
 
 ## Conclusion
 
-I found Context API very easy to implement compared to Redux's use of `mapStateToProps` and `mapDispatchToProps` to access state and methods for updating it. Plus, no need to keep track of action types.
+I found the Context API very easy to implement compared to Redux's use of `mapStateToProps` and `mapDispatchToProps`. Plus, no need to keep track of action types.
 
 This example can be found in the [`context-api-intro` repo](https://github.com/Dana94/context-api-intro).
 
@@ -223,7 +219,4 @@ Resources:
 - [React - Context.Provider](https://reactjs.org/docs/context.html#contextprovider)
 - [React - Context.Consumer](https://reactjs.org/docs/context.html#contextconsumer)
 
-
-
-
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-07-17-replacing-redux-with-context-api.md)

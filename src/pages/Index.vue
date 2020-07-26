@@ -94,20 +94,21 @@
             </div>
           </li>
           <li class="checkmark mb-6">
-            <div>TARDIS</div>
+            <div>Switches Puzzle</div>
             <div
               class="text-lg text-gray-600"
-            >The TARDIS made with CSS and Vue.js. I used transitions to replicate the fade in/out effects.</div>
+            >A switches game with 3 levels of difficulty.</div>
+            <div class="text-lg text-gray-600">Made with React.js.</div>
             <div class="text-lg text-gray-600">
               <a
-                href="https://github.com/Dana94/TARDIS"
+                href="https://github.com/Dana94/switches-puzzle"
                 target="_blank"
                 rel="noopener"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
-                href="https://distracted-jang-cfb752.netlify.com/"
+                href="https://objective-noyce-143dfb.netlify.app/"
                 target="_blank"
                 rel="noopener"
                 class="text-copy-leadpurple"

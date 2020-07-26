@@ -100,5 +100,9 @@
   {
     "title": "Using Vue Apollo to Query Data",
     "path": "/using-vue-apollo-to-query-data"
+  },
+  {
+    "title": "Replacing Redux with Context API",
+    "path": "/replacing-redux-with-context-api"
   }
 ]

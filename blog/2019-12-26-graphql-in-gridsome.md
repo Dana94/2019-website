@@ -259,7 +259,7 @@ query {
         },
         {
           "node": {
-            "title": "My First Tech Conference – Codeland 2019",
+            "title": "My First Tech Conference – CodeLand 2019",
             "date": "2019-07-27T00:00:00.000Z"
           }
         },

@@ -14,9 +14,9 @@
     "summary": "I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do."
   },
   {
-    "title": "My First Tech Conference – Codeland 2019",
+    "title": "My First Tech Conference – CodeLand 2019",
     "path": "/my-first-codeland-experience",
-    "summary": "A summary of the talks I saw at Codeland 2019."
+    "summary": "A summary of the talks I saw at CodeLand 2019."
   },
   {
     "title": "Git Commands I Currently Use",
@@ -104,5 +104,9 @@
   {
     "title": "Replacing Redux with Context API",
     "path": "/replacing-redux-with-context-api"
+  },
+  {
+    "title": "CodeLand 2020 - Part 1",
+    "path": "/codeland-2020-part-1"
   }
 ]

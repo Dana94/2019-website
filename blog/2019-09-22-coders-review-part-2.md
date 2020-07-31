@@ -3,7 +3,7 @@ title: Coders by Clive Thompson – Review – Part 2
 path: coders-review-part-2
 date: 2019-09-22
 summary: I encourage every programmer to read Coders by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
-tags: ['coding']
+tags: ['coding', 'books']
 ---
 
 I encourage every programmer to read ***_Coders_*** by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
@@ -24,7 +24,7 @@ Later on, Twitter regretted not taking action sooner when these hate groups were
 
 I wonder if more women were engineers at Twitter at the time, would there have been more of a system in place to expect the possibility of attacks online and to deflect its impact.
 
-I wanted to point out that someone did go out of his way to try to address the issue. Jacob Hoffman-Andrews, who previously worked as an engineer at Twitter, created Block Together. Realizing that users being attacked online were targeted by the same hate-groups, he created an app where lists of blocked accounts can be shared between those who subscribe to a user’s list. This saved time for someone to manually block the hundreds of accounts that targeted others receiving the same attacks. 
+I wanted to point out that someone did go out of his way to try to address the issue. Jacob Hoffman-Andrews, who previously worked as an engineer at Twitter, created Block Together. Realizing that users being attacked online were targeted by the same hate-groups, he created an app where lists of blocked accounts can be shared between those who subscribe to a user’s list. This saved time for someone to manually block the hundreds of accounts that targeted others receiving the same attacks.
 
 I appreciate that Hoffman-Andrews sought out a way to alleviate this problem even after he already left Twitter after witnessing the uncontrollable “dogpiling” on the site. If Twitter had gotten control of the situation sooner, maybe things would not have gotten as bad as they did.
 
@@ -44,11 +44,11 @@ As long as software developers are in high demand, you should be picking up more
 
 ## Coding can be considered a blue-collar job
 
-There is a chapter that describes the notion of coding becoming a blue-color job for its common use in almost every company. 
+There is a chapter that describes the notion of coding becoming a blue-color job for its common use in almost every company.
 
-When Rusty Justice (who worked in the mining industry) decided to teach coal miners to code, he was treated with skepticism. Despite that, he took miners into an intensive program to teach them the basics of coding in order to make them technology able to find more substantial careers. 
+When Rusty Justice (who worked in the mining industry) decided to teach coal miners to code, he was treated with skepticism. Despite that, he took miners into an intensive program to teach them the basics of coding in order to make them technology able to find more substantial careers.
 
-I found this story inspiring not only because of the miners learning new skills, but for battling stereotypes imposed on them from others. This can relate to being bias towards older programmers that aren’t fresh out of college and wish to change careers into a more technical role. 
+I found this story inspiring not only because of the miners learning new skills, but for battling stereotypes imposed on them from others. This can relate to being bias towards older programmers that aren’t fresh out of college and wish to change careers into a more technical role.
 
 ## Another way to hire
 

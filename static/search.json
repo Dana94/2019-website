@@ -104,5 +104,9 @@
   {
     "title": "Replacing Redux with Context API",
     "path": "/replacing-redux-with-context-api"
+  },
+  {
+    "title": "CodeLand 2020 - Part 1",
+    "path": "/codeland-2020-part-1"
   }
 ]

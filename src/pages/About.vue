@@ -34,7 +34,7 @@
         <br />
         <p>
           I finally decided to get around having a clean, new site to showcase what I know so far and even a
-          <g-link to="/blog">blog</g-link>to document what I learn on my own.
+          <g-link to="/blog">blog</g-link> to document what I learn on my own.
         </p>
         <br />
         <p>Aside from programming, I enjoy learning about Blender and improving my drawing skills.</p>

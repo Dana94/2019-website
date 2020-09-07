@@ -1,12 +1,12 @@
 ---
-title: My First Tech Conference – Codeland 2019
+title: My First Tech Conference – CodeLand 2019
 path: my-first-codeland-experience
 date: 2019-07-27
-summary: A summary of the talks I saw at Codeland 2019.
-tags: ['coding']
+summary: A summary of the talks I saw at CodeLand 2019.
+tags: ['coding', 'conferences']
 ---
 
-I recently attended Codeland in NYC. I was super pumped to meet with new developers at an event that is known to have such a welcoming and enthusiastic community.
+I recently attended CodeLand in NYC. I was super pumped to meet with new developers at an event that is known to have such a welcoming and enthusiastic community.
 
 I only signed up for the talks so that is what this article will be about.
 
@@ -14,7 +14,7 @@ I only signed up for the talks so that is what this article will be about.
 
 Unfortunately, I took _very few_ images while I was there so this will be mostly a text-filled post.
 
-This image was from one of the entrances into Codeland.
+This image was from one of the entrances into CodeLand.
 
 ![Entrance to Skirball Center for the Performing Arts](./images/2019-07-27/2019-codeland-entrance.jpg)
 _Entrance to Skirball Center for the Performing Arts_
@@ -35,7 +35,7 @@ If you’re interested in Kaya’s app, you can check it out [here](https://were
 
 _Katrina Owen, @kytrinyx_
 
-Even before Katrina came on stage, I knew I was going like this talk just from the title alone. Honestly, I think anyone in tech needs to hear what she has to say. Katrina delved into the stages of going through a project and the many situations where you can eventually come up short as you persist. 
+Even before Katrina came on stage, I knew I was going like this talk just from the title alone. Honestly, I think anyone in tech needs to hear what she has to say. Katrina delved into the stages of going through a project and the many situations where you can eventually come up short as you persist.
 
 There were 3 parts where failure could happen:
 - the beginning of when you have an idea but you never even start acting on it
@@ -123,8 +123,8 @@ Jo-Wayne shared her journey and background getting into tech while being an immi
 
 ---
 
-I am so glad to have witnessed these speakers and be present at Codeland. I’ve learned so much and look forward to next year's conference.
+I am so glad to have witnessed these speakers and be present at CodeLand. I’ve learned so much and look forward to next year's conference.
 
-If you're interested in attending Codeland, you can stay up to date with their [newsletter](https://codelandconf.com/).
+If you're interested in attending CodeLand, you can stay up to date with their [newsletter](https://codelandconf.com/).
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2019-07-27-my-first-codeland-experience.md)

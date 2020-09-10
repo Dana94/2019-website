@@ -5,7 +5,7 @@ date: 2020-09-11
 tags: ['frontend', 'coding', 'react']
 ---
 
-When using props in components in Vue.js, you have the option to have tye checking to make sure the data being passed down is expected and that the program warns if it's required.
+When using props in components in Vue.js, you have the option to have type checking to make sure the data being passed down is expected and that the program warns if it's required.
 
 ```js
 export default {
@@ -24,6 +24,8 @@ Install the package:
 ```bash
 npm install --save prop-types
 ```
+
+My example is just having an object called `quote` contain 2 string properties: `quote` and `author` which is passed to a component called `Card` to display it.
 
 ```js
 // App.js
@@ -52,6 +54,10 @@ function App() {
 export default App;
 ```
 
+One of the minimum checks you can do is just make sure that the prop `quote` is indeed an object using the `PropTypes.object`.
+
+⚠️ Note that when declaring the component's prop types, it uses `propTypes` (starts with lower "p") to wrap everything. The import `PropTypes` (starts with capital "P") is used when assigning the expected checking to each prop.
+
 ```js
 // Card.js
 
@@ -75,7 +81,7 @@ Card.propTypes = {
 export default Card;
 ```
 
-If we change the type of `quote` to `PropTypes.string` to be expected, an error will show in the console.
+If we change the type of `quote` to `PropTypes.string`, an error will show in the console.
 
 ```js
 Card.propTypes = {
@@ -94,10 +100,12 @@ Card.propTypes = {
 }
 ```
 
+So not passing the `quote` will result in this error.
+
 ![Props required error](./images/2020-09-11/required-error.png)
 _Props required error_
 
-If your prop can be more than one type, you can use `oneOfType` to pass validation.
+If your prop can be more than one type, you can use `oneOfType` to pass validation by listing them in an array as an argument.
 
 ```js
 Card.propTypes = {
@@ -108,13 +116,11 @@ Card.propTypes = {
 }
 ```
 
-I would recommend checking out more of the docs for this package. Type checking for props is important to avoid getting unexpected types and ensuring that important props are available in your program.
-
 You can give a specific validator for a prop too. You can get 3 arguments:
 
-- `props`: the data the props contain as an Object
-- `propName`: the name of the prop as a String
-- `componentName`: the name of the component this prop checking is contained in as a String
+- `props`: all the props contained as an Object, so you can reach other props this way
+- `propName`: the name of the prop as a String (`quote`)
+- `componentName`: the name of the component this prop checking is contained in as a String (`Card`)
 
 If the author is not included in the quote object, we can throw an error in the console checking if the author is provided.
 
@@ -140,5 +146,7 @@ Card.propTypes = {
 
 ![Custom validator error](./images/2020-09-11/custom-validator-error.png)
 _Custom validator error_
+
+I would recommend checking out more of the docs for this package. Type checking for props is important to avoid getting unexpected types and ensuring that important props are available in your program.
 
 [Found a typo or problem? Edit this page.]()

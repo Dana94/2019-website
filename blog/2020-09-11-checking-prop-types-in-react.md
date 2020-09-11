@@ -98,7 +98,7 @@ Card.propTypes = {
 }
 ```
 
-![Props type checking error](./images/2020-09-11/checking-error.png)
+![Props type checking error](./images/2020-09-11/checking_error.png)
 _Props type checking error_
 
 You can chain `isRequired` to match the expectations in the first Vue.js example.
@@ -111,7 +111,7 @@ Card.propTypes = {
 
 So not passing the `quote` will result in this error.
 
-![Props required error](./images/2020-09-11/required-error.png)
+![Props required error](./images/2020-09-11/required_error.png)
 _Props required error_
 
 If your prop can be more than one type, you can use `oneOfType` to pass validation by listing them in an array as an argument.
@@ -153,7 +153,7 @@ Card.propTypes = {
 }
 ```
 
-![Custom validator error](./images/2020-09-11/custom-validator-error.png)
+![Custom validator error](./images/2020-09-11/custom_validator_error.png)
 _Custom validator error_
 
 

@@ -160,4 +160,4 @@ I would recommend checking out more of the [usage](https://www.npmjs.com/package
 
 This example can be found in the [`prop-checking` repo](https://github.com/Dana94/prop-checking).
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-09-11-checking-prop-types-in-react.md)

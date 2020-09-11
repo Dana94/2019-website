@@ -156,6 +156,7 @@ Card.propTypes = {
 ![Custom validator error](./images/2020-09-11/custom-validator-error.png)
 _Custom validator error_
 
+
 I would recommend checking out more of the [usage](https://www.npmjs.com/package/prop-types#usage) for this package. Type checking for props is important to avoid getting unexpected types and ensuring that required props are available in your program.
 
 This example can be found in the [`prop-checking` repo](https://github.com/Dana94/prop-checking).

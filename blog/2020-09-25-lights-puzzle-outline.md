@@ -5,6 +5,8 @@ date: 2020-09-25
 tags: ['frontend', 'coding', 'vue']
 ---
 
+This is my first outline of a project I created a while ago. It's not going to delve deep into every piece of code, but an overview of what I was thinking when creating the project and some of the logistics I had to implement.
+
 ## Inspiration
 
 Inspired from Khanacademy's puzzles, I wanted to create my own project using the logic it would take to make this puzzle work.
@@ -25,21 +27,69 @@ _My Lights Puzzle_
 [Vuex](https://vuex.vuejs.org/) is used as a global store to hold information for:
 
 - **board status**: The board is initialized based on what level is selected.
-- **moves count**: Each time a grid is selected, the count increases until the game is reset or ends. Then it's set to 0.
-- **level selected**: Assigned before the game starts to assign the correct board size.
-- **game progress**: Set to true if the board is complete or ends prematurely through reset or end game options.
+- **moves count**: Each time a grid is selected, the count increases until the game is reset or ends (then it's set to 0).
+- **level selected**: Assigned before the game starts to set the correct board size.
+- **game progress**: Set to `true` if the board is complete or `false` if the user chooses to reset or nd the game prematurely.
 
-Store board resets in board.js
+The 3 board levels are stored in a `board.js` file to be used upon starting a new game.
+
+```js
+
+export const boardLevel1 = [
+  [0, 0, 0],
+  [0, 0, 0],
+  [0, 0, 0]
+];
+
+export const boardLevel2 = [
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0],
+];
+
+export const boardLevel3 = [
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+  [0, 0, 0, 0, 0, 0, 0],
+];
+```
 
 ---
 
-## Colors
+## Design & Colors
 
 I used [Vuetify](https://vuetifyjs.com/en/) to display a "Google-like" design to the buttons and use a layout offered in the framework to structure the project.
 
-Style specifics like using grid display for the board.
+Depending on the level, the board had a specific layout to show the grids. I also had to implement slightly different sized for the level 2 and 3 boards so they fit in mobile.
 
-I set the general color scheme in the base stylesheet `base.scss`.
+```scss
+.row {
+  display: grid;
+  margin-bottom: 10px;
+  grid-gap: 5px;
+
+  &.rowLevel1 {
+    grid-template-rows: 100px;
+    grid-template-columns: repeat(3, 100px);
+  }
+  &.rowLevel2 {
+    grid-template-rows: 65px;
+    grid-template-columns: repeat(5, 65px);
+  }
+  &.rowLevel3 {
+    grid-template-rows: 45px;
+    grid-template-columns: repeat(7, 45px);
+  }
+}
+```
+
+I set the color scheme in the base stylesheet `base.scss`.
 
 ![Color Scheme](./images/2020-09-25/color-scheme-cut.png)
 _Color Scheme_
@@ -58,6 +108,7 @@ The `Board` component passes each array of the board into the `Row` component. I
 The `Row` has minimal functionality whereas the `Column` component has a lot going on.
 
 ```html
+<!-- Column.vue -->
 <template>
   <div
     class="column"
@@ -75,7 +126,20 @@ The `Row` has minimal functionality whereas the `Column` component has a lot goi
 </template>
 ```
 
-To make this usable through the keyboard, I had to consider how the button will be selected (enter key). That was the easy part, just call the `changeStatus` function to a `keydown.enter` event listener.
+The class `active` is set through a computed property determining if the grid's coordinates match the ones in focus in the store which runs each time the moves count is increased (during every move).
+
+```js
+active() {
+  if (this.moves) {
+    return this.$store.getters.isOn({
+      row: this.index_x,
+      col: this.index_y
+    });
+  }
+}
+```
+
+To make this usable through the keyboard, I had to consider how the button will be selected (enter key). That was the easy part, just call the `changeStatus` function to a `keydown.enter` event listener. The board's status is checked every time `changeStatus` is called to end the game once it's solved.
 
 Only the first top left grid is able to be tabbed to (so `tabindex=0` and `tabindex=-1` otherwise) so only arrow keys can roam the board.
 Using the `keydown` listener for all arrow key directions, they call the `setFocus` method to the next grid the user is tying to select.
@@ -86,6 +150,7 @@ Using the `keydown` listener for all arrow key directions, they call the `setFoc
 _Select outline in puzzle_
 
 ```js
+// Column.vue
 setFocus (focusX, focusY) {
   this.$store.dispatch('setFocus', {
     x: focusX,
@@ -98,6 +163,7 @@ setFocus (focusX, focusY) {
 There is a unique `ref` set to each grid like the first grid is `col_0_0`. This is how to reach the grid that should be set to focus by checking if it matches the coordinates that are in the store.
 
 ```js
+// Column.vue
 computed: {
   focus() {
     return this.$store.getters.getFocus;
@@ -125,4 +191,6 @@ mounted () {
 
 ### Conclusion
 
+This was my first complete puzzle I created when learning the Vue.js framework. I'm glad how it turned out and hope this gave some insight to my process.
 
+You can find the [project on my GitHub](https://github.com/Dana94/lights-puzzle).

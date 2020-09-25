@@ -2,7 +2,7 @@
 title: Lights Puzzle Outline
 path: lights-puzzle-outline
 date: 2020-09-25
-tags: ['frontend', 'coding', 'vue']
+tags: ['frontend', 'coding', 'vue', 'projects']
 ---
 
 This is my first outline of a project I created a while ago. It's not going to delve deep into every piece of code, but an overview of what I was thinking when creating the project and some of the logistics I had to implement.
@@ -186,7 +186,7 @@ mounted () {
 }
 ```
 
-`Stats` component sits next to the board and gives the current moves taken as well as the option to reset or end the game to select a new level.
+`Stats` component sits next to the board and displays the current number of moves taken as well as the option to reset or end the game to select a new level.
 
 `Rules` uses a dropdown from Vuetify to show the description on how to solve the puzzle.
 
@@ -197,6 +197,8 @@ _EndGame_
 
 ### Conclusion
 
-This was my first complete puzzle I created when learning the Vue.js framework. I'm glad how it turned out and hope this gave some insight to my process.
+This was my first complete puzzle I created when learning the Vue.js framework. I'm glad how it turned out and I hope this gave some insight to my process.
 
 [You can find the project on my GitHub](https://github.com/Dana94/lights-puzzle).
+
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-09-25-lights-puzzle-outline.md)

@@ -11,7 +11,7 @@ This is my first outline of a project I created a while ago. It's not going to d
 
 Inspired from Khanacademy's puzzles, I wanted to create my own project using the logic it would take to make this puzzle work.
 
-Puzzles is something I'm really into and I try to incorporate more in my projects. This was my first full-complete Vue.js project.
+Puzzles is something I'm really into and I try to incorporate more in my projects. This was my first complete Vue.js project.
 
 ![Khanacademy Lights Puzzle](./images/2020-09-25/khanacademy-puzzle.png)
 _Khanacademy Lights Puzzle_
@@ -29,7 +29,7 @@ _My Lights Puzzle_
 - **board status**: The board is initialized based on what level is selected.
 - **moves count**: Each time a grid is selected, the count increases until the game is reset or ends (then it's set to 0).
 - **level selected**: Assigned before the game starts to set the correct board size.
-- **game progress**: Set to `true` if the board is complete or `false` if the user chooses to reset or nd the game prematurely.
+- **game progress**: Set to `true` if the board is complete or `false` if the user chooses to reset or end the game prematurely.
 
 The 3 board levels are stored in a `board.js` file to be used upon starting a new game.
 
@@ -66,7 +66,7 @@ export const boardLevel3 = [
 
 I used [Vuetify](https://vuetifyjs.com/en/) to display a "Google-like" design to the buttons and use a layout offered in the framework to structure the project.
 
-Depending on the level, the board had a specific layout to show the grids. I also had to implement slightly different sized for the level 2 and 3 boards so they fit in mobile.
+Depending on the level, the board had a specific dimension to show the grids. I also had to implement slightly different sizes for the level 2 and 3 boards so they fit in mobile.
 
 ```scss
 .row {
@@ -101,7 +101,10 @@ _Color Scheme Variables_
 
 ## Components
 
-`Home` component setting level to start game.
+`Home` component is where a level is selected to start the game.
+
+![Home](./images/2020-09-25/Home.png)
+_Home_
 
 The `Board` component passes each array of the board into the `Row` component. In each `Row`, the elements in the arrays are assigned as `Column` components.
 
@@ -126,7 +129,7 @@ The `Row` has minimal functionality whereas the `Column` component has a lot goi
 </template>
 ```
 
-The class `active` is set through a computed property determining if the grid's coordinates match the ones in focus in the store which runs each time the moves count is increased (during every move).
+The class `active` is set through a computed property determining if the grid's coordinates match the ones in focus in the store. This is called each time the moves count is increased (during every move).
 
 ```js
 active() {
@@ -139,10 +142,10 @@ active() {
 }
 ```
 
-To make this usable through the keyboard, I had to consider how the button will be selected (enter key). That was the easy part, just call the `changeStatus` function to a `keydown.enter` event listener. The board's status is checked every time `changeStatus` is called to end the game once it's solved.
+To make this usable through the keyboard, I had to consider how the grid will be selected (enter key). That was the easy part, just call the `changeStatus` function to a `keydown.enter` event listener. The board's status is checked every time `changeStatus` is called to end the game once it's solved.
 
 Only the first top left grid is able to be tabbed to (so `tabindex=0` and `tabindex=-1` otherwise) so only arrow keys can roam the board.
-Using the `keydown` listener for all arrow key directions, they call the `setFocus` method to the next grid the user is tying to select.
+Using the `keydown` listener for all arrow key directions, they call the `setFocus` method to the next grid the user is trying to select.
 
 `setFocus` sends the coordinates to the store so it's reached by every grid on the board to know which one should have the pink outline.
 
@@ -160,7 +163,7 @@ setFocus (focusX, focusY) {
 }
 ```
 
-There is a unique `ref` set to each grid like the first grid is `col_0_0`. This is how to reach the grid that should be set to focus by checking if it matches the coordinates that are in the store.
+There is a unique `ref` set to each grid (the first grid is `col_0_0`). This is how to reach the grid that should be set to focus by checking if it matches the coordinates that are in the store.
 
 ```js
 // Column.vue
@@ -187,10 +190,13 @@ mounted () {
 
 `Rules` uses a dropdown from Vuetify to show the description on how to solve the puzzle.
 
-`EndGame` shows if the game is won displaying how many moves it took to solve it along the options to start the same game or select a new level.
+`EndGame` shows if the game is won displaying how many moves it took to solve it along with the options to start the same game or select a new level.
+
+![EndGame](./images/2020-09-25/EndGame.png)
+_EndGame_
 
 ### Conclusion
 
 This was my first complete puzzle I created when learning the Vue.js framework. I'm glad how it turned out and hope this gave some insight to my process.
 
-You can find the [project on my GitHub](https://github.com/Dana94/lights-puzzle).
+[You can find the project on my GitHub](https://github.com/Dana94/lights-puzzle).

@@ -7,6 +7,8 @@ tags: ['frontend', 'coding', 'vue', 'projects']
 
 This is my first outline of a project I created a while ago. It's not going to delve deep into every piece of code, but an overview of what I was thinking when creating the project and some of the logistics I had to implement.
 
+---
+
 ## Inspiration
 
 Inspired from Khanacademy's puzzles, I wanted to create my own project using the logic it would take to make this puzzle work.
@@ -101,14 +103,14 @@ _Color Scheme Variables_
 
 ## Components
 
-`Home` component is where a level is selected to start the game.
+`Home` is where a level is selected to start the game.
 
 ![Home](./images/2020-09-25/Home.png)
 _Home_
 
-The `Board` component passes each array of the board into the `Row` component. In each `Row`, the elements in the arrays are assigned as `Column` components.
+The `Board` passes each array of the board into the `Row`. In each `Row`, the elements in the arrays are assigned as `Column`.
 
-The `Row` has minimal functionality whereas the `Column` component has a lot going on.
+The `Row` has minimal functionality whereas the `Column` has a lot going on.
 
 ```html
 <!-- Column.vue -->
@@ -186,7 +188,7 @@ mounted () {
 }
 ```
 
-`Stats` component sits next to the board and displays the current number of moves taken as well as the option to reset or end the game to select a new level.
+`Stats` sits next to the board and displays the current number of moves taken as well as the option to reset or end the game to select a new level.
 
 `Rules` uses a dropdown from Vuetify to show the description on how to solve the puzzle.
 
@@ -194,6 +196,8 @@ mounted () {
 
 ![EndGame](./images/2020-09-25/EndGame.png)
 _EndGame_
+
+---
 
 ### Conclusion
 

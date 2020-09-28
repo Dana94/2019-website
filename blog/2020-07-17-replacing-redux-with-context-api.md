@@ -42,6 +42,8 @@ const ColorsContextProvider = props => {
         </ColorsContext.Provider>
     )
 }
+
+export default ColorsContextProvider;
 ```
 
 The `ColorsContext.Provider` tags make sure that components using the values in its attribute `value` are notified and re-rendered when they are changed.

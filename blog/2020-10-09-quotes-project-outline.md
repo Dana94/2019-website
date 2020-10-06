@@ -11,7 +11,11 @@ I was collecting a bunch of quotes in a Google spreadsheet and wanted to display
 
 ## Store
 
+[Vuex](https://vuex.vuejs.org/) is used as a global store to hold information for:
 
+- **theme**: Either set to the `String` value "light" or "dark". The store is where the theme is set in the local storage too.
+- **authorId**: An integer from the `Dropdown` component set whenever a specific author is selected to query the results in the `App`.
+- **tags**: A list of all `String` values of the tags selected to query the results in the `App`.
 
 ---
 
@@ -31,8 +35,8 @@ _Dark Colors Scheme_
 
 While there were quite a few icons I used from [Fontawesome](https://fontawesome.com/), the quotation symbols were created by me using [Inkscape](https://inkscape.org/). I had to create a pair of open and closed quotes for every single color in both schemes.
 
-<!-- show example -->
-
+![View of Inkscape](./images/2020-10-09/Inkscape-view.png)
+_View of Inkscape_
 
 ---
 
@@ -102,6 +106,7 @@ A message if the author combined with the tags selected don't result in any quot
 ---
 
 ### Conclusion
+
 
 
 [You can find the project on my GitHub](https://github.com/Dana94/quotes-database).

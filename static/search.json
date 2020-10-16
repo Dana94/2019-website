@@ -116,5 +116,17 @@
   {
     "title": "Closure",
     "path": "/defining-closure"
+  },
+  {
+    "title": "Checking Prop Types in React",
+    "path": "/checking-prop-types-in-react"
+  },
+  {
+    "title": "Lights Puzzle Outline",
+    "path": "/lights-puzzle-outline"
+  },
+  {
+    "title": "Quotes Project Outline",
+    "path": "/quotes-project-outline"
   }
 ]

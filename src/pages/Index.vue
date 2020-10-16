@@ -62,14 +62,14 @@
               <a
                 href="https://github.com/Dana94/lights-puzzle"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
                 href="https://kind-kilby-d6c11a.netlify.com/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="text-copy-leadpurple"
               >Live</a>
             </div>
@@ -81,14 +81,14 @@
               <a
                 href="https://github.com/Dana94/quotes-database"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
                 href="https://dazzling-lewin-1b7d00.netlify.app/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="text-copy-leadpurple"
               >Live</a>
             </div>
@@ -103,14 +103,14 @@
               <a
                 href="https://github.com/Dana94/switches-puzzle"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="text-copy-leadpurple"
               >Source</a>
               &nbsp;
               <a
                 href="https://objective-noyce-143dfb.netlify.app/"
                 target="_blank"
-                rel="noopener"
+                rel="noopener noreferrer"
                 class="text-copy-leadpurple"
               >Live</a>
             </div>

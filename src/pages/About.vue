@@ -46,7 +46,7 @@
           <a
             href="https://www.freecodecamp.org/news/fcc100-top-contributors-2019/"
             target="_blank"
-            rel="noopener"
+            rel="noopener noreferrer"
           >Top 100 Open Source Contributors</a> by freeCodeCamp.org in 2019.
         </p>
       </div>
@@ -60,7 +60,7 @@
             <a
               href="https://code.visualstudio.com/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >Visual Studio Code</a>
           </li>
           <li>
@@ -68,7 +68,7 @@
             <a
               href="https://www.gitkraken.com/git-client"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >GitKraken</a>
           </li>
           <li>
@@ -76,12 +76,12 @@
             <a
               href="https://gridsome.org/"
               target="_blank"
-              rel="noopener"
+              rel="noopener noreferrer"
             >Gridsome</a>
           </li>
           <li>
             Hosting:
-            <a href="https://www.netlify.com/" target="_blank" rel="noopener">Netlify</a>
+            <a href="https://www.netlify.com/" target="_blank" rel="noopener noreferrer">Netlify</a>
           </li>
         </ul>
       </div>

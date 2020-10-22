@@ -63,7 +63,7 @@ If I wanted to print all the Pokemon names to the console, I can do:
 player.pokemon.forEach(pokemon => console.log(pokemon.name));
 ```
 
-But what if I want to also print out any evolution stones that the pokemon requires to evolve?
+But what if I want to print out any evolution stones that the pokemon requires to evolve?
 
 This code would give an error since not all pokemon have one:
 
@@ -117,10 +117,10 @@ If we weren't sure if the player object had a method called `possibleFunction` t
 player.possibleFunction?.()
 ```
 
-I find myself using this shorthand approach more often than the usual if-statement to see if a value is undefined or null before continuing.
+I find myself using this shorthand approach more often than the usual if-statement to see if a value is undefined or null to avoid an error.
 
 Resources:
 
 - [MDN - Optional Chaining](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining)
 
-[Found a typo or problem? Edit this page.]()
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-10-23-optional-chaining.md)

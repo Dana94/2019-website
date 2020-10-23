@@ -250,7 +250,7 @@ Example:
 
 ## Resources
 
-- [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+- [MDN - CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
 - [Khanacademy - Bezier curves](https://www.khanacademy.org/partner-content/pixar/animate/ball/v/animation3)
 

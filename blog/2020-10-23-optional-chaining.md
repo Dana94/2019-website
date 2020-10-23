@@ -7,9 +7,7 @@ tags: ['coding', 'javascript']
 
 A common error in the console I've seen is `Error: Cannot read property '<name>' of undefined` where `<name>` is a value expected to be other than undefined or null.
 
-To avoid this error from happening, you could add an if-statement to check if the value can be evaluated.
-
-Here's an example of a player object that has a collection of Pokemon. Each Pokemon object has at least a name, Pokedex ID, and their pre-evolution name. What some also have is an `evolution` property which is contains what stone it needs to become this Pokemon from its `preEvolution` stage.
+Here's an example of a player object that has a collection of Pokemon. Each Pokemon object has at least a name, Pokedex ID, and their pre-evolution name. What some also have is an `evolution` property which contains what stone it needs to become this Pokemon from its `preEvolution` stage.
 
 ```js
 const player = {
@@ -107,7 +105,7 @@ player.pokemon.forEach(pokemon => {
 // "Dawn"
 ```
 
-This syntax isn't only used on objects, it can be put after any variable, Array, or Function as a check.
+This syntax isn't only used on objects. It can be put after any variable, Array, or Function as a check.
 
 To execute a Function that may not be defined, you can append `()` after the optional chaining to execute it.
 

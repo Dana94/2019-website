@@ -124,5 +124,13 @@
   {
     "title": "Lights Puzzle Outline",
     "path": "/lights-puzzle-outline"
+  },
+  {
+    "title": "Quotes Project Outline",
+    "path": "/quotes-project-outline"
+  },
+  {
+    "title": "Optional Chaining",
+    "path": "/optional-chaining"
   }
 ]

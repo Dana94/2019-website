@@ -8,7 +8,7 @@ tags: ['linux']
 
 Once I [installed Linux Mint](/installing-linux-mint), I tried to install 2 programs just to learn how it's done in Linux. I know it's not as easy as running an executable, so this is what this post is about.
 
-I learned how to install 2 programs 2 different ways: 
+I learned how to install 2 programs 2 different ways:
 - with a debian file
 - through Snap
 
@@ -77,7 +77,7 @@ _Software manager_
 
 So unlike a typical Windows installer, there are a few ways someone can install a program on Linux. For a beginner like myself, it takes a bit of searching to understand what works best. Luckily, there are many well written instructions out there to guide someone through this set-up.
 
-## Resources:
+Resources:
 
 - [Visual Studio Code Website](https://code.visualstudio.com/)
 

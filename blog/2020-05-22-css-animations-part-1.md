@@ -248,7 +248,7 @@ Example:
 
 [Read part 2 here](/css-animations-part-2).
 
-## Resources
+Resources
 
 - [MDN - CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 

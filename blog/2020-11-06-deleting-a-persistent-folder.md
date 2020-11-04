@@ -5,7 +5,7 @@ date: 2020-11-06
 tags: ['command-line']
 ---
 
-A while ago I was renaming a folder and accidentally created an invalid name that caused the directory to be unknown to the computer thus unable to change the name or delete it with the "delete" key.
+A while ago I was renaming a folder and accidentally created an invalid name that caused the directory to be unknown to the computer thus unable to change the name or delete it.
 
 While googling solutions, I came across a way to delete the directory using the command-line. The `rd` command is used to delete a directory using the `/s` parameter to delete all subdirectories.
 
@@ -21,10 +21,12 @@ Include the folder path in double quotations after the `rd /s` commands. You wil
 "path/to/folder/to/delete", Are you sure (Y/N)? y
 ```
 
+You won't see the folder in the recycle bin, it will just be gone.
+
 As frustrating as it is that I couldn't just delete a folder the usual way, I was glad to have to look up another approach through the command-line to solve this problem.
 
 Resources:
 
-[Microsoft Docs - Windows Commands - rd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rd)
+- [Microsoft Docs - Windows Commands - rd](https://docs.microsoft.com/en-us/windows-server/administration/windows-commands/rd)
 
 [Found a typo or problem? Edit this page.]()

@@ -12,7 +12,7 @@ Unlike the previous post, you'll notice I was ready to document this. 😉
 
 ## Create the bootable USB
 
-First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. According to [this post on Quora](https://www.quora.com/What-do-mirrors-mean-in-Linux), mirrors are copies of the Linux program available for download. 
+First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. According to [this post on Quora](https://www.quora.com/What-do-mirrors-mean-in-Linux), mirrors are copies of the Linux program available for download.
 
 After looking at some forums, it seems my best bet was to just download the ISO file from the first of the 16 choices for USA mirrors. It took about 20 min for the file to download. The one I went with was from "advancedhosters.com".
 
@@ -105,7 +105,7 @@ I followed [Linux Mint's instructions](https://linuxmint-installation-guide.read
 ## Installing Linux Mint
 
 I followed the instructions for [booting Linux Mint](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot.html) and the [installation options](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html) right from their website.
-After inserting the USB, you will get a "live session" of Linux Mint. The OS hasn't been installed yet, this is sort of a "testing area" so you could preview what you intend to install. There will be a installer on the desktop when you decide to use it. 
+After inserting the USB, you will get a "live session" of Linux Mint. The OS hasn't been installed yet, this is sort of a "testing area" so you could preview what you intend to install. There will be a installer on the desktop when you decide to use it.
 
 ![Linux Mint home screen](./images/2019-11-17/home-screen.jpg)
 _Linux Mint home screen_
@@ -129,7 +129,7 @@ _Remove USB message_
 
 All in all, I found the instructions on Linux Mint website extremely well documented. If anyone were to try installing a Linux distro for the first time, I would recommend Linux Mint.
 
-## Resources:
+Resources:
 
 - [Linux Mint Website](https://linuxmint.com/)
 

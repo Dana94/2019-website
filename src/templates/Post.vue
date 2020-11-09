@@ -992,9 +992,5 @@ export default {
   .markdown-body .pl-12 {
     padding-left: 128px!important;
   }
-
-  .tag {
-    color: #2d3748;
-  }
 </style>
 

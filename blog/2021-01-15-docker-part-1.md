@@ -5,15 +5,13 @@ date: 2021-01-15
 tags: ['coding', 'docker']
 ---
 
-I'm creating a series of posts as I learn Docker to share what I'm learning.
-
-I was first introduced to Docker in my previous company and all I knew about it was that it allowed you to run programs on your machine without having to install dependencies required for it to work.
+I was first introduced to Docker in oe of my previous jobs and all I knew about it was that it allowed you to run programs on your machine without having to install dependencies required for it.
 
 ## What is Docker?
 
 Docker is used for creating and managing containers.
 
-A **container** is a package of the code and dependencies needed to run the code. No matter where it's running, it should always execute the same way.
+A **container** is a package of the code and dependencies needed to run the program. No matter where it's running, it should always execute the same way.
 
 You may be wondering "why not use virtual machines?". Well, having multiple machines on your computer can give the same use of allowing others to load up the same project, but this can cause slow performance and use up a lot of space on your computer. Docker doesn't require an OS in a container. You just need a configuration file to share (like a blueprint) so others can remake the container.
 
@@ -23,9 +21,9 @@ Since I have Windows 10 Pro, I wanted to give an overview of my experience insta
 
 Here's what I did:
 
-1) Enable Hyper-V and Containers features (needed to create virtual machines)
-    - Run PowerShell as administrator.
-    - Enable Hyper-V:
+1) Enable Hyper-V and containers features (needed to create virtual machines)
+
+Run PowerShell as administrator and enable Hyper-V:
 
 ```bash
 > Enable-WindowsOptionalFeature -Online -FeatureName Microsoft-Hyper-V -All
@@ -64,6 +62,4 @@ I ran `docker` in a command prompt (without admin access) you should see a list 
 - There are also tons of [tutorials on the Docker site](https://www.docker.com/play-with-docker) to help you learn.
 - If using VS Code you can use the extensions [Docker by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) and [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to help.
 
-
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-10-23-optional-chaining.md)
-
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-15-docker-part-1.md)

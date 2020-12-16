@@ -5,9 +5,9 @@ date: 2021-01-01
 tags: ['coding', 'javascript']
 ---
 
-While I was working on a take-home challenge for a company I created a method on ensuring an element is inserted alphabetically into the array. I had to scrap it since I couldn't continue with the interviews but I wanted to share the code snippet I created. Assuming the list starts off with at least 1 element already in it, the recursive function implements binary search to know where to insert the next element according to its first name. (I know if the first names are the same then the ast names should be compared but like I said I didn't finish the project.)
+While I was working on a take-home challenge for a company, I had to come up with some logic to systematically keep the users in an array in alphabetical order. While there are ways to do this using Array's sort() function. I wanted to consider a recursive method that uses binary search. While I had to scrap the project since I couldn't continue with the interviews, I still wanted to share the code snippet I created. Assuming the list starts off with at least 1 user already in it, the recursive function implements binary search to know where to insert the next element according to its first name. (I know if the first names are the same then the ast names should be compared but like I said I didn't finish the project.)
 
-I wanted to talk about this because as useful as recursive functions are, they can be tricky to create to make a solution that gives what you are expecting (and you know, doesn't cause the program to crash).
+I wanted to talk about this because as useful as recursive functions are, they can be tricky to create to make a solution that gives what you are expecting (and, you know, doesn't cause the program to crash).
 
 This was a Vue.js project, but it can be used in any project setup.
 
@@ -33,7 +33,7 @@ const state = {
 }
 ```
 
-I would send the contacts array with the new contact to add in the `insert` method. Which would return a new list of contacts containing the new contact.
+I would send the contacts array with the new contact to add in the `insert` method. Which would return a new list of contacts containing the new addition.
 ```js
 state.contacts = insert(state.contacts, contact);
 ```
@@ -46,7 +46,7 @@ export default function insert(array, value) {
 }
 ```
 
-The `insertHelper` is what does all the work. It includes the `start` and `end` values indicating the start and end index that we need to keep track of to know when to stop searching the array.
+The `insertHelper` is what does all the work. It includes the `start` and `end` values indicating the start and end index that we need to keep track in order to know when to stop searching the array.
 
 ```js
 function insertHelper(array, start, end, value) {
@@ -106,6 +106,6 @@ if(start === end) {
 }
 ```
 
-A copy of the array is created and the new value is inserted either after the last value we are looking at or before it. This returns a new array which will replace `state.contacts` in the store.
+A copy of the array is created and the new value is inserted either before or after the last value we are comparing. This returns a new array which will replace `state.contacts` in the store.
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-12-01-binary-search.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-01-binary-search.md)

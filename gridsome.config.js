@@ -11,7 +11,7 @@ const postcssPlugins = [
   tailwind(),
 ]
 
-if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss())
+if (process.env.NODE_ENV === 'production') postcssPlugins.push(purgecss)
 
 module.exports = {
   siteName: 'Dana Ottaviani | Portfolio Website',

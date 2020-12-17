@@ -121,14 +121,17 @@ a:hover {
 
 .social-icons {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 3rem;
-  grid-row-gap: 2rem;
+  -ms-grid-columns: 1fr 1fr 1fr;
+  column-gap: 3rem;
+  row-gap: 2rem;
 }
 
 .tech-list ul {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  -ms-grid-columns: 1fr 1fr;
 }
 
 .tech-list li {
@@ -144,9 +147,11 @@ a:hover {
 @screen sm {
   .social-icons {
     grid-template-columns: repeat(6, 1fr);
-    grid-column-gap: 2rem;
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    column-gap: 2rem;
   }
   .tech-list ul {
     grid-template-columns: repeat(4, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr;
   }
 }

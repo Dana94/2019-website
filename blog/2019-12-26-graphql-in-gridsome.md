@@ -1,6 +1,6 @@
 ---
 title: GraphQL in Gridsome
-path: graphql-in-gridsome
+path: /graphql-in-gridsome
 date: 2019-12-26
 summary: A summary on how to understand using GraphQL queries in Gridsome.
 tags: ['graphql', 'coding', 'gridsome']

@@ -1,6 +1,6 @@
 ---
 title: Styling in React
-path: styling-in-react
+path: /styling-in-react
 date: 2020-05-01
 tags: ['coding', 'react', 'frontend']
 ---

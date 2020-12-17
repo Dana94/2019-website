@@ -1,6 +1,6 @@
 ---
 title: Using State in React Components
-path: using-state-in-react-components
+path: /using-state-in-react-components
 date: 2020-05-15
 tags: ['coding', 'react', 'frontend']
 ---

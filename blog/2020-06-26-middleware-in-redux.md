@@ -1,6 +1,6 @@
 ---
 title: Middleware in Redux
-path: middleware-in-redux
+path: /middleware-in-redux
 date: 2020-06-26
 tags: ['frontend', 'coding', 'react']
 ---

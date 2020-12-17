@@ -1,6 +1,6 @@
 ---
 title: Checking Prop Types in React
-path: checking-prop-types-in-react
+path: /checking-prop-types-in-react
 date: 2020-09-11
 tags: ['frontend', 'coding', 'react']
 ---

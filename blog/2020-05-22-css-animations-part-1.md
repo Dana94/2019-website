@@ -1,6 +1,6 @@
 ---
 title: CSS Animations - Part 1
-path: css-animations-part-1
+path: /css-animations-part-1
 date: 2020-05-22
 summary: Part 1 of CSS animation property.
 tags: ['coding', 'css', 'frontend']

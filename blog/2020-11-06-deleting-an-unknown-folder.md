@@ -1,6 +1,6 @@
 ---
 title: Deleting an Unknown Folder
-path: deleting-an-unknown-folder
+path: /deleting-an-unknown-folder
 date: 2020-11-06
 tags: ['command-line']
 ---

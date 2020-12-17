@@ -1,6 +1,6 @@
 ---
 title: React Components
-path: react-components
+path: /react-components
 date: 2020-05-08
 tags: ['coding', 'react', 'frontend']
 ---

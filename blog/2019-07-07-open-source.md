@@ -1,6 +1,6 @@
 ---
 title: How I Got Into Open Source
-path: how-i-got-into-open-source
+path: /how-i-got-into-open-source
 date: 2019-07-07
 tags: ['coding']
 ---

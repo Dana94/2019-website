@@ -1,6 +1,6 @@
 ---
 title: Using Vuex in Vue.js
-path: using-vuex-in-vuejs
+path: /using-vuex-in-vuejs
 date: 2020-06-19
 tags: ['frontend', 'coding', 'vue']
 ---

@@ -1,6 +1,6 @@
 ---
 title: Coders by Clive Thompson – Review – Part 1
-path: coders-review-part-1
+path: /coders-review-part-1
 date: 2019-09-06
 summary: I encourage every programmer to read Coders by Clive Thompson. This book captures how coders were first introduced to technology, then into a vast range of occupations, and how we got to where we are now.
 tags: ['coding', 'books']

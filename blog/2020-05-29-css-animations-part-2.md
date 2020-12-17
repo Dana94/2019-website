@@ -1,6 +1,6 @@
 ---
 title: CSS Animations - Part 2
-path: css-animations-part-2
+path: /css-animations-part-2
 date: 2020-05-29
 summary: Part 2 of CSS animation property.
 tags: ['coding', 'css', 'frontend']

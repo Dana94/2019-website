@@ -1,6 +1,6 @@
 ---
 title: Installing Programs on Linux 🐧
-path: installing-programs-on-linux
+path: /installing-programs-on-linux
 date: 2019-11-30
 summary: Once I installed Linux Mint, I tried to install 2 programs just to learn how it's done in Linux. I know it's not as easy as running an executable, so this is what this post is about.
 tags: ['linux']

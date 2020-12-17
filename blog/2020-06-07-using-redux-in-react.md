@@ -1,6 +1,6 @@
 ---
 title: Using Redux in React
-path: using-redux-in-react
+path: /using-redux-in-react
 date: 2020-06-07
 summary: Redux is a commonly used library that is not affiliated with React. It is used to manage state throughout the app. If you know Vue.js you may have used Vuex, the state management library for Vue.js projects. It's the same idea.
 tags: ['frontend', 'coding', 'react']

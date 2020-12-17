@@ -1,6 +1,6 @@
 ---
 title: Installing Linux Mint 🐧
-path: installing-linux-mint
+path: /installing-linux-mint
 date: 2019-11-17
 summary: My experience with installing Linux Mint.
 tags: ['linux']

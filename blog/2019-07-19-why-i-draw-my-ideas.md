@@ -1,6 +1,6 @@
 ---
 title: Why I Draw My Ideas
-path: why-i-draw-my-ideas
+path: /why-i-draw-my-ideas
 date: 2019-07-19
 summary: I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do.
 tags: ['coding','art','blender']
@@ -8,9 +8,9 @@ tags: ['coding','art','blender']
 
 I find it incredibly satisfying to have my project ideas written down. Whether it be a sketchbook or regular notebook paper, you will have more clarity to see what you're trying to do.
 
-Before I continue, I just need to point out to whomever is reading this thinking: 
+Before I continue, I just need to point out to whomever is reading this thinking:
 
-_I can't draw! My stuff will look horrible!_ 
+_I can't draw! My stuff will look horrible!_
 
 It's fine, unless you want to show them off, no one else needs to see your ideas on paper.
 
@@ -37,7 +37,7 @@ _3D stair model render_
 
 I downloaded [Inkscape](https://inkscape.org/) (free and open source) to learn how to make my own svgs. The favicon for this site was also made using Inkscape.
 
-As you can see, my sketches are not very detailed. But that's ok, they serve their purpose. I just want to make the design process easier as I am working. 
+As you can see, my sketches are not very detailed. But that's ok, they serve their purpose. I just want to make the design process easier as I am working.
 
 ![Cute critter eating a cookie sketch](./images/2019-07-17/svg-sketch.jpg)
 _Cute critter eating a cookie sketch_

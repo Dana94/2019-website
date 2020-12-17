@@ -1,6 +1,6 @@
 ---
 title: Using Vue Apollo to Query Data
-path: using-vue-apollo-to-query-data
+path: /using-vue-apollo-to-query-data
 date: 2020-07-03
 tags: ['frontend', 'coding', 'vue', 'graphql']
 ---

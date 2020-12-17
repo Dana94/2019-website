@@ -1,6 +1,6 @@
 ---
 title: Optional Chaining
-path: optional-chaining
+path: /optional-chaining
 date: 2020-10-23
 tags: ['coding', 'javascript']
 ---

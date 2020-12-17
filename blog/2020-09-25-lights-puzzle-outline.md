@@ -1,6 +1,6 @@
 ---
 title: Lights Puzzle Outline
-path: lights-puzzle-outline
+path: /lights-puzzle-outline
 date: 2020-09-25
 tags: ['frontend', 'coding', 'vue', 'projects']
 ---

@@ -1,6 +1,6 @@
 ---
 title: Using Resolvers to Connect Your Data
-path: using-resolvers-to-connect-your-data
+path: /using-resolvers-to-connect-your-data
 date: 2020-04-24
 tags: ['coding', 'graphql']
 ---

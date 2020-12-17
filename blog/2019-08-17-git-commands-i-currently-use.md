@@ -1,6 +1,6 @@
 ---
 title: Git Commands I Currently Use
-path: git-commands-i-currently-use
+path: /git-commands-i-currently-use
 date: 2019-08-17
 summary: I started using Git about 3 years ago. While I don’t always remember all the commands on the top of my head, I thought to create a list to keep track of the ones I currently use with a small blurb of what each one does.
 tags: ['coding','git']
@@ -204,7 +204,7 @@ $ git remote add origin https://github.com/Dana94/git-example.git
 
 ## Updating Repo
 
-As you work on your projects, you need to make sure it's constantly backed up in GitHub. Make sure to merge often into your base branch (`master`) when it's safe to. 
+As you work on your projects, you need to make sure it's constantly backed up in GitHub. Make sure to merge often into your base branch (`master`) when it's safe to.
 
 `git push <tracking-name> <branch-name>`
 

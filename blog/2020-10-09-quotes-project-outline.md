@@ -1,6 +1,6 @@
 ---
 title: Quotes Project Outline
-path: quotes-project-outline
+path: /quotes-project-outline
 date: 2020-10-09
 tags: ['frontend', 'coding', 'vue', 'projects']
 ---

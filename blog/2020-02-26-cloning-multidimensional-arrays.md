@@ -1,6 +1,6 @@
 ---
 title: How to Properly Clone Multidimensional Arrays
-path: cloning-multidimensional-arrays
+path: /cloning-multidimensional-arrays
 date: 2020-02-26
 tags: ['coding', 'javascript']
 ---

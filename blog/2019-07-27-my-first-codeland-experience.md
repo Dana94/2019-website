@@ -1,6 +1,6 @@
 ---
 title: My First Tech Conference – CodeLand 2019
-path: my-first-codeland-experience
+path: /my-first-codeland-experience
 date: 2019-07-27
 summary: A summary of the talks I saw at CodeLand 2019.
 tags: ['coding', 'conferences']

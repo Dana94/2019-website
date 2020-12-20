@@ -18,17 +18,17 @@ To make one, you just create a new file in the root of your project and name it 
 
 There are various optional commands you can use. I'm just listing the ones I've learned so far:
 
-- `FROM <image>[:<tag>]` can start you off with an existing image as the base of the build. In DockerHub (we'll get to this in a bit), there are specific images that you can use like `node` or `python` for running programs based in that language(?).
+- `FROM <image>[:<tag>]` can start you off with an existing image as the base of the build. In Docker Hub (we'll get to this in a bit), there are specific images that you can use like `node` or `python` for running programs based in that language(?).
 
 - `WORKDIR path/to/folder` is the name of the directory being created in the container.
 
 - `RUN <command>` launches necessary commands to run the program as you would do locally (for example: to install dependencies in a node project, you'd have to include `RUN npm install`).
 
-- `COPY <path/to/source> <path/to/destination>` will copy the rest of the project's code into the container. There are 2 arguments for this command. The first being the path where the code is located, and the second being what path in the container it's being copied to.
+- `COPY <path/to/source> <path/to/destination>` will copy the rest of the project's code into the image. There are 2 arguments for this command. The first being the path where the files are located locally, and the second being what path in the image it's being copied to.
 
-- `EXPOSE <port>` is used to specify what ports the container should listen to when running. You need to publish the port in the command to run the container.
+- `EXPOSE <port>` is used to specify what ports the container should listen to when running. You need to publish the port in the command to run the container. The port is expected in the project's code. This actually optional here and isn't required to run the container. What's important is when publishing it. This is to show as documentation.
 
-- `CMD ["<executable>", "<param1>", ...]` is the command to execute the project. There is only one of these instructions in the file.
+- `CMD ["<executable>", "<param1>", ...]` is the command to execute the project. There is only one of these instructions in the file. This won't be executed when the _image_ is created but when the _container_ is created.
 
 ## What is an Image?
 
@@ -55,5 +55,16 @@ REPOSITORY               TAG                 IMAGE ID            CREATED        
 docker/getting-started   latest              67a3629d4d71        2 days ago          27.2MB
 ```
 
+If you change the project's code after building the image, you will need to rebuild the image again. That's because images are read-only and locked once they're created. The `COPY` command takes a snapshot of the code and does not update itself if the project is edited.
+
+## Using Prebuilt Images
+
+There are existing images you can use as a starter in a Dockerfile or just to use to solely run a container off of. [Docker Hub](https://hub.docker.com/) is a good source for finding images. Docker Hub is a lot like GitHub except it has images instead of repositories.
+
+If you want to start up a new container (which will be discussed in the next section) you could just use the image name even if it's not on found on your computer. Here, the `node` image is pulled from Docker Hub (if you're connected) since it's not on my computer.
+
+```bash
+> docker run node
+```
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-22-docker-part-2.md)

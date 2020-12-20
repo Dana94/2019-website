@@ -5,7 +5,7 @@ date: 2021-01-15
 tags: ['coding', 'docker']
 ---
 
-I was first introduced to Docker in oe of my previous jobs and all I knew about it was that it allowed you to run programs on your machine without having to install dependencies required for it.
+I was first introduced to Docker in one of my previous jobs and all I knew about it was that it allowed you to run programs on your machine without having to install dependencies required for it. I'm going to making posts following the steps as I learn Docker.
 
 ## What is Docker?
 

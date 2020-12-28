@@ -39,6 +39,10 @@
   background: #2d3748;
 }
 
+.tag {
+  color: #2d3748;
+}
+
 .theme-dark {
   --bg-background-primary: #0d2438;
   --bg-background-secondary: #102c44;

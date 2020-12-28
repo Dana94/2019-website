@@ -20,7 +20,7 @@ After opening it up and making sure that there was nothing needed to back-up on 
 
 ## Getting the ISO file
 
-My first task was to download the ISO file on the [lubuntu website](https://lubuntu.net/downloads/). 
+My first task was to download the ISO file on the [lubuntu website](https://lubuntu.net/downloads/).
 
 I chose to download **lubuntu Desktop 32-bit**.
 
@@ -49,7 +49,7 @@ I needed to access the BIOS on my computer. I never had to go into this before s
 
 I looked at the [documentation on Linux Mint website](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot.html) to make sure I did this properly, even though I wasn't using Linux Mint, it was the same process. It seemed I needed to time it properly to access the BIOS after I restarted my computer.
 
-If this is done right, the computer will prompt you that it detects a new OS on your usb. You need to select it and hit enter. 
+If this is done right, the computer will prompt you that it detects a new OS on your usb. You need to select it and hit enter.
 
 Here's the interesting thing, I heard that I could have 2 operating systems on my computer, but I didn't realize it was as easy as an option when installing lubuntu. I was asked if I wanted to install lubuntu alongside my current OS (Windows Vista). Since I wanted to follow Chris's video, I chose a full override.
 
@@ -80,9 +80,9 @@ A few things to note when I went through this installation:
 ![Select distro options on computer start](./images/2019-10-20/lubuntu-select.jpg)
 _Select distro options on computer start_
 
-So this began with my frustration with Docker on Windows, and ended with me having successfully installed Linux for the first time on a forgotten computer. Considering my interest in Linux was always _this is something I'll eventually look into_, I'm glad I finally got around to it.  
+So this began with my frustration with Docker on Windows, and ended with me having successfully installed Linux for the first time on a forgotten computer. Considering my interest in Linux was always _this is something I'll eventually look into_, I'm glad I finally got around to it.
 
-## Resources:
+Resources:
 
 - [Chris Titus's channel page](https://www.youtube.com/channel/UCg6gPGh8HU2U01vaFCAsvmQ)
 

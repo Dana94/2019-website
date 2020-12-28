@@ -132,5 +132,9 @@
   {
     "title": "Optional Chaining",
     "path": "/optional-chaining"
+  },
+  {
+    "title": "Deleting an Unknown Folder",
+    "path": "/deleting-an-unknown-folder"
   }
 ]

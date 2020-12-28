@@ -319,7 +319,7 @@ I hope this post helped anyone struggling to understand how to query for their d
 ![Autocomplete in action](./images/2019-12-26/autocomplete.jpg)
 _Autocomplete in action_
 
-## Resources
+Resources
 
 - [GraphQL Website](https://graphql.org/)
 

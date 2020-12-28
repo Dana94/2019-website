@@ -206,8 +206,8 @@ This concludes my CSS Animation series.
 
 While I wrote these articles for myself, I hope it helped someone else understand what CSS animation has to offer and give you loads of ideas of how to use it it your projects.
 
-## Resources
+Resources
 
-- [MDN web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
+- [MDN - CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/animation)
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2020-05-29-css-animations-part-2.md)

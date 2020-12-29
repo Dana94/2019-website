@@ -5,7 +5,7 @@ date: 2021-01-15
 tags: ['coding', 'docker']
 ---
 
-I was first introduced to Docker in one of my previous jobs and all I knew about it was that it allowed you to run programs on your machine without having to install dependencies required for it. I'm going to making posts following the steps as I learn Docker.
+I was first introduced to Docker in one of my previous jobs and all I knew about it was that it allowed you to run programs on your machine without having to locally install dependencies required for it. I will be making multiple posts documenting what I learn about Docker.
 
 ## What is Docker?
 
@@ -60,6 +60,6 @@ I ran `docker` in a command prompt (without admin access) you should see a list 
 
 - There is a [Docker Playground](https://labs.play-with-docker.com/) for practicing Docker in the browser.
 - There are also tons of [tutorials on the Docker site](https://www.docker.com/play-with-docker) to help you learn.
-- If using VS Code you can use the extensions [Docker by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) and [Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode) to help.
+- If using VS Code you can use the extensions [Docker by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) to help.
 
 [Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-15-docker-part-1.md)

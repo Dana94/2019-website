@@ -13,6 +13,9 @@ Docker is used for creating and managing containers.
 
 A **container** is a package of the code and dependencies needed to run the program. No matter where it's running, it should always execute the same way.
 
+![Docker Visual](./images/2021-01-15/docker-part-1-crop.png)
+_Docker visual_
+
 You may be wondering "why not use virtual machines?". Well, having multiple machines on your computer can give the same use of allowing others to load up the same project, but this can cause slow performance and use up a lot of space on your computer. Docker doesn't require an OS in a container. You just need a configuration file to share (like a blueprint) so others can remake the container.
 
 ## Docker Setup (Windows Version)

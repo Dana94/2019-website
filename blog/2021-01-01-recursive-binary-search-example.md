@@ -1,5 +1,5 @@
 ---
-title: Alphabetize Using Recursive Binary Search Example
+title: Recursive Binary Search Example
 path: recursive-binary-search-example
 date: 2021-01-01
 tags: ['coding', 'javascript']

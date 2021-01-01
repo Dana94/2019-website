@@ -5,7 +5,9 @@ date: 2021-01-01
 tags: ['coding', 'javascript']
 ---
 
-While I was working on a take-home challenge for a company, I had to come up with some logic to systematically keep the contacts in an array in alphabetical order. While there are ways to do this using Array's `sort` function. I wanted to consider a recursive method that uses binary search. While I had to scrap the project since I couldn't continue with the interviews, I still wanted to share the code snippet I created. Assuming the list starts off with at least 1 contact already in it, the recursive function implements binary search to know where to insert the next contact according to their first name. (I know if the first names are the same then the last names should be compared but like I said I didn't finish the project.)
+While I was working on a take-home challenge for a company, I had to come up with some logic to systematically keep the contacts in an array in alphabetical order. Even though there is a way to do this using Array's `sort` function. I wanted to consider a recursive method that uses binary search.
+
+I had to scrap the project since I couldn't continue with the interviews, but I still wanted to share the code snippet I created. Assuming the list starts off with at least 1 contact already in it, the recursive function implements binary search to know where to insert the next contact according to their first name. (I know if the first names are the same then the last names should be compared but like I said I didn't finish the project.)
 
 I wanted to talk about this because as useful as recursive functions are, they can be tricky to create a solution that gives what you are expecting (and, you know, doesn't cause the program to crash).
 

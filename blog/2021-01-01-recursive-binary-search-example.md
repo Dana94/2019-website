@@ -5,7 +5,7 @@ date: 2021-01-01
 tags: ['coding', 'javascript']
 ---
 
-While I was working on a take-home challenge for a company, I had to come up with some logic to systematically keep the contacts in an array in alphabetical order. While there are ways to do this using Array's `sort()` function. I wanted to consider a recursive method that uses binary search. While I had to scrap the project since I couldn't continue with the interviews, I still wanted to share the code snippet I created. Assuming the list starts off with at least 1 contact already in it, the recursive function implements binary search to know where to insert the next contact according to their first name. (I know if the first names are the same then the last names should be compared but like I said I didn't finish the project.)
+While I was working on a take-home challenge for a company, I had to come up with some logic to systematically keep the contacts in an array in alphabetical order. While there are ways to do this using Array's `sort` function. I wanted to consider a recursive method that uses binary search. While I had to scrap the project since I couldn't continue with the interviews, I still wanted to share the code snippet I created. Assuming the list starts off with at least 1 contact already in it, the recursive function implements binary search to know where to insert the next contact according to their first name. (I know if the first names are the same then the last names should be compared but like I said I didn't finish the project.)
 
 I wanted to talk about this because as useful as recursive functions are, they can be tricky to create a solution that gives what you are expecting (and, you know, doesn't cause the program to crash).
 
@@ -33,7 +33,7 @@ const state = {
 }
 ```
 
-I would send the contacts array with the new contact to add in the `insert()` method. Which would return a new list of contacts.
+I would send the contacts array with the new contact to add in the `insert` method. Which would return a new list of contacts.
 ```js
 state.contacts = insert(state.contacts, contact);
 ```
@@ -89,7 +89,7 @@ else {
 }
 ```
 
-The `index` finds the middle index to start at and sees if the contact at that index should be before or after the new contact we need to add. Depending on this, we change the `start` and `end` parameters for the next iteration of the function and continue breaking down the array until the `start` and `end` values are the same, or there is only 1 contact to compare to the new contact with.
+The `index` finds the middle index to start at and sees if the contact at that index should be before or after the new contact we need to add. Depending on this, we change the `start` and `end` parameters for the next iteration of the function and continue breaking down the array until the `start` and `end` values are the same, or there is only 1 contact to compare the new contact with.
 
 ```js
 // only 1 to compare to

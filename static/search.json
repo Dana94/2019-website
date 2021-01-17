@@ -140,5 +140,9 @@
   {
     "title": "Recursive Binary Search Example",
     "path": "/recursive-binary-search-example"
+  },
+  {
+    "title": "Docker - Part 1 - Intro & Installation",
+    "path": "/docker-part-1-intro-and-installation"
   }
 ]

@@ -1,6 +1,6 @@
 ---
-title: Docker - Part 1
-path: docker-part-1
+title: Docker - Part 1 - Intro & Installation
+path: docker-part-1-intro-and-installation
 date: 2021-01-15
 tags: ['coding', 'docker']
 ---
@@ -24,7 +24,7 @@ Since I have Windows 10 Pro, I wanted to give an overview of my experience insta
 
 Here's what I did:
 
-1) Enable Hyper-V and containers features (needed to create virtual machines)
+1) Enable Hyper-V and containers features (needed to create virtual machines).
 
 Run PowerShell as administrator and enable Hyper-V:
 
@@ -33,7 +33,7 @@ Run PowerShell as administrator and enable Hyper-V:
 ```
 _[Source](https://docs.microsoft.com/en-us/virtualization/hyper-v-on-windows/quick-start/enable-hyper-v)_
 
-2) Enable containers
+2) Enable containers.
 
 ```bash
 > Enable-WindowsOptionalFeature -Online -FeatureName containers –All
@@ -51,18 +51,18 @@ I then had to restart my computer, when I logged back in, I got an error about W
 ![Docker Settings](./images/2021-01-15/docker-settings.png)
 _Docker Settings_
 
-I ran `docker` in a command prompt (without admin access) you should see a list of commands to show that it is running.
+I ran `docker` in a command prompt (without admin access). You should see a list of commands to show that it is running.
 
 ## Notes
 
 - **Docker Desktop** installs **Docker Engine** and has a Daemon and CLI.
-- I installed **Docker Desktop** on my computer since I had the requirements. If I didn't I would've had to install **Docker Toolbox** instead.
+- I installed **Docker Desktop** on my computer since I had the requirements. If I didn't, I would've had to install **Docker Toolbox** instead.
 - Whichever I used, **Docker Engine** would still have been installed.
 
 ## Resources
 
 - There is a [Docker Playground](https://labs.play-with-docker.com/) for practicing Docker in the browser.
 - There are also tons of [tutorials on the Docker site](https://www.docker.com/play-with-docker) to help you learn.
-- If using VS Code you can use the extensions [Docker by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) to help.
+- If using VS Code you can use the extension [Docker by Microsoft](https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker) to help.
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-15-docker-part-1.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-15-docker-part-1-intro-and-installation.md)

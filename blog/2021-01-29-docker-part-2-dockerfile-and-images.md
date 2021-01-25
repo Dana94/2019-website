@@ -1,13 +1,13 @@
 ---
-title: Docker - Part 2
-path: docker-part-2
-date: 2021-01-22
+title: Docker - Part 2 - Dockerfile & Images
+path: docker-part-2-dockerfile-and-images
+date: 2021-01-29
 tags: ['coding', 'docker']
 ---
 
 ## What is a Dockerfile?
 
-A Dockerfile is a set of instructions on what Docker needs to build an image that will be used to create a new container.
+A Dockerfile is a set of instructions on what Docker needs to know build an image that will be used to create a new container.
 
 ## Make-up of a Dockerfile
 
@@ -60,10 +60,10 @@ There are existing images you can use as a starter in a Dockerfile or just to us
 
 If you want to start up a new container (which will be discussed in the next section) you could use an image on Docker Hub as if it was already on your computer. Here, the `node` image is pulled from Docker Hub (if you're connected) since it's not on my computer. It will first look for the `node` image locally before searching Docker Hub.
 
-`docker run` is for building a new container.
+The `docker run` command builds a new container.
 
 ```bash
 > docker run node
 ```
 
-[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-22-docker-part-2.md)
+[Found a typo or problem? Edit this page.](https://github.com/Dana94/website/blob/master/blog/2021-01-29-docker-part-2-dockerfile-and-images.md)

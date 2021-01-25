@@ -146,7 +146,7 @@
     "path": "/docker-part-1-intro-and-installation"
   },
   {
-    "title": "Docker - Part 2",
-    "path": "/docker-part-2"
+    "title": " Docker - Part 2 - Dockerfile & Images",
+    "path": "/docker-part-2-dockerfile-and-images"
   }
 ]

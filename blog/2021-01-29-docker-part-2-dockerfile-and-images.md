@@ -7,7 +7,7 @@ tags: ['coding', 'docker']
 
 ## What is a Dockerfile?
 
-A Dockerfile is a set of instructions on what Docker needs to know build an image that will be used to create a new container.
+A Dockerfile is a set of instructions on what Docker needs to know to build an image that will be used to create a new container.
 
 ## Make-up of a Dockerfile
 

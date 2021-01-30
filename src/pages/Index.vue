@@ -115,6 +115,27 @@
               >Live</a>
             </div>
           </li>
+          <li class="checkmark mb-6">
+            <div>Eight Queens Puzzle</div>
+            <div
+              class="text-lg text-gray-600"
+            >The eight queens puzzle built in Vue.js.</div>
+            <div class="text-lg text-gray-600">
+              <a
+                href="https://github.com/Dana94/eight-queens-puzzle"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-copy-leadpurple"
+              >Source</a>
+              &nbsp;
+              <a
+                href="https://ecstatic-bartik-944ecc.netlify.app/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="text-copy-leadpurple"
+              >Live</a>
+            </div>
+          </li>
         </ul>
       </div>
       <!-- end projects -->

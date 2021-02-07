@@ -9,7 +9,7 @@ This is my first outline of a project I created a while ago. It's not going to d
 
 ---
 
-## Inspiration
+<h2> Inspiration </h2>
 
 Inspired from Khanacademy's puzzles, I wanted to create my own project using the logic it would take to make this puzzle work.
 
@@ -24,7 +24,7 @@ _My Lights Puzzle_
 
 ---
 
-## Store
+<h2> Store </h2>
 
 [Vuex](https://vuex.vuejs.org/) is used as a global store to hold information for:
 
@@ -64,7 +64,7 @@ export const boardLevel3 = [
 
 ---
 
-## Design & Colors
+<h2> Design & Colors </h2>
 
 I used [Vuetify](https://vuetifyjs.com/en/) to display a "Google-like" design to the buttons and use a layout offered in the framework to structure the project.
 
@@ -101,7 +101,7 @@ _Color Scheme Variables_
 
 ---
 
-## Components
+<h2> Components </h2>
 
 `Home` is where a level is selected to start the game.
 
@@ -199,7 +199,7 @@ _EndGame_
 
 ---
 
-### Conclusion
+<h2> Conclusion </h2>
 
 This was my first complete puzzle I created when learning the Vue.js framework. I'm glad how it turned out and I hope this gave some insight to my process.
 

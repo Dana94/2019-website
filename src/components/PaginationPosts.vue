@@ -1,13 +1,14 @@
 <template>
-  <div class="flex justify-between text-xl items-center">
+  <div class="text-xl paginations">
     <g-link
+      v-if="showPreviousPage"
       :to="previousPage"
-      :class="{ 'text-gray-400 hover:text-gray-400 cursor-not-allowed': !showPreviousPage }"
     >&larr; Prev</g-link>
-    <div class="text-base">Page {{ currentPage }} of {{ totalPages }}</div>
+    <div class="text-base text-center pages">Page {{ currentPage }} of {{ totalPages }}</div>
     <g-link
+      v-if="showNextPage"
       :to="nextPage"
-      :class="{ 'text-gray-400 hover:text-gray-400 cursor-not-allowed': !showNextPage }"
+      class="next"
     >Next &rarr;</g-link>
   </div>
 </template>
@@ -35,3 +36,18 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+.paginations {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.pages {
+  grid-column-start: 2;
+}
+
+.next {
+  text-align: right;
+}
+</style>

@@ -10,7 +10,7 @@ tags: ['linux']
 
 Unlike the previous post, you'll notice I was ready to document this. 😉
 
-## Create the bootable USB
+<h2> Create the bootable USB </h2>
 
 First thing I had to do was download the mirror from this [page](https://linuxmint.com/edition.php?id=267). This was the first time I encountered mirrors and had no idea what they were. According to [this post on Quora](https://www.quora.com/What-do-mirrors-mean-in-Linux), mirrors are copies of the Linux program available for download.
 
@@ -19,7 +19,7 @@ After looking at some forums, it seems my best bet was to just download the ISO 
 ![Mirrors to download on Linux Mint website](./images/2019-11-17/mirrors.png)
 _Mirrors to download on Linux Mint website_
 
-## Verify the ISO file
+<h2> Verify the ISO file </h2>
 
 This step was not something I did when installing lubuntu. Linux Mint strongly suggests checking to make sure the ISO downloaded has not been corrupted.
 
@@ -70,7 +70,7 @@ _Compare hash_
 
 If the hash wasn't found then the integrity check did not pass. DO NOT use this ISO file.
 
-## Authenticity Check
+<h2> Authenticity Check </h2>
 
 Yep, we have to do both an _integrity_ and _authentication_ check.
 
@@ -98,11 +98,11 @@ I received a "Good Signature" message which means that the file was signed with 
 
 With the ISO passing both integrity and authentication, it's time to create a bootable USB (finally).
 
-## Create bootable USB
+<h2> Create bootable USB </h2>
 
 I followed [Linux Mint's instructions](https://linuxmint-installation-guide.readthedocs.io/en/latest/burn.html) and used [Etcher](https://etcher.io/) for this step.
 
-## Installing Linux Mint
+<h2> Installing Linux Mint </h2>
 
 I followed the instructions for [booting Linux Mint](https://linuxmint-installation-guide.readthedocs.io/en/latest/boot.html) and the [installation options](https://linuxmint-installation-guide.readthedocs.io/en/latest/install.html) right from their website.
 After inserting the USB, you will get a "live session" of Linux Mint. The OS hasn't been installed yet, this is sort of a "testing area" so you could preview what you intend to install. There will be a installer on the desktop when you decide to use it.

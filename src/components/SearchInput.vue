@@ -3,7 +3,11 @@
     <search-focus @keyup="focusSearch"></search-focus>
 
     <div class="relative w-80">
+      <label for="search" class="visuallyhidden">Search: </label>
+
       <input
+        name="search"
+        id="search"
         type="text"
         placeholder="Search (Press  &quot;/&quot; to focus)"
         class="bg-background-form border border-gray-500 rounded-full px-4 pl-10 py-2 outline-none focus:border-purple-700 w-80"
@@ -139,6 +143,16 @@ export default {
   }
   .fade-enter, .fade-leave-to {
     opacity: 0;
+  }
+  .visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
   }
 </style>
 

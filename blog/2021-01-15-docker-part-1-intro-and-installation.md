@@ -7,7 +7,7 @@ tags: ['coding', 'docker']
 
 I was first introduced to Docker in one of my previous jobs and all I knew about it was that it allowed you to run programs on your machine without having to locally install dependencies required for it. I will be making multiple posts documenting what I learn about Docker.
 
-## What is Docker?
+<h2> What is Docker? </h2>
 
 Docker is used for creating and managing containers.
 
@@ -18,7 +18,7 @@ _Docker visual_
 
 You may be wondering "why not use virtual machines?". Well, having multiple machines on your computer can give the same use of allowing others to load up the same project, but this can cause slow performance and use up a lot of space on your computer. Docker doesn't require an OS in a container. You just need a configuration file to share (like a blueprint) so others can remake the container.
 
-## Docker Setup (Windows Version)
+<h2> Docker Setup (Windows Version) </h2>
 
 Since I have Windows 10 Pro, I wanted to give an overview of my experience installing Docker on Windows. There are also directions on how to install on Mac and Linux [available here](https://docs.docker.com/engine/install/). Make sure you check the system requirements for each OS.
 
@@ -53,13 +53,13 @@ _Docker Settings_
 
 I ran `docker` in a command prompt (without admin access). You should see a list of commands to show that it is running.
 
-## Notes
+<h2> Notes </h2>
 
 - **Docker Desktop** installs **Docker Engine** and has a Daemon and CLI.
 - I installed **Docker Desktop** on my computer since I had the requirements. If I didn't, I would've had to install **Docker Toolbox** instead.
 - Whichever I used, **Docker Engine** would still have been installed.
 
-## Resources
+<h2> Resources </h2>
 
 - There is a [Docker Playground](https://labs.play-with-docker.com/) for practicing Docker in the browser.
 - There are also tons of [tutorials on the Docker site](https://www.docker.com/play-with-docker) to help you learn.

@@ -5,11 +5,11 @@ date: 2021-01-29
 tags: ['coding', 'docker']
 ---
 
-## What is a Dockerfile?
+<h2> What is a Dockerfile? </h2>
 
 A Dockerfile is a set of instructions on what Docker needs to know to build an image that will be used to create a new container.
 
-## Make-up of a Dockerfile
+<h2> Make-up of a Dockerfile </h2>
 
 To make one, you just create a new file in the root of your project and name it "Dockerfile" (no extension).
 
@@ -27,11 +27,11 @@ There are various optional commands you can use. I'm just listing the ones I've 
 
 - `CMD ["<executable>", "<param1>", ...]` is the command to execute the project. There is only one of these instructions in the file. This won't be executed when the _image_ is created but when the _container_ is created.
 
-## What is an Image?
+<h2> What is an Image? </h2>
 
 An image are the blueprints to make a container that contain code and required tools. One image can create multiple containers. Images can be shared so a developer can spin up a new container on their own machine without having to need the Dockerfile it was built from (of course this can be shared too).
 
-## Building an Image
+<h2> Building an Image </h2>
 
 Use the `docker build` command with the path where the Dockerfile is located.
 
@@ -54,7 +54,7 @@ docker/getting-started   latest              67a3629d4d71        2 days ago     
 
 If you change the project's code after building the image, you will need to rebuild the image again. That's because images are read-only and locked once they're created. The `COPY` command takes a snapshot of the code and does not update itself if the project is edited.
 
-## Using Prebuilt Images
+<h2> Using Prebuilt Images </h2>
 
 There are existing images you can use as a starter in a Dockerfile or just to use to solely run a container off of. [Docker Hub](https://hub.docker.com/) is a good source for finding images. Docker Hub is a lot like GitHub except it has images instead of repositories.
 

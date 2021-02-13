@@ -9,7 +9,7 @@ I was collecting a bunch of quotes in a Google spreadsheet and wanted to display
 
 ---
 
-## Store
+<h2> Store </h2>
 
 [Vuex](https://vuex.vuejs.org/) is used as a global store to hold information for:
 
@@ -19,7 +19,7 @@ I was collecting a bunch of quotes in a Google spreadsheet and wanted to display
 
 ---
 
-## Design & Colors
+<h2> Design & Colors </h2>
 
 I knew I wanted to implement a light and dark mode to switch between.
 
@@ -40,7 +40,7 @@ _View of Inkscape_
 
 ---
 
-## Components
+<h2> Components </h2>
 
 `App`
 
@@ -207,7 +207,7 @@ _No Results Message_
 
 ---
 
-### Conclusion
+<h2> Conclusion </h2>
 
 Since I learned about GraphQL, I wanted to implement an example of using it in a project. This was also my first experience using Vue-Apollo ([which I made a post about](/using-vue-apollo-to-query-data)).
 

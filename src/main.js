@@ -30,11 +30,6 @@ export default function (Vue, { router, head, isClient }) {
     name: 'author',
     content: 'Dana Ottaviani'
   })
-
-  head.link.push({
-    rel: 'stylesheet',
-    href: 'https://fonts.googleapis.com/css?family=Nunito+Sans:400,700'
-  })
 }
 
 

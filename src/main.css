@@ -2,6 +2,11 @@
 
 @tailwind components;
 
+@font-face {
+  font-family: 'Nunito Sans';
+  src: local('Nunito Sans'), url(./fonts/NunitoSans-Regular.ttf) format('ttf');
+}
+
 @tailwind utilities;
 
 .theme-light {

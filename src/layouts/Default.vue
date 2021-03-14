@@ -94,7 +94,7 @@
         </div>
         <ul class="social-icons">
           <li class="flex justify-center items-center">
-            <a href="https://docs.google.com/document/d/17YrN4uSYJdU_Lk0B05p2MS1rBNsYg6wTS8HfFFk_8fc/edit?usp=sharing"
+            <a href="https://docs.google.com/document/d/1hpLaa9Ks4viejq7gZpfMwliz39zZS7XHELgaGGgF4lg/edit?usp=sharing"
               target="_blank" rel="noopener noreferrer" aria-label="resume" class="text-white hover:text-gray-400">
               <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="40" height="40" viewBox="0 0 172 172" style=" fill:#000000;"><g fill="none" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
                 <path d="M0,172v-172h172v172z" fill="none">

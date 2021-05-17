@@ -1,4 +1,4 @@
-# danaottaviani.com [![Netlify Status](https://api.netlify.com/api/v1/badges/a0be5a39-1e71-4e22-8d06-d0c216e0e51e/deploy-status)](https://app.netlify.com/sites/loving-saha-a0ba35/deploys)
+# danaottaviani.com (not my current site anymore)
 
 A personal website and blog.
 
